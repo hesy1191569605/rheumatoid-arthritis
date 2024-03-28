@@ -60,6 +60,99 @@ ggplot(data1,aes(x =data1$group2,y=data1$DAS28.CRP.HM)) +
         axis.text.x= element_text(size = 13, color = "black",   hjust =1,angle = 45),
         title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
 ggsave("C:/Users/11915/Desktop/RA/913/FIG3/FIG3-D.pdf", width = 3, height = 4)
+####################DESWAN#######################
+DEswanage=function(data.df, qt, covariates){
+  
+  if(missing(data.df)==T){
+    print("No input data frame")
+    stop
+  }
+  if(missing(qt)==T){
+    print("No quantitative trait")
+    stop
+  }
+  if(missing(covariates)==T){
+    covariates  <-  NULL
+  }else{
+    covariates <- data.frame(covariates)  
+  }
+  
+  pvalues.tot  <-  NULL
+  coefficients.tot  <-  NULL
+  
+  window.center <- seq(31, 77, by = 2)
+  
+  for (k in 1:length(window.center)) {
+    pvalues <- NULL
+    coefficients <- NULL
+    idx_below <- which(qt <= window.center[k]) 
+    idx_above <- which(qt > window.center[k])
+    
+    if (length(idx_below) < 3 || length(idx_above) < 3) {
+      next 
+    }
+    
+    if (length(idx_below) < 4 || length(idx_above) < 4) {
+      idx_below <- tail(sort(idx_below), 3)
+      idx_above <- head(sort(idx_above), 3)
+    } else if (length(idx_below) < 5 || length(idx_above) < 5) {
+      idx_below <- tail(sort(idx_below), 4)
+      idx_above <- head(sort(idx_above), 4)
+    } else {
+      idx_below <- tail(sort(idx_below), 5)  # Take the 5 closest and smaller or equal samples to window.center
+      idx_above <- head(sort(idx_above), 5)  # Take the 5 closest and greater samples to window.center
+    }
+    
+    qt.tmp <- rep(NA, length(qt))
+    qt.tmp[idx_below] <- 0
+    qt.tmp[idx_above] <- 1
+    qt.tmp <- factor(qt.tmp)
+    for (i in 1:ncol(data.df)) {
+      
+      if(is.null(covariates) == T){
+        deswan.formula = "data.df[, i] ~ qt.tmp"  
+      }else{
+        deswan.formula  <-  paste(c("data.df[, i] ~ qt.tmp", paste("covariates$",colnames(covariates), collapse  =  " + ", sep = "")), collapse = " + ", sep = "")
+      }
+      test.glm  <-  NULL
+      test.glm  <- try(glm.fit  <-  glm(as.formula(deswan.formula), family  =  gaussian), silent=TRUE)
+      if(class(test.glm)[1] !=  "try-error"){
+        glm.res  <-  car::Anova(glm.fit,  type  =  "2")
+        pvalues  <-  rbind(pvalues, data.frame(variable  =  colnames(data.df)[i], window.center  =  window.center[k], factor  =  rownames(glm.res), pvalue=glm.res$`Pr(>Chisq)`, stringsAsFactors  =  F))
+        coefficients  <- rbind(coefficients, data.frame(variable  =  colnames(data.df)[i], window.center  =  window.center[k], factor  = names(coefficients(glm.fit)), 
+                                                        coefficient=coefficients(glm.fit), stringsAsFactors  =  F))
+      }
+    }
+    pvalues.tot  =  rbind(pvalues.tot, pvalues)
+    coefficients.tot  =  rbind(coefficients.tot, coefficients)
+    
+    print(paste("window.center  ", k, "/", length(window.center), sep = ""))
+  }
+  pvalues.tot$factor[which(pvalues.tot$factor=="qt.tmp")]<-"qt"
+  pvalues.tot$factor=gsub("^covariates\\$","",pvalues.tot$factor)
+  coefficients.tot$factor[which(coefficients.tot$factor=="qt.tmp1")]<-"qt"
+  coefficients.tot$factor=gsub("^covariates\\$","",coefficients.tot$factor)
+  
+  
+  results  =  list(p  =  pvalues.tot, coeff  =  coefficients.tot)
+  return(results)
+}
+data<-'expression dataframe with age at column1 in female'
+res.DEswanage <- DEswanage(
+  data = data[,-1]
+  qt = data[,'age']
+)
+
+age.DEswan.wide.p=reshape.DEswan(res.DEswanage,parameter = 1,factor = "qt")
+age.DEswan.wide.q=q.DEswan(age.DEswan.wide.p,method="BH")
+age.DEswan.wide.coeff=reshape.DEswan(res.DEswanage,parameter = 2,factor = "qt")
+toHeatmap=sign(age.DEswan.wide.coeff[,-1])*-log10(age.DEswan.wide.p[,-1])
+rownames(toHeatmap)<-age.DEswan.wide.coeff[,1]
+age.DEswan.wide.p.signif=nsignif.DEswan(age.DEswan.wide.p)
+age.DEswan.wide.q.signif=nsignif.DEswan(age.DEswan.wide.q)
+toPlot=age.DEswan.wide.p.signif[1:3,]
+toPlotq=age.DEswan.wide.q.signif[1:3,]
+
 ####################4 clinicalin different age in female####################------
 data2<-data1[,c(11,14,15,16,17)]
 data3<-reshape::melt(data2,id="group2")
