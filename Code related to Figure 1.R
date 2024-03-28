@@ -117,10 +117,10 @@ data<-read.csv("913rf-input.csv",row.names = 1)
 pdf("FIG1/D.pdf", width = 14.32,height = 7.36)
 data2<-log2(data)
 range(na.omit(data))
-boxplot(data2[425:523],axes=F,col="white",#浣跨敤data1閲屽墠98鍒楁暟鎹粯鍥?
-        border = "#1C65A9",lwd=1.5, cex=.3, #lwd璁剧疆绠辨绮楃粏锛宑ex璁剧疆瀛ょ偣澶у皬
+boxplot(data2[425:523],axes=F,col="white",
+        border = "#1C65A9",lwd=1.5, cex=.3, 
         xlim=c(0,366),ylim=c(-6,4),xlab = "Samples",ylab = "log10 (protein)",
-        cex.lab=1.4, font.lab=1) #y杞翠笉浠?10寮€濮嬶紝鏄洜涓烘柟渚胯缃甽egend锛屽惁鍒檒egend浼氬拰绠辩嚎鍥鹃噸鍙犲湪涓€璧?boxplot(data[425:523],add = T,axes=F,at=c(425:523),col="white",
+        cex.lab=1.4, font.lab=1)
 boxplot(data2[524:579],add = T,axes=F,at=c(99:154),col="white",
         border="#7B81B1",lwd=1.5, cex=.3,ylim=c(-6,4))
 boxplot(data2[1:212],add = T,axes=F,at=c(155:366),col="white",
@@ -128,10 +128,10 @@ boxplot(data2[1:212],add = T,axes=F,at=c(155:366),col="white",
 
 
 #"Health"="#1C65A9","At risk of RA"='#7B81B1',"RA"="#C00000"
-axis(2,at=c(-6,-3,0,3), #2琛ㄧず璁剧疆宸﹀潗鏍囪酱锛坹杞达級
+axis(2,at=c(-6,-3,0,3), 
      label=c("-6","-3","0","3"),lwd=2,
      lwd.ticks = 2,
-     font.axis=1, #鍧愭爣鏍囩鈥?1鈥濅负姝ｅ父锛屸€?2鈥濅负鍔犵矖锛屸€?3鈥濅负鏂滀綋e
+     font.axis=1, 
      cex.axis=1.3)
 dev.off()
 
