@@ -68,7 +68,7 @@ row_cluster = cutree(p$tree_row,k=6)
   newOrder$Cluster = paste0("cluster",newOrder$Cluster)
   newOrder$gene = rownames(newOrder)
   head(newOrder)
-  write.csv(newOrder,"ALL-cluster8.csv")#瀵煎嚭鏁版嵁鏀瑰悕
+  write.csv(newOrder,"ALL-cluster8.csv")
   library(reshape2)
   data_new = melt(newOrder)
   head(data_new)
@@ -346,8 +346,8 @@ data<-read.csv("pathway deswan&lm.csv",header = T)
 
 library(ggplot2);library(reshape)
 ggplot(data,aes(x =data$GROUP,y =data$Term,size=data$Count,fill=data$LOG10))+
-  geom_point(aes(size=data$Count,fill=data$LOG10),color='black',shape = 21)+#閻犱礁澧介悿鍡涙倷閸︻厽鐣卞鍫嗗啰姣堝☉鎾抽叄椤や線鎳??
-  scale_fill_gradient2(low="#3C82B9",mid = "white",high = "#EE3434")+#闁煎浜滈悾鐐▕婢跺鐟ら柛娆愶耿椤や線?????
+  geom_point(aes(size=data$Count,fill=data$LOG10),color='black',shape = 21)+
+  scale_fill_gradient2(low="#3C82B9",mid = "white",high = "#EE3434")+
   scale_x_discrete(limits=c("LM","2.9","4","5.1"))+
   scale_y_discrete(limits=rev(unique(data$Term)))+
   labs(x="",y="")+
