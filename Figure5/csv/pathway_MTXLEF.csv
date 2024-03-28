@@ -1,0 +1,11 @@
+Term,Count,PValue,Genes,Fold Enrichment,group
+Initial triggering of complement,2,0.030903188,"CRP, C2",59.83152174,up
+response to lipid hydroperoxide,2,0.001848951,"GPX3, APOA4",1024.315789,down
+peripheral nervous system axon regeneration,2,0.006457212,"APOA4, APOD",292.6616541,down
+collagen biosynthetic process,2,0.010129346,"COL1A1, SERPINH1",186.2392344,down
+hydrogen peroxide catabolic process,2,0.025593391,"GPX3, APOA4",73.16541353,down
+Respiratory electron transport,3,0.008407641,"NDUFA13, CYCS, SDHB",20.04065534,up
+The TCA cycle and respiratory electron transport,3,0.023773358,"NDUFA13, CYCS, SDHB",11.59655899,up
+Innate Immune System,7,0.001905206,"CRP, ATP6V1A, VAT1, SERPINA1, PRKCSH, MYH9, C2",4.50977294,up
+Immune System,8,0.01233474,"CRP, ATP6V1A, VAT1, SERPINA1, PRKCSH, MYH9, VIM, C2",2.679892892,up
+Metabolism,8,0.022134852,"PSMA6, CBR1, CA1, TTR, ECI2, APOA4, SUCLG1, SLC25A13",2.436832494,down

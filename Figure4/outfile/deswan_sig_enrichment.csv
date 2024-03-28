@@ -1,0 +1,35 @@
+ID,Description,GeneRatio,BgRatio,pvalue,p.adjust,qvalue,geneID,Count,name
+GO:0045296,cadherin binding,7/44,333/18369,1.30091308926406e-05,0.003031127,0.002163624,9588/1937/10399/5216/832/5861/2316,7,goup significant protein at 5.1
+GO:0045296,cadherin binding,8/46,333/18369,1.53572363507718e-06,0.00027643,0.000174588,79026/302/1499/7534/2810/5339/226/9124,8,godown significant protein at 5.1
+GO:0003779,actin binding,7/46,434/18369,9.45266100731283e-05,0.008507395,0.005373092,6876/81/7429/5339/4638/226/9124,7,godown significant protein at 5.1
+GO:0016877,"ligase activity, forming carbon-sulfur bonds",3/46,41/18369,0.000146565,0.008793899,0.005554041,7317/123876/10055,3,godown significant protein at 5.1
+GO:0008641,ubiquitin-like modifier activating enzyme activity,2/46,10/18369,0.000272575,0.009044102,0.005712064,7317/10055,2,godown significant protein at 5.1
+GO:0016832,aldehyde-lyase activity,2/46,10/18369,0.000272575,0.009044102,0.005712064,6472/226,2,godown significant protein at 5.1
+GO:0044325,transmembrane transporter binding,4/46,129/18369,0.00030147,0.009044102,0.005712064,1499/7534/81/2280,4,godown significant protein at 5.1
+WP558,Complement and coagulation cascades,5/44,58/8389,1.17131481043972e-05,0.001393865,0.00131927,730/5340/714/715/462,5,wkdown significant protein at 2.9
+WP477,Cytoplasmic ribosomal proteins,5/44,88/8389,8.91388697741686e-05,0.005303763,0.005019926,6205/9349/23521/6138/4736,5,wkdown significant protein at 2.9
+WP545,Complement activation,3/44,23/8389,0.000221591,0.008789767,0.008319373,730/714/715,3,wkdown significant protein at 2.9
+hsa04610,Complement and coagulation cascades,6/41,86/8644,2.76629623611607e-06,0.000290461,0.000270806,730/966/5340/714/715/462,6,kkdown significant protein at 2.9
+hsa05171,Coronavirus disease - COVID-19,8/41,232/8644,1.06079943456118e-05,0.00055692,0.000519233,6205/730/9349/714/715/23521/6138/4736,8,kkdown significant protein at 2.9
+WP477,Cytoplasmic ribosomal proteins,6/49,88/8389,1.09254241163447e-05,0.001300125,0.001184546,6137/6147/6203/6201/6138/6158,6,wkdown significant protein at 4
+hsa03010,Ribosome,6/40,167/8644,0.000105841,0.007279166,0.005655493,6137/6147/6203/6201/6138/6158,6,kkdown significant protein at 4
+hsa01200,Carbon metabolism,5/40,115/8644,0.000173313,0.007279166,0.005655493,5230/2597/5096/50/847,5,kkdown significant protein at 4
+hsa00630,Glyoxylate and dicarboxylate metabolism,3/40,30/8644,0.000341809,0.007919939,0.006153336,5096/50/847,3,kkdown significant protein at 4
+hsa01230,Biosynthesis of amino acids,4/40,75/8644,0.00037714,0.007919939,0.006153336,383/5230/2597/50,4,kkdown significant protein at 4
+GO:0055102,lipase inhibitor activity,3/55,16/18369,1.38369460288793e-05,0.001426726,0.000993626,345/307/301,3,godown significant protein at 4
+GO:0003735,structural constituent of ribosome,6/55,177/18369,1.44113716831618e-05,0.001426726,0.000993626,6137/6147/6203/6201/6138/6158,6,godown significant protein at 4
+GO:0016836,hydro-lyase activity,4/55,62/18369,3.52698750669475e-05,0.002075504,0.00144546,3295/50/549/1962,4,godown significant protein at 4
+GO:0016810,"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds",5/55,131/18369,4.46588890495161e-05,0.002075504,0.00144546,114770/383/3340/79814/847,5,godown significant protein at 4
+GO:0045296,cadherin binding,7/55,333/18369,5.80833955678881e-05,0.002075504,0.00144546,6147/6138/5339/4627/301/10890/2316,7,godown significant protein at 4
+GO:0048027,mRNA 5'-UTR binding,3/55,26/18369,6.28940555725195e-05,0.002075504,0.00144546,6201/4691/22948,3,godown significant protein at 4
+GO:0016835,carbon-oxygen lyase activity,4/55,77/18369,8.27626510086413e-05,0.002341001,0.001630362,3295/50/549/1962,4,godown significant protein at 4
+GO:0140662,ATP-dependent protein folding chaperone,3/55,41/18369,0.000249797,0.006182472,0.004305709,10693/22948/3336,3,godown significant protein at 4
+GO:0016829,lyase activity,5/55,198/18369,0.000310775,0.006746131,0.004698263,3295/5106/50/549/1962,5,godown significant protein at 4
+GO:0051015,actin filament binding,5/55,202/18369,0.000340714,0.006746131,0.004698263,9948/5339/4627/4629/2316,5,godown significant protein at 4
+GO:0016813,"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amidines",2/55,10/18369,0.000390064,0.007021155,0.0048898,383/79814,2,godown significant protein at 4
+GO:0051082,unfolded protein binding,4/55,122/18369,0.000486243,0.007522665,0.00523907,10693/5478/22948/3336,4,godown significant protein at 4
+GO:0051287,NAD binding,3/55,52/18369,0.000505954,0.007522665,0.00523907,2597/23530/1962,3,godown significant protein at 4
+GO:0050661,NADP binding,3/55,53/18369,0.000535178,0.007522665,0.00523907,2597/23530/847,3,godown significant protein at 4
+GO:0004859,phospholipase inhibitor activity,2/55,12/18369,0.000569899,0.007522665,0.00523907,307/301,2,godown significant protein at 4
+GO:0004857,enzyme inhibitor activity,6/55,359/18369,0.000691178,0.008553332,0.005956866,1992/6201/345/307/2597/301,6,godown significant protein at 4
+GO:0098631,cell adhesion mediator activity,3/55,62/18369,0.00084773,0.009873566,0.006876327,301/177/10890,3,godown significant protein at 4

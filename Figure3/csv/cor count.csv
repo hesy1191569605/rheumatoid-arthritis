@@ -1,0 +1,11 @@
+x,Count,group
+DAS28,75,neg
+VAS,73,neg
+SJC,32,neg
+TJC,24,neg
+CRP,78,neg
+DAS28,17,pos
+VAS,13,pos
+SJC,28,pos
+TJC,16,pos
+CRP,42,pos

@@ -1,0 +1,5 @@
+Category,Term,Count,%,PValue,Genes,List Total,Pop Hits,Pop Total,Fold Enrichment,Bonferroni,Benjamini,FDR,group1
+GOTERM_BP_DIRECT,negative regulation of endopeptidase activity,2,25,-1.715043378,"SERPINC1, SERPINH1",8,54,19453,90.06018519,0.753705245,1,1,down
+REACTOME_PATHWAY,ER-Phagosome pathway,2,25,-1.492077943,"PSMC5, S100A8",5,90,11044,49.08444444,0.997875376,1,1,down
+GOTERM_BP_DIRECT,cellular protein localization,2,14.28571429,1.327200342,"SEPTIN11, YWHAG",14,72,19453,38.59722222,0.988159776,1,1,up
+REACTOME_PATHWAY,Smooth Muscle Contraction,2,14.28571429,1.442585235,"MYL6, ITGA1",10,45,11044,49.08444444,0.990952334,1,1,up
