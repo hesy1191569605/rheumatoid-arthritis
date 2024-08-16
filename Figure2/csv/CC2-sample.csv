@@ -1,0 +1,409 @@
+sampel,group
+A002,Postive
+A004,Postive
+A005,Postive
+A008,Postive
+A014,Postive
+A015,Postive
+A016,Postive
+A019,Postive
+A026,Postive
+A028,Postive
+A029,Postive
+A036,Postive
+A037,Postive
+A039,Postive
+A044,Postive
+A046,Postive
+A048,Postive
+A049,Postive
+A052,Postive
+A054,Postive
+A055,Postive
+A056,Postive
+A057,Postive
+A058,Postive
+A061,Postive
+A064,Postive
+A066,Postive
+A067,Postive
+A069,Postive
+A073,Postive
+A075,Postive
+A076,Postive
+A078,Negative
+A086,Postive
+A094,Postive
+A095,Postive
+A098,Postive
+A099,Postive
+A104,Postive
+A106,Postive
+A111,Negative
+A116,Postive
+A117,Postive
+A120,Postive
+A121,Postive
+A122,Postive
+A124,Postive
+A134,Postive
+A135,Postive
+A136,Postive
+A138,Postive
+A145,Postive
+A147,Postive
+A251,Postive
+A255,Postive
+A261,Postive
+A264,Postive
+A265,Postive
+A266,Postive
+A272,Postive
+A278,Negative
+A296,Postive
+A297,Negative
+A298,Postive
+A302,Postive
+A304,Postive
+A305,Postive
+A306,Postive
+A313,Postive
+A318,Postive
+A320,Postive
+A323,Postive
+A330,Postive
+A333,Postive
+A334,Postive
+A339,Postive
+A347,Postive
+A354,Postive
+A355,Postive
+A356,Postive
+A357,Postive
+A365,Postive
+A372,Postive
+A375,Postive
+A378,Postive
+A382,Postive
+A383,Postive
+A384,Postive
+A386,Postive
+A387,Postive
+A389,Postive
+A391,Postive
+A392,Postive
+A394,Negative
+A400,Postive
+A401,Postive
+A402,Postive
+A408,Postive
+A411,Postive
+A412,Postive
+A416,Postive
+A420,Postive
+A426,Postive
+A433,Postive
+A434,Postive
+A436,Postive
+A437,Postive
+A441,Negative
+A445,Postive
+A452,Negative
+A454,Postive
+A458,Postive
+A461,Postive
+A462,Postive
+A463,Postive
+A464,Postive
+A465,Postive
+A467,Postive
+A470,Postive
+A477,Negative
+A485,Postive
+A487,Postive
+A488,Postive
+A490,Postive
+A494,Postive
+A495,Postive
+A496,Negative
+A497,Postive
+A498,Negative
+A499,Postive
+A500,Postive
+A501,Postive
+A503,Postive
+A511,Postive
+A513,Postive
+A515,Postive
+A524,Postive
+A529,Postive
+A530,Postive
+A531,Postive
+A532,Postive
+A534,Postive
+A543,Postive
+A548,Postive
+A554,Postive
+A559,Postive
+A560,Postive
+A563,Postive
+A565,Postive
+A570,Postive
+A571,Negative
+A573,Postive
+A577,Negative
+A578,Postive
+A584,Postive
+A587,Postive
+A593,Negative
+A596,Postive
+A598,Postive
+A599,Postive
+A600,Postive
+A601,Postive
+A606,Postive
+A609,Postive
+A612,Postive
+A613,Postive
+A617,Postive
+A618,Postive
+A624,Postive
+A626,Postive
+A634,Negative
+A635,Postive
+A637,Postive
+A639,Postive
+A641,Postive
+A642,Postive
+A643,Postive
+A650,Postive
+A657,Postive
+A658,Postive
+A659,Postive
+A662,Postive
+A664,Postive
+A674,Postive
+A683,Postive
+A684,Postive
+A687,Postive
+A693,Postive
+A699,Postive
+A711,Postive
+A715,Postive
+A728,Postive
+A731,Postive
+A744,Postive
+A746,Postive
+A752,Postive
+A801,Negative
+A802,Negative
+A803,Negative
+A804,Negative
+A805,Negative
+A806,Negative
+A807,Negative
+A808,Negative
+A809,Negative
+A810,Negative
+A811,Negative
+A812,Negative
+A813,Negative
+A814,Negative
+A815,Negative
+A816,Negative
+A817,Negative
+A818,Negative
+A819,Negative
+A820,Negative
+A821,Negative
+A822,Negative
+A823,Negative
+A825,Negative
+A826,Negative
+A827,Negative
+A828,Negative
+A829,Negative
+A830,Negative
+A831,Negative
+A832,Negative
+A833,Negative
+A834,Negative
+A835,Negative
+A836,Negative
+A837,Negative
+A838,Negative
+A839,Negative
+A840,Negative
+A841,Negative
+A842,Negative
+A843,Negative
+A844,Negative
+A845,Negative
+A846,Negative
+A847,Negative
+A848,Negative
+A849,Negative
+A850,Negative
+A851,Negative
+A852,Negative
+A853,Negative
+A854,Negative
+HP001,Health
+HP002,Health
+HP003,Health
+HP004,Health
+HP005,Health
+HP006,Health
+HP007,Health
+HP008,Health
+HP009,Health
+HP010,Health
+HP011,Health
+HP012,Health
+HP013,Health
+HP014,Health
+HP015,Health
+HP016,Health
+HP017,Health
+HP018,Health
+HP019,Health
+HP020,Health
+HP021,Health
+HP022,Health
+HP023,Health
+HP024,Health
+HP025,Health
+HP026,Health
+HP027,Health
+HP029,Health
+HP030,Health
+HP031,Health
+HP032,Health
+HP033,Health
+HP034,Health
+HP035,Health
+HP036,Health
+HP037,Health
+HP038,Health
+HP039,Health
+HP040,Health
+HP041,Health
+HP042,Health
+HP043,Health
+HP044,Health
+HP045,Health
+HP046,Health
+HP047,Health
+HP048,Health
+HP049,Health
+HP050,Health
+HP051,Health
+HP052,Health
+HP053,Health
+HP054,Health
+HP055,Health
+HP056,Health
+HP057,Health
+HP058,Health
+HP059,Health
+HP060,Health
+HP061,Health
+HP062,Health
+HP063,Health
+HP064,Health
+HP065,Health
+HP066,Health
+HP067,Health
+HP068,Health
+HP069,Health
+HP070,Health
+HP071,Health
+HP072,Health
+HP073,Health
+HP074,Health
+HP075,Health
+HP076,Health
+HP077,Health
+HP078,Health
+HP079,Health
+HP080,Health
+HP081,Health
+HP082,Health
+HP083,Health
+HP084,Health
+HP085,Health
+HP086,Health
+HP087,Health
+HP088,Health
+HP089,Health
+HP090,Health
+HP091,Health
+HP092,Health
+HP093,Health
+HP094,Health
+HP095,Health
+HP096,Health
+HP097,Health
+HP098,Health
+HP099,Health
+HP100,Health
+PRA001,At-risk of RA
+PRA002,At-risk of RA
+PRA003,At-risk of RA
+PRA004,At-risk of RA
+PRA005,At-risk of RA
+PRA006,At-risk of RA
+PRA007,At-risk of RA
+PRA008,At-risk of RA
+PRA009,At-risk of RA
+PRA010,At-risk of RA
+PRA011,At-risk of RA
+PRA012,At-risk of RA
+PRA013,At-risk of RA
+PRA014,At-risk of RA
+PRA015,At-risk of RA
+PRA016,At-risk of RA
+PRA017,At-risk of RA
+PRA018,At-risk of RA
+PRA019,At-risk of RA
+PRA020,At-risk of RA
+PRA021,At-risk of RA
+PRA022,At-risk of RA
+PRA023,At-risk of RA
+PRA024,At-risk of RA
+PRA025,At-risk of RA
+PRA026,At-risk of RA
+PRA027,At-risk of RA
+PRA028,At-risk of RA
+PRA029,At-risk of RA
+PRA030,At-risk of RA
+PRA031,At-risk of RA
+PRA032,At-risk of RA
+PRA033,At-risk of RA
+PRA034,At-risk of RA
+PRA035,At-risk of RA
+PRA036,At-risk of RA
+PRA037,At-risk of RA
+PRA038,At-risk of RA
+PRA039,At-risk of RA
+PRA040,At-risk of RA
+PRA041,At-risk of RA
+PRA042,At-risk of RA
+PRA043,At-risk of RA
+PRA044,At-risk of RA
+PRA045,At-risk of RA
+PRA046,At-risk of RA
+PRA047,At-risk of RA
+PRA048,At-risk of RA
+PRA049,At-risk of RA
+PRA050,At-risk of RA
+PRA051,At-risk of RA
+PRA052,At-risk of RA
+PRA053,At-risk of RA
+PRA054,At-risk of RA
+PRA055,At-risk of RA
+PRA056,At-risk of RA
+PRA057,At-risk of RA
+PRA058,At-risk of RA
+PRA059,At-risk of RA
+PRA060,At-risk of RA
