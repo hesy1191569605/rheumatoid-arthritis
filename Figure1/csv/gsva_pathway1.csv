@@ -1,0 +1,712 @@
+"","Group1","Group2","Gender","Age","Anti.citrullinated.peptide.antibodies","Class","DAS28.CRP","VAS","TJC","SJC","CRP","DDAS28.CRP","Drugs","Drugs.Response","ARPC2","inflammatory"
+"A002","RA_A","ACPA+ RA","Female","54","Postive","moderate_disease_activity",3.326148619,50,1,2,6.19,0.018514658,"MTX+HCQ+5-ASA","No Response",0.074009577,0.708288129664641
+"A004","RA_A","ACPA+ RA","Female","34","Postive","moderate_disease_activity",4.86437789,90,6,4,6.24,1.473076099,"MTX+LEF+HCQ","Response",0.04251086,0.766044730708691
+"A005","RA_A","ACPA+ RA","Female","49","Postive","low_disease_activity",2.813726798,70,0,2,2.77,0.342812115,"MTX+LEF","No Response",0.184482686,0.903050841822165
+"A008","RA_A","ACPA+ RA","Male","64","Postive","moderate_disease_activity",4.472687568,50,5,2,24.4,2.687241764,"MTX+HCQ","Response",0.265016566,0.854386784573823
+"A014","RA_A","ACPA+ RA","Female","44","Postive","low_disease_activity",3.191444139,50,2,0,6.8,0.486078059,"MTX+HCQ","No Response",0.047031951,0.884401924723104
+"A015","RA_A","ACPA+ RA","Male","66","Postive","disease_remission",2.508777918,30,0,0,22,0.885953787,"MTX+HCQ","No Response",0.147334009,0.850592877111038
+"A016","RA_A","ACPA+ RA","Female","52","Postive","high_disease_activity",5.40774748,100,6,4,21.2,2.334156409,"MTX+LEF","Response",0.283014635,0.807827244694095
+"A019","RA_A","ACPA+ RA","Female","60","Postive","disease_remission",2.335357961,20,0,1,8.63,-0.907003874,"MTX+5-ASA","No Response",0.157879121,0.771329118627449
+"A026","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",4.631205538,50,10,2,8.34,1.456195247,"LEF+HCQ","Response",0.060661338,0.67787446884312
+"A028","RA_A","ACPA+ RA","Male","48","Postive","low_disease_activity",2.915513558,19,2,0,11.1,NA,"MTX+HCQ",NA,0.131376847,0.779426656030692
+"A029","RA_A","ACPA+ RA","Male","53","Postive","high_disease_activity",5.364269332,60,13,7,8.34,-0.702472842,"MTX+LEF","No Response",0.182925706,0.927079603735286
+"A036","RA_A","ACPA+ RA","Female","44","Postive","low_disease_activity",3.031560003,60,0,0,29.6,-2.292082333,"MTX+LEF","No Response",0.085721661,0.774008443030476
+"A037","RA_A","ACPA+ RA","Female","51","Postive","low_disease_activity",3.036779034,20,2,0,15.3,-0.942039221,"MTX+LEF","No Response",0.105421804,0.527788349042289
+"A039","RA_A","ACPA+ RA","Female","52","Postive","low_disease_activity",2.768921703,30,2,0,4.25,-0.146665617,"MTX+LEF","No Response",0.15661876,0.68151325065949
+"A041","RA_A",NA,"Female","40",NA,NA,NA,30,3,3,NA,NA,"MTX+HCQ",NA,0.113585358,0.809225615385303
+"A044","RA_A","ACPA+ RA","Female","54","Postive","high_disease_activity",5.408639137,60,16,7,4.72,0.999739113,"MTX+HCQ","Response",0.145468376,0.805540417667255
+"A046","RA_A","ACPA+ RA","Female","51","Postive","high_disease_activity",5.239069447,40,23,5,2.1,0.090645531,"MTX","No Response",0.301497545,0.825698524801904
+"A048","RA_A","ACPA+ RA","Female","57","Postive","moderate_disease_activity",3.788148068,50,2,1,17.8,-0.526170235,"MTX+LEF","No Response",0.334376106,0.900828520977586
+"A049","RA_A","ACPA+ RA","Female","55","Postive","moderate_disease_activity",3.329562339,80,1,0,5.79,-1.708167469,"MTX+LEF","No Response",0.211789609,0.7499364550753
+"A051","RA_A",NA,"Female","67",NA,"moderate_disease_activity",3.75552451,30,3,3,11.9,-0.754868965,"MTX+LEF","No Response",0.136859552,0.771864923985927
+"A052","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",4.983798166,60,5,16,8.53,-1.037907913,"HCQ","No Response",0.065396677,0.749512466124123
+"A054","RA_A","ACPA+ RA","Female","39","Postive","moderate_disease_activity",3.439632239,50,4,2,1.08,NA,NA,NA,0.080409344,0.76255697544325
+"A055","RA_A","ACPA+ RA","Female","42","Postive","low_disease_activity",2.728592812,10,1,1,7.94,-2.242267171,"MTX+HCQ+5-ASA","No Response",0.190599685,0.720720190160965
+"A056","RA_A","ACPA+ RA","Female","46","Postive","moderate_disease_activity",3.399892582,30,1,0,56.7,-2.589417291,"MTX+HCQ","No Response",0.239533134,0.840206014521814
+"A057","RA_A","ACPA+ RA","Female","50","Postive","moderate_disease_activity",3.912501296,35,4,4,7.79,0.525432409,"MTX+LEF+HCQ","No Response",0.09920872,0.811294669278269
+"A058","RA_A","ACPA+ RA","Female","46","Postive","disease_remission",1.400559155,0,0,0,2.4,-0.294526466,"LEF","No Response",0.168472845,0.688203835679345
+"A061","RA_A","ACPA+ RA","Female","44","Postive",NA,NA,20,2,2,NA,NA,"MTX+HCQ",NA,0.146020141,0.725561296177132
+"A064","RA_A","ACPA+ RA","Female","51","Postive","moderate_disease_activity",4.230019864,50,6,0,26.9,-0.574748106,"MTX+HCQ","No Response",0.103754147,0.983923435999621
+"A066","RA_A","ACPA+ RA","Female","43","Postive",NA,NA,50,2,0,NA,NA,"MTX+LEF",NA,0.251423718,0.773634325223559
+"A067","RA_A","ACPA+ RA","Female","51","Postive","moderate_disease_activity",3.925644851,50,3,1,15.8,NA,"LEF+HCQ+5-ASA",NA,0.212747168,0.865495001210972
+"A069","RA_A","ACPA+ RA","Female","59","Postive","moderate_disease_activity",3.403287101,40,2,2,5.9,0.740683053,"MTX+LEF","No Response",0.159992705,0.75407906845873
+"A073","RA_A","ACPA+ RA","Female","61","Postive","high_disease_activity",6.665154554,100,22,9,9.27,NA,"MTX+LEF",NA,0.265580525,0.752737463009377
+"A075","RA_A","ACPA+ RA","Male","63","Postive","high_disease_activity",5.59037395,70,18,6,4.13,0.753308852,"MTX+LEF","Response",0.145531728,0.863883901546685
+"A076","RA_A","ACPA+ RA","Male","53","Postive","low_disease_activity",2.850847099,80,0,0,7.51,-0.114133735,"MTX+LEF","No Response",0.192204981,0.951692197209801
+"A078","RA_A","ACPA- RA","Female","70","Negative","low_disease_activity",2.943504298,50,0,6,4.26,0.168942924,"MTX+HCQ","No Response",0.180256937,0.760287107830076
+"A086","RA_A","ACPA+ RA","Female","38","Postive","high_disease_activity",6.132702193,75,22,8,6.07,1.40454486,"MTX+HCQ","Response",0.229815407,0.857105859629752
+"A090","RA_A",NA,"Female","66",NA,"disease_remission",2.307528018,20,2,0,1.15,-0.908574385,"MTX+HCQ","No Response",0.274199848,0.592780111753022
+"A094","RA_A","ACPA+ RA","Male","59","Postive","disease_remission",2.583381769,50,0,0,12,NA,"MTX+HCQ",NA,0.145081982,0.823203505270366
+"A095","RA_A","ACPA+ RA","Female","66","Postive","moderate_disease_activity",3.727390467,20,2,0,110,0.278266611,"MTX","No Response",0.08923694,0.896070091458149
+"A098","RA_A","ACPA+ RA","Female","33","Postive","moderate_disease_activity",5.067360133,50,15,3,7.11,2.423409184,"HCQ","Response",0.074828826,0.775362239163222
+"A099","RA_A","ACPA+ RA","Female","44","Postive","moderate_disease_activity",3.760148403,65,3,3,2.35,1.090109586,"MTX+HCQ","No Response",0.139178058,0.80287618882581
+"A104","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",4.126307649,50,3,3,15.6,0.767649692,"LEF+HCQ","No Response",0.0892913,0.681919674986023
+"A106","RA_A","ACPA+ RA","Female","43","Postive","moderate_disease_activity",3.456090045,80,3,0,2.09,-0.213774619,"LEF","No Response",3.580938792,0.831924562711224
+"A111","RA_A","ACPA- RA","Male","77","Negative","moderate_disease_activity",5.073489151,30,24,0,13,-0.136984103,"MTX+LEF","No Response",0.126659923,0.622331196188499
+"A116","RA_A","ACPA+ RA","Female","50","Postive","low_disease_activity",2.653812701,20,0,2,15.9,0.217456907,"MTX+LEF","No Response",0.175918368,0.740157901139317
+"A117","RA_A","ACPA+ RA","Female","44","Postive","moderate_disease_activity",3.652815749,60,2,2,5.34,2.297315325,"LEF","Response",0.185825674,0.776553129853034
+"A120","RA_A","ACPA+ RA","Female","46","Postive","disease_remission",1.629950834,0,0,0,5.43,-2.611611992,"LEF+HCQ","No Response",0.157481333,0.804627973832909
+"A121","RA_A","ACPA+ RA","Female","50","Postive","disease_remission",2.002490152,0,0,4,2.82,-2.98985668,"MTX+LEF","No Response",0.111224939,0.890948737158247
+"A122","RA_A","ACPA+ RA","Female","51","Postive","moderate_disease_activity",3.936711767,60,4,3,3.38,1.171419943,"MTX","No Response",0.079160808,0.797097719464029
+"A124","RA_A","ACPA+ RA","Female","61","Postive","low_disease_activity",3.004237623,10,0,6,28.5,-1.4927041,"MTX+HCQ","No Response",0.131893582,0.762594181636754
+"A134","RA_A","ACPA+ RA","Female","53","Postive","disease_remission",2.302864851,30,1,0,1.74,0.565294213,"LEF+HCQ","No Response",1.605437438,0.768300522085175
+"A135","RA_A","ACPA+ RA","Female","64","Postive","low_disease_activity",3.132710193,40,4,0,2.93,1.2925754,"MTX+HCQ","Response",0.170498977,0.680168515086749
+"A136","RA_A","ACPA+ RA","Female","45","Postive","disease_remission",2.075343372,50,0,0,2.17,0.147855076,"MTX+LEF+HCQ","No Response",0.102346854,0.79996576055207
+"A138","RA_A","ACPA+ RA","Female","50","Postive","disease_remission",2.100045985,30,0,0,6.39,-0.826072559,"MTX+LEF","No Response",0.193836674,0.870578444088756
+"A145","RA_A","ACPA+ RA","Male","65","Postive","moderate_disease_activity",4.31212923,60,4,0,46.8,0.236028422,"MTX+LEF","No Response",0.188429205,0.707754723918674
+"A147","RA_A","ACPA+ RA","Female","64","Postive","moderate_disease_activity",4.314278169,40,11,0,12.5,0.545639787,"MTX+LEF","No Response",0.152449931,0.781261246393158
+"A251","RA_A","ACPA+ RA","Male","61","Postive","moderate_disease_activity",4.428223364,50,3,3,37.4,1.260246513,"LEF+HCQ","Response",0.145290635,0.903210958322134
+"A255","RA_A","ACPA+ RA","Female","42","Postive","high_disease_activity",7.060996046,80,24,13,29.3,3.168982994,"MTX+LEF","Response",0.062072533,0.72957854609144
+"A261","RA_A","ACPA+ RA","Female","60","Postive","low_disease_activity",3.186088166,50,5,0,1.14,NA,"LEF",NA,0.07152643,0.877481853667911
+"A264","RA_A","ACPA+ RA","Female","50","Postive","moderate_disease_activity",3.837570638,100,4,0,1.7,NA,"MTX+LEF+HCQ",NA,0.155278752,0.677436049800711
+"A265","RA_A","ACPA+ RA","Female","48","Postive","high_disease_activity",5.646599471,80,26,2,1.4,1.293946216,"MTX+LEF","Response",0.155349103,0.933875934713836
+"A266","RA_A","ACPA+ RA","Female","45","Postive","low_disease_activity",2.794717859,30,2,0,4.64,0.081889008,"MTX+LEF+HCQ","No Response",0.143033851,0.761776131862381
+"A272","RA_A","ACPA+ RA","Female","43","Postive","moderate_disease_activity",4.429745753,50,7,5,5.29,0.649147103,"MTX+HCQ","No Response",0.217411357,0.869518633623107
+"A278","RA_A","ACPA- RA","Female","63","Negative","disease_remission",1.70610178,20,0,0,2.65,NA,NA,NA,0.099885568,0.771189774462513
+"A288","RA_A",NA,"Female","30",NA,"high_disease_activity",5.348773363,70,15,6,3.66,2.806181674,"HCQ","Response",0.257666707,0.709759827536119
+"A296","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",3.730616036,80,6,0,1.17,1.009368795,"MTX+HCQ","No Response",0.193855706,0.650879766896756
+"A297","RA_A","ACPA- RA","Female","43","Negative","disease_remission",2.473483933,50,0,0,8.58,-1.668362309,"LEF+5-ASA","No Response",0.094166423,0.696999035207175
+"A298","RA_A","ACPA+ RA","Female","32","Postive","moderate_disease_activity",4.115604923,50,4,2,12.6,-0.029737505,"MTX+LEF","No Response",0.077243507,0.8902785603107
+"A302","RA_A","ACPA+ RA","Male","69","Postive","moderate_disease_activity",4.44128888,35,16,0,7.06,-0.311224947,"MTX+LEF","No Response",0.172507871,0.734400552998858
+"A303","RA_A",NA,"Female","47",NA,"disease_remission",1.868114185,40,0,0,1.63,NA,"LEF",NA,0.149884788,0.68818178586566
+"A304","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",3.989871145,20,8,3,5.63,0.825351572,"MTX+LEF","No Response",0.146218925,0.965923351399231
+"A305","RA_A","ACPA+ RA","Female","48","Postive","moderate_disease_activity",3.436524261,60,3,0,5.37,0.494113135,"MTX+HCQ","No Response",0.119931917,0.832814604523337
+"A306","RA_A","ACPA+ RA","Female","40","Postive","low_disease_activity",2.999964847,50,1,1,3.01,0.129133158,"MTX","No Response",0.165850585,0.721514757257049
+"A313","RA_A","ACPA+ RA","Female","62","Postive","disease_remission",1.911882303,40,0,0,1.97,-1.65341928,"HCQ","No Response",0.098199487,0.858308402841054
+"A318","RA_A","ACPA+ RA","Female","42","Postive","low_disease_activity",2.920917955,50,0,0,32.2,0.404588308,"MTX+LEF","No Response",0.102010195,0.714715169507091
+"A320","RA_A","ACPA+ RA","Female","44","Postive","low_disease_activity",2.686677634,30,0,0,36.7,0.544187482,"MTX+LEF+HCQ","No Response",0.252828923,0.831099428463777
+"A323","RA_A","ACPA+ RA","Female","50","Postive","moderate_disease_activity",4.924947321,72,7,5,9.58,1.113231379,"MTX+LEF","No Response",0.10233814,0.736547281303089
+"A330","RA_A","ACPA+ RA","Female","32","Postive","low_disease_activity",2.791987322,40,1,1,2.32,0.882454337,"MTX+LEF","No Response",0.079650773,0.653276691930922
+"A333","RA_A","ACPA+ RA","Male","45","Postive","moderate_disease_activity",4.707131549,40,7,2,37,-0.386224955,"MTX+LEF","No Response",0.0687728,0.651817814447127
+"A334","RA_A","ACPA+ RA","Female","68","Postive","low_disease_activity",2.67744264,20,2,1,1.76,-0.198467903,"MTX+LEF","No Response",0.447024747,0.615884319266836
+"A339","RA_A","ACPA+ RA","Female","41","Postive","moderate_disease_activity",4.137970271,30,12,2,2.23,1.692658792,"MTX+LEF+HCQ","Response",0.138418084,0.85079916264687
+"A343","RA_A",NA,"Female","55",NA,"high_disease_activity",5.762350528,90,16,2,11.4,-0.7153127,"MTX+LEF","No Response",0.089437916,0.728651816144124
+"A347","RA_A","ACPA+ RA","Female","60","Postive","high_disease_activity",5.530758674,50,12,5,36.5,0.551958145,"HCQ+5-ASA","No Response",0.103035412,0.865236718315278
+"A354","RA_A","ACPA+ RA","Female","63","Postive","moderate_disease_activity",3.51053726,50,2,2,5.3,-1.827887901,"LEF+5-ASA","No Response",0.237834592,0.634676978362038
+"A355","RA_A","ACPA+ RA","Male","69","Postive","moderate_disease_activity",4.201739781,60,6,4,2.69,0.515517885,"MTX+LEF+HCQ","No Response",0.698202653,0.576379978318525
+"A356","RA_A","ACPA+ RA","Female","49","Postive","high_disease_activity",5.464104454,70,8,16,8.76,0.58858876,"MTX+5-ASA","No Response",0.090952438,0.735297838880002
+"A357","RA_A","ACPA+ RA","Male","50","Postive","low_disease_activity",3.188921703,60,2,0,4.25,-1.02014332,"MTX+LEF","No Response",0.051384973,0.940609607154839
+"A363","RA_A",NA,"Female","46",NA,"low_disease_activity",2.705302444,20,1,1,4.68,0.170920033,"MTX+LEF+HCQ","No Response",0.12002598,0.827531996347589
+"A365","RA_A","ACPA+ RA","Male","61","Postive","disease_remission",2.464880693,40,0,0,12.8,NA,"MTX+LEF",NA,0.054121288,0.892642671988782
+"A372","RA_A","ACPA+ RA","Female","44","Postive","low_disease_activity",2.92957263,10,3,0,9.89,-0.004576861,"MTX+HCQ","No Response",0.081550684,0.823044584988184
+"A373","RA_A",NA,"Female",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0.0743407,0.883115386838439
+"A375","RA_A","ACPA+ RA","Female","60","Postive","moderate_disease_activity",3.983776131,80,0,0,197,1.542505605,"MTX+HCQ","Response",0.094621891,0.865325637593465
+"A378","RA_A","ACPA+ RA","Female","59","Postive","low_disease_activity",3.134562609,50,2,0,5.66,-1.346940547,"HCQ","No Response",0.064920094,0.794667165891425
+"A382","RA_A","ACPA+ RA","Female","67","Postive","moderate_disease_activity",4.78765484,50,26,0,1.13,-0.49982984,"MTX+LEF","No Response",0.215965113,0.902480535988522
+"A383","RA_A","ACPA+ RA","Female","45","Postive","disease_remission",2.527878593,10,2,0,4.85,1.052106329,"MTX","No Response",0.11519593,0.743392211090184
+"A384","RA_A","ACPA+ RA","Female","47","Postive","moderate_disease_activity",3.652552515,50,6,0,4.61,0.323115488,"MTX+LEF","No Response",0.124151497,0.765769593214623
+"A386","RA_A","ACPA+ RA","Female","58","Postive","high_disease_activity",6.087992416,90,15,5,18.7,3.652460288,"MTX+LEF","Response",0.715198183,0.821406092323827
+"A387","RA_A","ACPA+ RA","Female","63","Postive","moderate_disease_activity",4.115669169,50,12,0,3.19,NA,NA,NA,0.097418643,0.885480066720481
+"A389","RA_A","ACPA+ RA","Female","45","Postive","moderate_disease_activity",4.014801082,80,5,0,5.66,NA,"MTX+HCQ",NA,0.141868144,0.789161324494814
+"A391","RA_A","ACPA+ RA","Female","75","Postive","moderate_disease_activity",4.298523869,50,2,1,76.6,0.697354537,"MTX+LEF","No Response",0.157742004,0.616994196116159
+"A392","RA_A","ACPA+ RA","Male","66","Postive","moderate_disease_activity",4.093773132,50,3,1,25.8,0.431180594,"LEF+HCQ","No Response",0.102980758,0.779130598323368
+"A394","RA_A","ACPA- RA","Female","51","Negative","low_disease_activity",2.830025525,20,4,0,2.69,NA,"MTX+LEF",NA,1.142364841,0.599715113214739
+"A400","RA_A","ACPA+ RA","Female","27","Postive","low_disease_activity",2.991266587,20,6,0,1.87,-0.117782004,"MTX","No Response",0.281662404,0.810686017941623
+"A401","RA_A","ACPA+ RA","Female","51","Postive","high_disease_activity",6.196775229,70,28,2,11.1,-1.247599489,"LEF+HCQ","No Response",0.210642807,0.766313383140321
+"A402","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",3.774042688,60,1,0,49.8,NA,"MTX+LEF",NA,0.225797024,0.765480120754035
+"A408","RA_A","ACPA+ RA","Male","47","Postive","disease_remission",1.962979768,30,0,0,4.05,-1.71464533,"MTX+HCQ","No Response",0.242879547,0.660436016418714
+"A411","RA_A","ACPA+ RA","Female","45","Postive","disease_remission",1.769532985,0,1,0,1,-2.03226994,"HCQ","No Response",0.132379549,0.797550176323014
+"A412","RA_A","ACPA+ RA","Female","52","Postive","disease_remission",2.314291695,30,0,0,12.4,-2.044453086,"MTX","No Response",0.122453706,0.676900069631096
+"A416","RA_A","ACPA+ RA","Female","59","Postive","moderate_disease_activity",4.295357961,80,4,1,8.63,2.644848169,"MTX+LEF","Response",0.161951975,0.737708865042663
+"A420","RA_A","ACPA+ RA","Female","56","Postive","moderate_disease_activity",4.154851891,60,4,2,9.28,1.838221462,"LEF+HCQ","Response",0.049712525,0.803121583923583
+"A426","RA_A","ACPA+ RA","Female","68","Postive",NA,NA,80,18,13,NA,NA,"MTX+HCQ",NA,0.121300629,0.948685366440242
+"A433","RA_A","ACPA+ RA","Female","19","Postive","disease_remission",2.140112852,30,0,0,7.26,0.727956676,"MTX+HCQ","No Response",0.200468922,0.733427088815607
+"A434","RA_A","ACPA+ RA","Female","50","Postive","moderate_disease_activity",3.747545776,60,5,0,5.9,0.752097926,"MTX+LEF","No Response",0.218039044,0.864375601050626
+"A436","RA_A","ACPA+ RA","Male","74","Postive","low_disease_activity",2.839948492,10,3,0,7.49,-0.498478337,"MTX+LEF","No Response",0.164738175,0.901243308265213
+"A437","RA_A","ACPA+ RA","Female","65","Postive","disease_remission",2.045592564,0,0,0,19.4,-3.737417862,"MTX+HCQ","No Response",0.140256572,0.901657965873612
+"A441","RA_A","ACPA- RA","Female","48","Negative","low_disease_activity",2.713106962,40,0,0,26.5,0.962443971,"MTX+LEF","No Response",0.270493013,0.824893594796496
+"A445","RA_A","ACPA+ RA","Female","47","Postive","moderate_disease_activity",4.762025728,12,2,40,18.6,0.863343186,"MTX+LEF+HCQ","No Response",0.15536014,0.917581893684508
+"A446","RA_A",NA,"Female","45",NA,"disease_remission",2.365222284,2,0,4,8.68,-1.173172407,"MTX+LEF","No Response",0.162688409,0.791645492623513
+"A451","RA_A",NA,"Female","32",NA,"low_disease_activity",2.614602177,10,3,0,3.54,-0.367460238,"HCQ","No Response",0.134016887,0.798057370704709
+"A452","RA_A","ACPA- RA","Male","28","Negative","low_disease_activity",3.180669099,50,2,0,6.57,NA,"MTX+LEF",NA,0.203877768,0.748405622775552
+"A454","RA_A","ACPA+ RA","Female","19","Postive","low_disease_activity",2.963115104,65,1,1,1.02,1.046453173,"MTX+HCQ","No Response",0.186940642,0.707855510887434
+"A458","RA_A","ACPA+ RA","Female","51","Postive","low_disease_activity",2.690134817,40,0,0,24.8,0.421618986,"MTX+HCQ","No Response",0.273710232,0.836627673304803
+"A461","RA_A","ACPA+ RA","Male","56","Postive","moderate_disease_activity",4.78243176,80,14,0,4.4,1.939804028,"MTX","Response",0.242902745,0.94931664066582
+"A462","RA_A","ACPA+ RA","Female","61","Postive","high_disease_activity",6.58794545,80,22,10,14.9,4.783629651,"MTX+HCQ","Response",0.062399057,0.832482969963553
+"A463","RA_A","ACPA+ RA","Female","47","Postive","moderate_disease_activity",3.983372662,50,10,0,3.64,1.940203818,"MTX+LEF","Response",0.106731032,0.669254671846539
+"A464","RA_A","ACPA+ RA","Male","63","Postive","high_disease_activity",8.389088799,100,27,23,138,6.765919956,"MTX+LEF","Response",0.192079541,0.860329739384682
+"A465","RA_A","ACPA+ RA","Female","46","Postive","moderate_disease_activity",3.41711323,50,2,2,3.86,1.733421296,"MTX+LEF","Response",0.094992162,0.866045128943473
+"A467","RA_A","ACPA+ RA","Female","46","Postive","moderate_disease_activity",3.967537421,50,10,1,1.04,1.836235629,"MTX+LEF","Response",0.17121283,0.707812926009194
+"A470","RA_A","ACPA+ RA","Female","46","Postive","moderate_disease_activity",4.499546398,50,6,1,26.1,NA,NA,NA,0.175724484,0.753443352625446
+"A477","RA_A","ACPA- RA","Female","47","Negative","high_disease_activity",5.531174928,50,2,22,134,0.93941185,"MTX+LEF","Response",0.103685951,0.779257844127015
+"A485","RA_A","ACPA+ RA","Female","60","Postive","moderate_disease_activity",4.412868693,50,5,3,15.8,0.784663383,"MTX+HCQ","No Response",0.105855238,0.712599988280028
+"A487","RA_A","ACPA+ RA","Female","54","Postive","disease_remission",1.743538077,20,0,0,3.05,-1.671375781,"MTX+HCQ","No Response",0.062801513,0.721237588595923
+"A488","RA_A","ACPA+ RA","Female","53","Postive",NA,NA,40,1,1,NA,NA,"LEF+HCQ",NA,0.173922647,0.698466658273477
+"A490","RA_A","ACPA+ RA","Female","37","Postive","moderate_disease_activity",3.558129188,30,2,1,20.6,0.280867733,"MTX+LEF","No Response",0.262133954,0.713409872969548
+"A494","RA_A","ACPA+ RA","Male","52","Postive","moderate_disease_activity",3.639277151,20,8,0,8.63,1.748614161,"MTX+HCQ","Response",0.053007466,0.663613261662371
+"A495","RA_A","ACPA+ RA","Female","64","Postive","disease_remission",2.022864851,50,0,0,1.74,-0.793271072,"HCQ","No Response",0.120600223,0.619941037510632
+"A496","RA_A","ACPA- RA","Female","75","Negative","moderate_disease_activity",3.861147548,30,4,2,13.6,0.388943964,"MTX+HCQ","No Response",0.175427791,0.662941006676624
+"A497","RA_A","ACPA+ RA","Female","41","Postive","moderate_disease_activity",3.604412131,40,4,2,3.85,-1.304791255,"MTX+LEF","No Response",0.406124802,0.617227140217708
+"A498","RA_A","ACPA- RA","Female","52","Negative","high_disease_activity",5.205651197,70,8,6,14.9,NA,"HCQ",NA,0.235536221,0.909777301308887
+"A499","RA_A","ACPA+ RA","Female","61","Postive","high_disease_activity",6.431172387,70,23,8,15.7,3.247018005,"MTX+HCQ","Response",0.107677608,0.784231002846762
+"A500","RA_A","ACPA+ RA","Female","50","Postive","moderate_disease_activity",3.714677294,30,7,3,1.78,-0.207811299,"MTX+HCQ","No Response",0.229824454,0.75614609686021
+"A501","RA_A","ACPA+ RA","Female","36","Postive","moderate_disease_activity",3.422927415,0,6,5,2.64,-0.122791259,"MTX+HCQ","No Response",0.079135851,0.757233394577598
+"A503","RA_A","ACPA+ RA","Female","52","Postive","moderate_disease_activity",4.483454557,70,2,6,18.3,NA,"MTX+LEF+HCQ",NA,0.185117046,0.684879538640384
+"A511","RA_A","ACPA+ RA","Female","47","Postive","low_disease_activity",3.177915572,30,3,2,2.32,1.395648596,"HCQ","Response",0.146447342,0.812756360665786
+"A513","RA_A","ACPA+ RA","Female","34","Postive","low_disease_activity",2.845443528,20,2,0,8.58,0.928593337,"MTX","No Response",0.123626082,0.841581639092996
+"A515","RA_A","ACPA+ RA","Female","56","Postive","moderate_disease_activity",3.21096741,20,3,1,6.41,-1.281280678,"MTX+LEF","No Response",0.131383169,0.959372421890295
+"A524","RA_A","ACPA+ RA","Female","46","Postive","moderate_disease_activity",3.727152843,40,5,1,5.52,NA,"MTX+LEF",NA,0.207081057,0.972599729660554
+"A529","RA_A","ACPA+ RA","Female","43","Postive","high_disease_activity",5.598339935,75,24,2,2.48,1.824525443,"MTX+HCQ","Response",0.07783728,0.774288092338739
+"A530","RA_A","ACPA+ RA","Male","74","Postive","moderate_disease_activity",4.032775283,40,4,1,21,-2.028165397,"LEF+HCQ","No Response",0.126969973,0.884781703107757
+"A531","RA_A","ACPA+ RA","Female","34","Postive","disease_remission",2.517325675,30,2,0,1.61,-0.045500424,"LEF+HCQ","No Response",0.113227306,0.883538867196479
+"A532","RA_A","ACPA+ RA","Female","45","Postive","low_disease_activity",2.644900116,30,2,0,2.72,0.498659929,"LEF+HCQ","No Response",0.106623795,0.98142218221897
+"A534","RA_A","ACPA+ RA","Male","41","Postive","moderate_disease_activity",3.454194888,60,4,0,3.41,NA,NA,NA,2.720787645,0.814963278988574
+"A543","RA_A","ACPA+ RA","Female","68","Postive","moderate_disease_activity",4.274100707,70,11,0,2.76,1.596658068,"MTX","Response",0.110834904,0.68897636584573
+"A548","RA_A","ACPA+ RA","Female","51","Postive","moderate_disease_activity",3.933824622,75,5,0,5.46,-0.532806486,"HCQ","No Response",0.140877844,0.801266949749684
+"A554","RA_A","ACPA+ RA","Female","41","Postive","disease_remission",2.552438604,10,3,0,2.82,1.13428229,"MTX+LEF","No Response",0.242453774,0.847214574760659
+"A559","RA_A","ACPA+ RA","Male","65","Postive","low_disease_activity",3.080374938,20,1,1,15.1,1.046982055,"MTX+HCQ","No Response",0.607642882,0.8436114956846
+"A560","RA_A","ACPA+ RA","Female","53","Postive","moderate_disease_activity",3.336966689,50,2,2,2.89,NA,"HCQ",NA,0.089365834,0.860150783935302
+"A563","RA_A","ACPA+ RA","Female","58","Postive","disease_remission",1.437964625,2,0,0,2.49,NA,"MTX+LEF",NA,0.118010264,0.700587377748664
+"A565","RA_A","ACPA+ RA","Female","34","Postive","high_disease_activity",7.533565746,90,27,20,23.5,0.65977858,"MTX+HCQ+5-ASA","No Response",0.495525121,0.862232175659118
+"A570","RA_A","ACPA+ RA","Female","57","Postive",NA,NA,70,12,11,NA,NA,"MTX+HCQ",NA,0.20231735,0.749394270687397
+"A571","RA_A","ACPA- RA","Female","48","Negative","moderate_disease_activity",4.676931742,60,12,4,1.85,0.254090678,"MTX+HCQ","No Response",0.100502231,0.757839016494283
+"A573","RA_A","ACPA+ RA","Female","51","Postive","moderate_disease_activity",4.60613922,80,11,0,5.41,1.723278277,"LEF","Response",0.168077555,0.873072210998027
+"A577","RA_A","ACPA- RA","Female","52","Negative","moderate_disease_activity",3.393470151,40,6,0,3.03,0.594063718,"MTX+HCQ","No Response",0.344742517,0.724674595935092
+"A578","RA_A","ACPA+ RA","Female","46","Postive","high_disease_activity",6.797158083,90,16,16,28.4,3.707429123,"LEF+HCQ","Response",0.084140367,0.644525132430657
+"A584","RA_A","ACPA+ RA","Male","58","Postive","high_disease_activity",6.330295716,80,28,0,34.7,3.02181597,"MTX+HCQ","Response",0.13911954,0.709682028318343
+"A587","RA_A","ACPA+ RA","Female","69","Postive","moderate_disease_activity",3.519008239,50,2,2,5.45,-0.241419018,"MTX+HCQ","No Response",0.276080184,0.918357276606718
+"A588","RA_A",NA,"Female","61",NA,"moderate_disease_activity",4.061232037,60,5,2,4.49,0.294308859,"MTX+LEF","No Response",0.134286838,0.848482436090147
+"A593","RA_A","ACPA- RA","Female","74","Negative","moderate_disease_activity",3.302628764,60,2,0,6.2,0.032358267,"LEF","No Response",0.097857333,0.906018202628411
+"A596","RA_A","ACPA+ RA","Male","45","Postive","moderate_disease_activity",3.31522395,6,8,1,2.1,-0.72559925,"MTX","No Response",0.64314106,0.757308032089731
+"A598","RA_A","ACPA+ RA","Female","52","Postive","disease_remission",2.420600384,70,0,0,2.8,0.55529794,"MTX+LEF","No Response",0.667394338,0.806732009220374
+"A599","RA_A","ACPA+ RA","Female","47","Postive","disease_remission",2.549864663,50,1,0,1.5,-1.849639801,"MTX+HCQ","No Response",0.189583699,0.82222675835903
+"A600","RA_A","ACPA+ RA","Female","16","Postive","disease_remission",2.49215614,50,0,0,9.09,NA,NA,NA,0.170970611,0.933925417163231
+"A601","RA_A","ACPA+ RA","Female","56","Postive","disease_remission",1.697140515,5,0,0,5.38,-0.997730305,"MTX","No Response",0.098362892,0.722643712645851
+"A606","RA_A","ACPA+ RA","Female","50","Postive","moderate_disease_activity",3.682555694,40,1,1,38.4,NA,"MTX+LEF",NA,0.090700865,0.714704628316908
+"A608","RA_A",NA,"Female","48",NA,NA,NA,50,NA,0,NA,NA,"MTX+LEF",NA,0.091700625,0.751963178491522
+"A609","RA_A","ACPA+ RA","Female","43","Postive",NA,NA,60,0,0,NA,NA,"MTX+LEF",NA,0.265541705,0.831914621417962
+"A612","RA_A","ACPA+ RA","Female","45","Postive","low_disease_activity",2.676392503,20,2,0,4.99,-1.085776654,"LEF+HCQ","No Response",0.1335041,0.856640984058809
+"A613","RA_A","ACPA+ RA","Female","58","Postive","low_disease_activity",3.160120043,50,2,0,6.15,0.698866586,"MTX+LEF","No Response",0.089399831,0.696864078845204
+"A617","RA_A","ACPA+ RA","Male","43","Postive","moderate_disease_activity",3.679806124,50,4,4,1.57,-0.761036026,"MTX+LEF","No Response",0.108839865,0.898705005232535
+"A618","RA_A","ACPA+ RA","Female","53","Postive","high_disease_activity",6.069221105,0,28,4,80.9,2.353680089,"MTX+LEF","Response",0.467050766,0.699804670831713
+"A624","RA_A","ACPA+ RA","Female","44","Postive","disease_remission",2.211720473,10,1,0,3.63,-0.21700523,"MTX","No Response",0.245134628,0.853914853888718
+"A626","RA_A","ACPA+ RA","Female","64","Postive","moderate_disease_activity",4.2429049,60,6,0,18.6,-0.369037742,"HCQ","No Response",0.20468114,0.824697425445144
+"A634","RA_A","ACPA- RA","Female","61","Negative",NA,NA,50,4,0,NA,NA,"MTX+LEF",NA,0.165896735,0.907743397399672
+"A635","RA_A","ACPA+ RA","Female","58","Postive","disease_remission",2.592259139,15,1,0,9.97,NA,"MTX+HCQ",NA,0.069015433,0.676561739112826
+"A637","RA_A","ACPA+ RA","Male","66","Postive","disease_remission",2.305632909,10,1,0,5.01,NA,"LEF+HCQ",NA,0.209470208,0.792680590025223
+"A639","RA_A","ACPA+ RA","Female","48","Postive","disease_remission",1.753225279,10,0,1,1.82,-0.310578644,"LEF","No Response",0.04893935,0.813693191463112
+"A641","RA_A","ACPA+ RA","Female","54","Postive","low_disease_activity",3.161147548,60,0,2,13.6,0.152269489,"LEF+HCQ","No Response",0.133878914,0.907579847699217
+"A642","RA_A","ACPA+ RA","Female","48","Postive","moderate_disease_activity",4.889734842,50,5,2,79.9,1.442765019,"MTX+LEF","Response",0.151904371,0.690896330634955
+"A643","RA_A","ACPA+ RA","Male","41","Postive","moderate_disease_activity",4.36858397,40,1,6,84.8,-0.537361632,"MTX+LEF","No Response",0.087634525,0.806300993418937
+"A650","RA_A","ACPA+ RA","Female","54","Postive","low_disease_activity",2.823855416,30,3,0,2.73,-1.737124777,"MTX+LEF","No Response",0.080748686,0.828282926771888
+"A654","RA_A",NA,"Female","50",NA,"moderate_disease_activity",4.513773132,100,3,0,25.8,NA,"LEF",NA,0.218945024,0.759212871251682
+"A657","RA_A","ACPA+ RA","Female","52","Postive","disease_remission",2.136790825,50,0,0,2.76,-0.676850021,"MTX+LEF","No Response",0.258832975,0.745577200069462
+"A658","RA_A","ACPA+ RA","Female","63","Postive","moderate_disease_activity",3.200534498,10,3,1,9.62,NA,"MTX+LEF",NA,0.402700674,0.734702794230898
+"A659","RA_A","ACPA+ RA","Female","61","Postive","low_disease_activity",2.738913254,10,1,1,8.2,0.947192782,"MTX+LEF","No Response",0.135481179,0.792197187572995
+"A660","RA_A",NA,"Female","76",NA,"moderate_disease_activity",3.629361426,50,6,0,4.26,0.797807602,"MTX+LEF","No Response",0.640069121,0.776469567465044
+"A662","RA_A","ACPA+ RA","Female","50","Postive","disease_remission",2.24972896,30,0,0,10.2,-3.529057372,"MTX+LEF","No Response",1.517720673,0.874581566867014
+"A664","RA_A","ACPA+ RA","Male","54","Postive","high_disease_activity",5.638776741,70,12,6,18.7,2.809782308,"LEF+HCQ","Response",0.272770925,0.741757468711999
+"A667","RA_A",NA,"Female","48",NA,NA,NA,80,10,4,NA,NA,"MTX+LEF",NA,0.076525353,0.657487686848631
+"A674","RA_A","ACPA+ RA","Female","60","Postive","moderate_disease_activity",3.829262312,60,4,0,11.5,-1.136743678,"MTX+LEF","No Response",0.125704534,0.851095810761471
+"A677","RA_A",NA,"Male","60",NA,"disease_remission",1.783859898,20,0,0,3.53,-0.371116819,"MTX+LEF","No Response",0.177618443,0.719431420417901
+"A683","RA_A","ACPA+ RA","Female","48","Postive","moderate_disease_activity",3.417231476,20,5,1,5,1.425491174,"MTX+5-ASA","Response",0.066860547,0.751342200468768
+"A684","RA_A","ACPA+ RA","Female","37","Postive","moderate_disease_activity",3.615353004,50,4,0,9.18,1.174585748,"MTX+HCQ","Response",0.194127738,0.681710787472668
+"A687","RA_A","ACPA+ RA","Female","28","Postive","disease_remission",2.376703159,20,1,1,1.28,-1.425227844,"MTX+HCQ","No Response",0.263140407,0.627518695752651
+"A693","RA_A","ACPA+ RA","Female","47","Postive","moderate_disease_activity",4.197816036,100,6,0,2.65,2.231315797,"MTX+HCQ","Response",0.160794644,0.897432817719184
+"A699","RA_A","ACPA+ RA","Male","52","Postive","low_disease_activity",3.014845498,30,1,0,18.8,-0.354883463,"MTX","No Response",0.435595318,0.875696288833769
+"A711","RA_A","ACPA+ RA","Female","25","Postive","low_disease_activity",3.052599516,70,0,2,6.32,1.563066531,"MTX+HCQ","Response",0.044048838,0.785433259200659
+"A715","RA_A","ACPA+ RA","Female","66","Postive",NA,NA,90,21,14,NA,NA,"MTX+LEF",NA,0.170284233,0.784645976780516
+"A728","RA_A","ACPA+ RA","Female","52","Postive","disease_remission",2.59066299,10,4,0,1.8,0.574307196,"MTX+HCQ","No Response",0.04402303,0.703830340427619
+"A731","RA_A","ACPA+ RA","Female","46","Postive","high_disease_activity",6.13761316,50,20,20,6.41,3.279709398,"LEF","Response",0.115762303,0.725769300073792
+"A744","RA_A","ACPA+ RA","Female","59","Postive","high_disease_activity",7.491422113,90,28,6,89.6,1.493072458,"MTX+LEF","Response",0.171162952,0.715818451582825
+"A746","RA_A","ACPA+ RA","Female","49","Postive","low_disease_activity",3.018463618,50,0,1,19,0.978420842,"LEF","No Response",0.312055008,0.799865175330797
+"A752","RA_A","ACPA+ RA","Male","50","Postive","moderate_disease_activity",3.53247675,40,3,0,17.1,-3.163221502,"MTX+LEF","No Response",0.817426834,0.684424748544525
+"A801","RA_A","ACPA- RA","Female","66","Negative","disease_remission",1.915167107,0,0,0,13.2,NA,NA,NA,0.255108172,0.477354890439803
+"A802","RA_A","ACPA- RA","Female","44","Negative","disease_remission",1.87623483,40,0,0,1.69,NA,NA,NA,0.039958697,0.731864152260926
+"A803","RA_A","ACPA- RA","Female","47","Negative","disease_remission",1.289864663,0,0,0,1.5,NA,NA,NA,0,0.916069065206503
+"A804","RA_A","ACPA- RA","Male","45","Negative","disease_remission",2.207914675,40,0,2,1.25,NA,NA,NA,0.058999963,0.683500223808576
+"A805","RA_A","ACPA- RA","Female","35","Negative","disease_remission",1.279640853,0,0,0,1.43,NA,NA,NA,0,0.366726733657071
+"A806","RA_A","ACPA- RA","Female","64","Negative","disease_remission",1.242204556,0,0,0,1.19,NA,NA,NA,0.025768559,0.460071167180379
+"A807","RA_A","ACPA- RA","Female","67","Negative","disease_remission",1.288421776,0,0,0,1.49,NA,NA,NA,0.046710884,0.708494690079154
+"A808","RA_A","ACPA- RA","Male","70","Negative","disease_remission",1.343295865,0,0,0,1.9,NA,NA,NA,0.028575919,0.695365894597003
+"A809","RA_A","ACPA- RA","Male","56","Negative","disease_remission",1.245477306,0,0,0,1.21,NA,NA,NA,0,0.423637052847175
+"A810","RA_A","ACPA- RA","Female","55","Negative","disease_remission",2.37562065,50,0,2,1.43,NA,NA,NA,0.046278864,0.251474145729687
+"A811","RA_A","ACPA- RA","Male","57","Negative","low_disease_activity",3.170238249,40,2,4,1.29,NA,NA,NA,0,0.716842717444003
+"A812","RA_A","ACPA- RA","Female","58","Negative","disease_remission",1.329374974,0,0,0,1.79,NA,NA,NA,0.128445756,0.624237522099134
+"A813","RA_A","ACPA- RA","Female","59","Negative","disease_remission",2.434275582,50,0,2,1.86,NA,NA,NA,0.018785184,0.316033617164029
+"A814","RA_A","ACPA- RA","Male","41","Negative","disease_remission",1.318901509,0,0,0,1.71,NA,NA,NA,0.034555468,0.602636462771795
+"A815","RA_A","ACPA- RA","Female","52","Negative","disease_remission",1.430999815,0,0,0,2.7,NA,NA,NA,0.061158401,0.759909083952701
+"A816","RA_A","ACPA- RA","Female","50","Negative","disease_remission",1.401616425,0,0,0,2.41,NA,NA,NA,0.067289909,0.538352581822334
+"A817","RA_A","ACPA- RA","Female","48","Negative","moderate_disease_activity",3.355225725,60,4,0,2.35,NA,NA,NA,0,0.533872649471564
+"A818","RA_A","ACPA- RA","Female","66","Negative","high_disease_activity",5.813298326,70,18,7,7.18,NA,NA,NA,0.042173349,0.769750222295647
+"A819","RA_A","ACPA- RA","Female","55","Negative","moderate_disease_activity",4.067296029,50,8,3,1.56,NA,NA,NA,0.066897982,0.288179903247269
+"A820","RA_A","ACPA- RA","Female","59","Negative","disease_remission",1.361450973,0,0,0,2.05,NA,NA,NA,0,0.0383256764804863
+"A821","RA_A","ACPA- RA","Female","55","Negative","disease_remission",1.683691934,10,0,0,4.06,NA,NA,NA,0,0.647721967087946
+"A822","RA_A","ACPA- RA","Male","33","Negative","disease_remission",2.309374974,10,1,1,1.79,NA,NA,NA,0,0.845849996802907
+"A823","RA_A","ACPA- RA","Male","77","Negative","high_disease_activity",5.325779249,70,12,8,5.15,NA,NA,NA,0.028950737,0.915770841681494
+"A825","RA_A","ACPA- RA","Female","39","Negative","moderate_disease_activity",3.842648089,70,4,1,3.04,NA,NA,NA,0.221405223,0.853607350300732
+"A826","RA_A","ACPA- RA","Female","55","Negative","low_disease_activity",3.040850841,20,1,0,30.4,NA,NA,NA,0.038035275,0.768791758659277
+"A827","RA_A","ACPA- RA","Female","57","Negative","low_disease_activity",2.740864479,10,1,1,8.25,NA,NA,NA,0,0.583335149147158
+"A828","RA_A","ACPA- RA","Female","45","Negative","disease_remission",1.348227449,0,0,0,1.94,NA,NA,NA,0,0.644670665117654
+"A829","RA_A","ACPA- RA","Female","65","Negative","disease_remission",1.549339109,0,0,0,4.14,NA,NA,NA,0,0.503045359579624
+"A830","RA_A","ACPA- RA","Female","20","Negative","low_disease_activity",3.017134943,10,2,3,4.92,NA,NA,NA,0,0.468058025394552
+"A831","RA_A","ACPA- RA","Female","47","Negative","moderate_disease_activity",3.281548579,40,4,1,1.73,NA,NA,NA,0,0.566691044105356
+"A832","RA_A","ACPA- RA","Female","34","Negative","low_disease_activity",3.185245589,40,6,0,1.26,NA,NA,NA,0.048682538,0.66642860038739
+"A833","RA_A","ACPA- RA","Female","55","Negative","low_disease_activity",2.673079102,20,3,0,2.62,NA,NA,NA,0,0.525869679875354
+"A834","RA_A","ACPA- RA","Female","59","Negative","disease_remission",2.00398412,10,1,0,1.6,NA,NA,NA,0.113268944,0.703333842162561
+"A835","RA_A","ACPA- RA","Male","67","Negative","moderate_disease_activity",4.544873403,50,7,0,48.3,NA,NA,NA,0,0.861105762565952
+"A836","RA_A","ACPA- RA","Female","53","Negative","disease_remission",1.828638037,20,0,0,4.13,NA,NA,NA,0.211252035,0.864011701566343
+"A837","RA_A","ACPA- RA","Female","69","Negative","disease_remission",1.612162355,0,0,0,5.12,NA,NA,NA,0,0.790317870351609
+"A838","RA_A","ACPA- RA","Female","36","Negative","disease_remission",1.985451983,10,0,0,10.7,NA,NA,NA,0.059443383,0.607908532685136
+"A839","RA_A","ACPA- RA","Female","36","Negative","moderate_disease_activity",4.027493784,40,6,4,3.95,NA,NA,NA,0,0.816861558008683
+"A840","RA_A","ACPA- RA","Female","53","Negative","moderate_disease_activity",3.727266895,40,1,0,96.1,NA,NA,NA,0.062071886,0.280240525971131
+"A841","RA_A","ACPA- RA","Female","47","Negative","moderate_disease_activity",4.745785407,60,14,3,1.76,NA,NA,NA,0.084403333,0.844700471295369
+"A842","RA_A","ACPA- RA","Male","40","Negative","disease_remission",1.448114185,10,0,0,1.63,NA,NA,NA,0,0.370414755540203
+"A843","RA_A","ACPA- RA","Female","41","Negative","moderate_disease_activity",4.843071485,70,9,3,6.77,NA,NA,NA,0.048175468,0.323312483278684
+"A844","RA_A","ACPA- RA","Female","64","Negative","moderate_disease_activity",3.460751342,40,7,0,2.58,NA,NA,NA,0.048440032,0.693629363936194
+"A845","RA_A","ACPA- RA","Female","23","Negative","high_disease_activity",7.553629671,80,24,16,86.6,NA,NA,NA,0.046149033,0.655839668759583
+"A846","RA_A","ACPA- RA","Male","50","Negative","high_disease_activity",6.54932164,60,14,10,135,NA,NA,NA,0.041629665,0.842213234382942
+"A847","RA_A","ACPA- RA","Female","56","Negative","disease_remission",2.34678919,10,0,6,3.75,NA,NA,NA,0.049401877,0.624123435835597
+"A848","RA_A","ACPA- RA","Female","50","Negative","moderate_disease_activity",4.285493334,50,6,4,5.87,NA,NA,NA,0.035792236,0.208945752119236
+"A849","RA_A","ACPA- RA","Female","34","Negative","high_disease_activity",6.119088471,70,12,6,73.8,NA,NA,NA,0,0.577794260652765
+"A850","RA_A","ACPA- RA","Female","42","Negative","moderate_disease_activity",4.117976464,40,7,4,3.69,NA,NA,NA,0,0.450915782209987
+"A851","RA_A","ACPA- RA","Female","55","Negative","moderate_disease_activity",4.488415178,40,4,1,77,NA,NA,NA,0,0.636369623686017
+"A852","RA_A","ACPA- RA","Male","59","Negative","low_disease_activity",2.644585938,10,2,0,7.09,NA,NA,NA,0.032136882,0.858952956466019
+"A853","RA_A","ACPA- RA","Female","48","Negative","disease_remission",1.814149491,30,0,0,2.34,NA,NA,NA,0,0.535103320493776
+"A854","RA_A","ACPA- RA","Female","58","Negative","high_disease_activity",6.104576785,50,16,2,151,NA,NA,NA,0.075708386,0.983583726223181
+"B001","RA_B","ACPA+ RA","Female","39","","disease_remission",2.00536608,50,0,0,1.61,-1.257673458,"MTX+HCQ","No Response",0.170926807,0.759195137032083
+"B008","RA_B","ACPA+ RA","Female","34","","moderate_disease_activity",3.391301791,70,4,0,1.51,1.104559037,"MTX+LEF+HCQ","Response",0.082162169,0.775795126579933
+"B013","RA_B","ACPA+ RA","Female","52","","low_disease_activity",3.073591071,30,4,0,3.92,1.273034115,"LEF","Response",0.163582086,0.684351414990663
+"B014","RA_B","ACPA+ RA","Female","44","","low_disease_activity",2.70536608,40,1,1,1.61,-1.485611553,"MTX+HCQ","No Response",0.1122165,0.7193330930754
+"B016","RA_B","ACPA+ RA","Female","53","","low_disease_activity",3.175010291,60,1,1,3.42,1.312413455,"LEF+HCQ","Response",0.063692509,0.636052501848634
+"B024","RA_B","ACPA- RA","Female","70","","low_disease_activity",2.774561373,50,0,2,6.36,-2.742544276,"HCQ","No Response",0.094407199,0.793123180174325
+"B025","RA_B","ACPA+ RA","Female","60","","moderate_disease_activity",3.242361835,40,1,1,10.6,-0.286366568,"MTX+5-ASA","No Response",0.188782596,0.486254413943227
+"B026","RA_B","ACPA+ RA","Female","57","","moderate_disease_activity",4.314318303,70,6,0,15.2,-0.098903663,"MTX+LEF","No Response",0.127312051,0.871522352414753
+"B030","RA_B","ACPA+ RA","Female","51","","moderate_disease_activity",4.80476797,50,7,6,14.1,-0.145171858,"LEF","No Response",0.131125946,0.889873281493856
+"B031","RA_B","ACPA+ RA","Female","52","","low_disease_activity",2.91558732,20,4,0,3.68,0.370442298,"MTX+LEF","No Response",0.164945722,0.809681646022711
+"B034","RA_B","ACPA+ RA","Female","46","","disease_remission",1.695085622,20,0,0,2.54,-1.920284621,"LEF","No Response",0.131728161,0.799103930432865
+"B037","RA_B","ACPA+ RA","Female","51","","high_disease_activity",5.148423916,60,14,8,2.6,0.961991094,"MTX+HCQ","No Response",0.175109475,0.684408891202329
+"B038","RA_B","ACPA+ RA","Female","53","","moderate_disease_activity",3.358657957,50,3,0,6.57,-1.315931886,"LEF+HCQ","No Response",0.209737782,0.849645693880934
+"B042","RA_B","ACPA+ RA","Female","54","","moderate_disease_activity",4.408900024,40,8,4,6.92,-0.460712569,"MTX+HCQ","No Response",0.108780616,0.80698001244943
+"B044","RA_B","ACPA+ RA","Female","53","","high_disease_activity",6.021706079,60,28,4,5.96,0.936654713,"MTX+HCQ","Response",0.153091806,0.870927119515958
+"B047","RA_B","ACPA+ RA","Female","44","","disease_remission",1.355500424,0,0,0,2,NA,NA,NA,0.103481418,0.687221085970619
+"B049","RA_B",NA,"Female","29","","moderate_disease_activity",3.971990765,50,2,2,21.7,0.962489982,"MTX+HCQ+5-ASA","No Response",0.077427699,0.678878368424805
+"B051","RA_B","ACPA+ RA","Female","49","","disease_remission",2.470914683,70,0,0,3.37,-1.025534008,"MTX+LEF","No Response",0.081817494,0.616923637686633
+"B052","RA_B","ACPA+ RA","Female","44","","low_disease_activity",2.670038817,40,1,0,4.15,-0.677617782,"HCQ","No Response",0.166494883,0.789631829238598
+"B058","RA_B","ACPA+ RA","Female","44","",NA,NA,20,0,0,NA,NA,"MTX+HCQ",NA,0.172717831,0.767390403691233
+"B062","RA_B","ACPA+ RA","Female","43","","moderate_disease_activity",3.669864663,70,4,1,1.5,NA,"MTX+HCQ",NA,0.133039344,0.768851255738988
+"B063","RA_B","ACPA+ RA","Female","50","","disease_remission",2.436355794,10,1,1,2.97,0.26885749,"MTX","No Response",0.122420301,0.730632997207467
+"B064","RA_B","ACPA+ RA","Female","33","","low_disease_activity",2.643950948,80,0,0,3.79,NA,"HCQ",NA,0.134369719,0.661372575069702
+"B070","RA_B","ACPA+ RA","Male","63","","moderate_disease_activity",4.837065099,40,15,8,1.69,NA,NA,NA,0.074262004,0.818797117891614
+"B071","RA_B","ACPA+ RA","Female","53","","disease_remission",1.737570638,30,0,0,1.7,-0.645230427,"LEF+HCQ","No Response",0.143238805,0.758372772689148
+"B075","RA_B","ACPA+ RA","Male","65","","moderate_disease_activity",4.076100808,40,4,4,10.4,0.617145528,"MTX","No Response",0.129001709,0.824223324220213
+"B077","RA_B","ACPA- RA","Male","77","","high_disease_activity",5.210473254,50,28,0,4.11,1.527922991,"MTX+LEF","Response",0.127132468,0.819244208763511
+"B090","RA_B","ACPA+ RA","Female","50","","moderate_disease_activity",3.387068888,30,5,1,2.74,NA,"HCQ",NA,0.1427262,0.618907440956655
+"B101","RA_B",NA,"Female","65","","disease_remission",1.892995313,10,0,0,8.05,-3.593146259,"HCQ","No Response",0.2103315,0.949292060170442
+"B103","RA_B","ACPA+ RA","Female","45","","disease_remission",1.927488296,15,0,0,7.2,0.064056966,"MTX+LEF+HCQ","No Response",0.09010485,0.715730553885036
+"B112","RA_B",NA,"Female","49","",NA,NA,50,3,1,NA,NA,"MTX+LEF",NA,0.1283026,0.729957261390631
+"B130","RA_B","ACPA+ RA","Female","42","","moderate_disease_activity",4.970859983,80,15,0,6.43,1.18585748,"MTX+HCQ+5-ASA","No Response",0.1644233,0.87289849481584
+"B131","RA_B",NA,"Female","53","","high_disease_activity",5.521942112,80,28,0,2.78,1.249127422,"MTX+LEF","Response",0.1111468,0.860650771267818
+"B133","RA_B","ACPA+ RA","Male","61","","low_disease_activity",3.16797685,10,3,3,4.49,0.323465076,"LEF+HCQ","No Response",0.09934806,0.776997498479501
+"B135","RA_B",NA,"Female","16","","disease_remission",2.082093569,30,0,1,2.23,0.441824864,"MTX+LEF","No Response",0.3378591,0.904064499523313
+"B146","RA_B","ACPA+ RA","Female","50","",NA,NA,40,4,0,NA,NA,"MTX+HCQ",NA,0.163419208,0.769640820047325
+"B154","RA_B","ACPA+ RA","Female","48","","moderate_disease_activity",4.352653254,80,11,0,2.17,-0.401093458,"MTX+LEF","No Response",0.03342708,0.770229515055212
+"B166","RA_B","ACPA+ RA","Male","53","","high_disease_activity",6.066742174,80,13,7,29.2,-1.882417994,"MTX+LEF","No Response",0.116040794,0.622093613446051
+"B167","RA_B","ACPA+ RA","Male","69","","moderate_disease_activity",4.752513828,30,24,0,4.74,-0.692334716,"MTX+LEF","No Response",0.1593404,0.634646616559306
+"B168","RA_B","ACPA+ RA","Female","42","","disease_remission",2.516329647,20,2,0,2.84,-0.07825332,"MTX+LEF","No Response",0.02943417,0.640687843449495
+"B169","RA_B","ACPA+ RA","Female","32","","moderate_disease_activity",4.145342428,50,7,4,2.43,0.931286104,"MTX+LEF+HCQ","No Response",0.1821938,0.766826310948443
+"B172","RA_B","ACPA+ RA","Female","51","","moderate_disease_activity",3.978818255,20,8,4,4.22,1.949194077,"MTX+HCQ","Response",0.08883775,0.902611463112096
+"B177","RA_B","ACPA- RA","Female","63","","low_disease_activity",2.776017681,50,2,0,1.46,1.237582425,"MTX","Response",0.1148821,0.831886916593037
+"B181","RA_B","ACPA+ RA","Female","43","","moderate_disease_activity",3.78059865,50,4,5,1.83,1.177490512,"MTX+HCQ","No Response",0.1058818,0.761204475448246
+"B182","RA_B","ACPA+ RA","Female","48","","low_disease_activity",2.942411127,30,2,3,1.21,0.629693216,"MTX+HCQ","No Response",0.1164752,0.593029864348011
+"B187","RA_B",NA,"Female","47","",NA,NA,70,0,0,NA,NA,"MTX+LEF",NA,0.1098366,0.642544142599816
+"B190","RA_B","ACPA+ RA","Female","53","","low_disease_activity",3.164519574,10,8,0,2.8,-0.307992428,"MTX+LEF","No Response",0.1580968,0.836560939470685
+"B195","RA_B","ACPA+ RA","Female","68","","low_disease_activity",2.875910543,40,2,0,3.79,-0.74814083,"MTX+LEF","No Response",0.1071017,0.752668149393189
+"B196","RA_B","ACPA+ RA","Male","45","","moderate_disease_activity",5.093356504,40,9,4,39.6,1.925669757,"MTX+LEF","Response",0.08042325,0.835783705202002
+"B200","RA_B","ACPA+ RA","Female","55","","moderate_disease_activity",5.037729808,80,12,0,15.9,3.115438114,"MTX+LEF","Response",0.05942267,0.846357337121156
+"B201","RA_B",NA,"Male","71","","low_disease_activity",2.989653028,20,2,0,13.3,0.798093025,"MTX+LEF","No Response",0.1799375,0.764596097328886
+"B203","RA_B","ACPA+ RA","Female","41","","disease_remission",2.44531148,30,1,0,3.07,-0.125561975,"MTX+LEF+HCQ","No Response",0.1175069,0.794515404722095
+"B205","RA_B","ACPA+ RA","Female","53","","low_disease_activity",2.721247241,10,6,0,1,1.231714256,"MTX+HCQ","Response",0.167823466,0.871858495545497
+"B233","RA_B","ACPA+ RA","Male","69","","moderate_disease_activity",3.686221896,50,6,0,5.16,NA,"LEF+HCQ",NA,0.02309236,0.639928197074576
+"B235","RA_B","ACPA+ RA","Male","50","","moderate_disease_activity",4.209065023,40,8,2,6.17,0.520335116,"MTX+LEF","No Response",0.1059854,0.735350830172116
+"B241","RA_B","ACPA+ RA","Female","44","","low_disease_activity",2.934149491,10,4,1,2.34,-0.591102749,"HCQ","No Response",0.1413978,0.761064380484901
+"B245","RA_B","ACPA- RA","Female","51","",NA,NA,30,10,0,NA,NA,"LEF",NA,0.07492502,0.657870740242866
+"B249","RA_B","ACPA+ RA","Female","62","","moderate_disease_activity",3.565301583,30,6,2,2.19,0.567817226,"MTX+HCQ","No Response",0.19057745,0.689074780462169
+"B251","RA_B","ACPA+ RA","Female","49","","moderate_disease_activity",4.875515694,70,3,1,107,0.592286641,"MTX+5-ASA","No Response",0.1247885,0.908499669767251
+"B253","RA_B","ACPA+ RA","Female","51","","high_disease_activity",7.444374718,70,28,18,41.9,3.240275339,"LEF+HCQ","Response",0.07512135,0.572813892243994
+"B255","RA_B","ACPA+ RA","Female","75","","moderate_disease_activity",3.601169332,60,2,0,15.5,-2.558572471,"MTX+LEF","No Response",0.08504986,0.653392786605506
+"B257","RA_B","ACPA+ RA","Female","52","","moderate_disease_activity",4.35874478,40,8,4,5.89,0.617514956,"MTX","No Response",0.116405,0.742809738266862
+"B258","RA_B","ACPA+ RA","Female","59","","disease_remission",1.650509792,30,0,0,1.12,-0.77211794,"MTX+LEF","No Response",0.09161342,0.798531805144854
+"B264","RA_B","ACPA+ RA","Female","43","",NA,NA,50,1,0,NA,NA,"MTX+LEF",NA,0.3510752,0.744165178883003
+"B266","RA_B","ACPA+ RA","Female","45","",NA,NA,80,10,4,NA,NA,"HCQ",NA,0.1239835,0.768380315132867
+"B275","RA_B","ACPA+ RA","Female","32","","disease_remission",1.909532985,50,0,0,1,-0.14,"MTX+LEF","No Response",0.3555483,0.83244008598923
+"B279","RA_B","ACPA+ RA","Female","45","","moderate_disease_activity",3.801802925,50,5,2,2.94,-1.934573671,"MTX+HCQ","No Response",0.05410189,0.71330252965903
+"B280","RA_B","ACPA+ RA","Female","47","","disease_remission",2.043168844,30,0,0,5.31,0.387821135,"MTX+HCQ","No Response",0.04320914,0.752774441274595
+"B282","RA_B","ACPA+ RA","Female","50","","low_disease_activity",2.995447849,30,4,0,2.96,0.934780876,"MTX+LEF","No Response",0.1775303,0.822356724225636
+"B284","RA_B","ACPA+ RA","Female","65","","high_disease_activity",5.783010427,20,19,16,14.3,0.871281045,"HCQ","Response",0.1277644,0.838145763436174
+"B285","RA_B",NA,"Female","41","","moderate_disease_activity",4.781562077,40,17,0,13.1,0.125700108,"MTX+HCQ","No Response",0.0119713,0.636854330796869
+"B286","RA_B","ACPA- RA","Female","48","","disease_remission",1.75066299,30,0,0,1.8,NA,"MTX+LEF",NA,0.1894343,0.644401653288837
+"B287","RA_B",NA,"Female","32","","low_disease_activity",2.982062415,20,3,0,7.54,NA,"HCQ",NA,0.09390553,0.837259045325659
+"B288","RA_B","ACPA+ RA","Female","60","","disease_remission",2.441270526,50,0,0,7.76,NA,"MTX+HCQ",NA,0.06996389,0.726715168030992
+"B290","RA_B","ACPA+ RA","Male","59","",NA,NA,60,28,0,NA,NA,"MTX+HCQ",NA,0.1067065,0.798936269426903
+"B294","RA_B","ACPA+ RA","Female","47","","moderate_disease_activity",3.898682543,5,6,4,12.5,0.136378936,"MTX+LEF+HCQ","No Response",0.1387019,0.754246291758851
+"B297","RA_B","ACPA+ RA","Female","46","","moderate_disease_activity",3.213603578,50,1,0,14.8,-0.85089205,"MTX","No Response",0.170411254,0.855667132483474
+"B303","RA_B","ACPA- RA","Female","47","","moderate_disease_activity",4.591763078,30,2,8,91,-0.0407531,"MTX+LEF","No Response",0.1100516,0.686193572994302
+"B306","RA_B","ACPA+ RA","Female","47","","moderate_disease_activity",3.329437027,60,5,0,1.16,1.459099536,"MTX+HCQ","Response",0.1094828,0.561066659532122
+"B308","RA_B","ACPA+ RA","Female","51","","disease_remission",2.268515831,30,0,0,10.8,NA,"MTX+HCQ",NA,0.06112902,0.928623567957497
+"B309","RA_B","ACPA+ RA","Female","41","","moderate_disease_activity",4.909203387,50,14,7,2.15,NA,"MTX+LEF",NA,0.1793352,0.645239179642364
+"B313","RA_B","ACPA+ RA","Female","53","","low_disease_activity",2.844518117,40,2,0,3.39,0.299755381,"LEF","No Response",0.1805365,0.902557669076905
+"B315","RA_B","ACPA+ RA","Female","61","","disease_remission",1.804315799,30,0,0,2.25,NA,"MTX+HCQ",NA,0.4789585,0.768190792084977
+"B320","RA_B","ACPA+ RA","Female","54","","moderate_disease_activity",3.414913859,30,8,0,2.5,-0.431444615,"MTX+HCQ","No Response",0.1291536,0.761363363022585
+"B323","RA_B","ACPA+ RA","Female","60","","moderate_disease_activity",4.978800529,60,9,2,20.4,-0.793886404,"HCQ+5-ASA","No Response",0.108528791,0.677603462891066
+"B325","RA_B","ACPA+ RA","Female","61","","low_disease_activity",3.184154382,60,3,0,2.16,-1.77942973,"MTX+HCQ","No Response",0.06474825,0.744359954820173
+"B327","RA_B","ACPA- RA","Female","75","","moderate_disease_activity",3.472203583,50,4,0,5.84,NA,"MTX+HCQ",NA,0.239951821,0.729472616464168
+"B329","RA_B","ACPA+ RA","Female","52","",NA,NA,10,NA,0,4.85,NA,"MTX",NA,0.06893341,0.827815721655439
+"B332","RA_B","ACPA+ RA","Male","41","","low_disease_activity",2.702718412,70,0,0,7.32,NA,"MTX+LEF+HCQ",NA,0.09622865,0.862807659123039
+"B339","RA_B","ACPA+ RA","Female","64","","low_disease_activity",2.816135923,50,2,0,1.75,-0.218089861,"HCQ","No Response",0.4054651,0.870888648326965
+"B351","RA_B","ACPA+ RA","Female","19","","disease_remission",1.916661931,30,0,1,1.04,-0.099572899,"MTX+HCQ","No Response",0.09929152,0.810246139197592
+"B357","RA_B","ACPA+ RA","Female","46","","low_disease_activity",3.08972896,50,1,0,10.2,0.288710002,"LEF+HCQ","No Response",0.1274211,0.881324962040443
+"B360","RA_B","ACPA+ RA","Female","57","",NA,NA,20,13,1,NA,NA,"MTX+HCQ",NA,0.251340397,0.911478819937772
+"B366","RA_B","ACPA- RA","Female","52","",NA,NA,NA,0,0,14.1,NA,"HCQ",NA,0.1153657,0.722572393003167
+"B380","RA_B","ACPA- RA","Female","48","","moderate_disease_activity",4.422841064,60,11,3,1.18,0.87504192,"MTX+HCQ","No Response",0.1115837,0.708518855950463
+"B381","RA_B",NA,"Female","30","","disease_remission",2.542591689,50,1,0,1.45,NA,"LEF+HCQ",NA,0.6277112,0.759706170743304
+"B382","RA_B","ACPA+ RA","Female","59","","moderate_disease_activity",4.481503156,60,5,0,52,0.246504787,"MTX+HCQ","No Response",0.09030448,0.89914431482472
+"B384","RA_B","ACPA+ RA","Female","58","",NA,NA,30,0,0,NA,NA,"MTX+LEF",NA,0.07158869,0.728265670331983
+"B389","RA_B",NA,"Female","48","","disease_remission",2.551152636,20,3,0,1.58,0.820311165,"MTX+LEF","No Response",0.196705873,0.689387256859592
+"B399","RA_B","ACPA+ RA","Female","45","","moderate_disease_activity",3.762169157,40,7,0,7.27,0.929771321,"MTX+HCQ","No Response",0.14618873,0.877638088434321
+"B406","RA_B","ACPA+ RA","Female","41","","disease_remission",1.418156314,10,0,0,1.42,0.096623329,"MTX+LEF","No Response",0.09817991,0.645867200103361
+"B412","RA_B","ACPA+ RA","Female","56","","moderate_disease_activity",4.492248089,20,6,9,17,2.574654095,"LEF","Response",0.06960466,0.81066418890657
+"B413","RA_B","ACPA+ RA","Male","41","","moderate_disease_activity",4.905945603,20,8,8,35,2.379874454,"LEF","Response",0.1788479,0.866812761434075
+"B417","RA_B","ACPA+ RA","Female","44","","disease_remission",2.428725703,10,1,0,7.46,-0.533862008,"MTX","No Response",0.2750188,0.609211172010971
+"B420","RA_B","ACPA+ RA","Female","43","",NA,NA,50,1,0,NA,NA,"LEF",NA,0.1313674,0.818949710459288
+"B422","RA_B","ACPA+ RA","Female","25","",NA,NA,30,12,10,NA,NA,"MTX+LEF",NA,0.08082906,0.754327036122551
+"B424","RA_B","ACPA+ RA","Male","43","","moderate_disease_activity",4.440842149,60,15,0,2.71,1.058790403,"MTX+LEF+HCQ","No Response",0.208466089,0.744368054091543
+"B425","RA_B","ACPA- RA","Female","61","",NA,NA,70,14,0,NA,NA,"LEF+HCQ",NA,0.1019702,0.796046301303182
+"B429","RA_B","ACPA+ RA","Female","50","",NA,NA,50,2,2,NA,NA,"MTX+LEF",NA,0.1303786,0.761279169814763
+"B430","RA_B","ACPA+ RA","Female","54","","low_disease_activity",3.008878059,60,0,1,12.2,-1.174666257,"LEF+HCQ","No Response",0.1618077,0.878847058094586
+"B433","RA_B","ACPA+ RA","Male","74","","high_disease_activity",6.06094068,70,18,18,3.7,NA,"MTX+LEF+HCQ",NA,0.02954242,0.70030796873318
+"B434","RA_B","ACPA+ RA","Female","46","","disease_remission",1.683691934,10,0,0,4.06,NA,"MTX+LEF",NA,0.1382406,0.770613928121308
+"B435","RA_B","ACPA+ RA","Female","50","","moderate_disease_activity",3.922488593,50,12,0,1.45,NA,"MTX+HCQ",NA,0.07095331,0.477155143021805
+"B440","RA_B",NA,"Female","45","","moderate_disease_activity",3.538394691,40,3,0,17.4,NA,"MTX+LEF",NA,0.208939852,0.708769530784257
+"B441","RA_B","ACPA+ RA","Female","52","","low_disease_activity",2.813640845,20,2,0,7.77,-1.512852903,"MTX+LEF","No Response",0.1998697,0.680932771796823
+"B447","RA_B","ACPA+ RA","Male","66","",NA,NA,70,4,1,NA,NA,"LEF",NA,0.1719245,0.979279397045869
+"B451","RA_B","ACPA+ RA","Female","50","","high_disease_activity",5.778786332,40,10,12,66.8,2.571575099,"MTX+LEF","Response",0.1153346,0.944594498474727
+"B464","RA_B","ACPA+ RA","Female","68","",NA,NA,30,5,6,NA,NA,"MTX+HCQ",NA,0.166473839,0.767416484934402
+"B467","RA_B","ACPA+ RA","Female","28","","moderate_disease_activity",3.801931003,30,5,3,5.7,1.089592834,"MTX+HCQ","No Response",0.1055423,0.711308106181822
+"B468","RA_B","ACPA+ RA","Female","53","","moderate_disease_activity",3.715541017,30,3,1,19.4,NA,"MTX+LEF",NA,0.171678227,0.76325057640266
+"B475","RA_B","ACPA+ RA","Female","47","","disease_remission",1.966500239,10,0,0,10.1,0.21327496,"MTX+HCQ","No Response",0.1340347,0.743449879391241
+"B477","RA_B",NA,"Female","#N/A","",NA,NA,8,1,0,NA,NA,"LEF",NA,0.1369214,0.787283559456446
+"B482","RA_B","ACPA+ RA","Male","74","","moderate_disease_activity",3.33842683,10,8,0,5.16,NA,"MTX+LEF",NA,0.07325539,0.47149512306556
+"B483","RA_B","ACPA+ RA","Female","25","","disease_remission",1.489532985,20,0,0,1,NA,"MTX+HCQ",NA,0.1122711,0.619651859289044
+"B486","RA_B","ACPA+ RA","Female","60","","moderate_disease_activity",4.96600599,60,12,8,2.34,NA,"MTX+LEF",NA,0.1312226,0.691638353700057
+"C002","RA_C","ACPA+ RA","Female","44","","moderate_disease_activity",4.190977632,50,2,1,56.56,NA,NA,NA,0.1335763,0.694354732971665
+"C003","RA_C","ACPA+ RA","Female","34","","disease_remission",2.286742754,30,1,0,1.62,NA,"MTX+LEF",NA,0.08340023,0.750331804054097
+"C005","RA_C","ACPA+ RA","Female","53","","disease_remission",1.862596835,40,0,0,1.59,NA,"LEF+HCQ",NA,0.145755,0.67671441902973
+"C015","RA_C","ACPA+ RA","Female","54","","moderate_disease_activity",3.390206368,50,2,2,3.51,NA,"MTX+HCQ+5-ASA",NA,0.1094895,0.722951789967856
+"C021","RA_C","ACPA+ RA","Female","57","","moderate_disease_activity",4.413221966,50,7,0,33.2,NA,"MTX+LEF",NA,0.212903618,0.716895573949475
+"C026","RA_C","ACPA+ RA","Female","46","","moderate_disease_activity",3.615370243,70,3,1,2.26,NA,"MTX+LEF",NA,0.1588944,0.719391759146825
+"C029","RA_C","ACPA+ RA","Female","51","","moderate_disease_activity",4.186432822,60,7,2,3.11,NA,"MTX+HCQ",NA,0.162653895,0.740092477431107
+"C040","RA_C","ACPA+ RA","Female","53","","moderate_disease_activity",4.674589842,50,10,5,4.56,NA,"LEF+HCQ",NA,0.107932,0.861798499898692
+"C042","RA_C","ACPA+ RA","Female","44","","moderate_disease_activity",3.347656599,40,4,0,6.14,NA,"HCQ",NA,0.1136749,0.807445273662307
+"C045","RA_C","ACPA+ RA","Female","44","","disease_remission",1.514817266,0,0,0,3.67,NA,NA,NA,0.143999,0.706605457247285
+"C052","RA_C","ACPA+ RA","Female","53","","disease_remission",2.382801065,20,2,0,1.65,NA,"LEF+HCQ",NA,0.168795425,0.687205776101175
+"C054","RA_C","ACPA+ RA","Female","50","","moderate_disease_activity",3.949848464,40,12,0,2.9,NA,"LEF+HCQ",NA,0.127195976,0.644842987365987
+"C068","RA_C","ACPA- RA","Male","77","","moderate_disease_activity",3.682550263,20,8,0,9.86,NA,"MTX+LEF",NA,0.1078698,0.838471406492766
+"C072","RA_C",NA,"Female","45","","disease_remission",2.287198849,50,0,0,4.71,NA,"LEF",NA,0.2578673,0.648323368319693
+"C073","RA_C",NA,"Female","49","","moderate_disease_activity",3.681158934,50,2,0,29.4,NA,"MTX+HCQ+5-ASA",NA,0.09719308,0.677004697342164
+"C079","RA_C","ACPA+ RA","Female","44","",NA,NA,30,1,1,NA,NA,"MTX+HCQ",NA,0.2575154,0.944847103086082
+"C086","RA_C",NA,"Female","65","","high_disease_activity",5.34978642,60,11,8,11.2,NA,"LEF",NA,0.2293818,0.858340937329732
+"C088","RA_C",NA,"Male","33","","moderate_disease_activity",3.636471369,60,2,0,17.2,NA,"HCQ",NA,0.1302869,0.72194618073865
+"C092","RA_C",NA,"Female","72","","moderate_disease_activity",5.023105264,0,24,4,7.25,NA,"MTX+HCQ",NA,0.08234913,0.618576097718594
+"C096","RA_C",NA,"Female","65","","high_disease_activity",5.486141572,80,6,5,49,NA,"MTX+HCQ",NA,0.1285217,0.865636613822727
+"C099","RA_C",NA,"Female","16","","disease_remission",1.640268706,20,0,0,2.04,NA,"MTX+LEF+HCQ",NA,0.1464462,0.914248691991509
+"C104","RA_C",NA,"Female","53","","moderate_disease_activity",4.27281469,50,14,0,3.21,NA,"LEF",NA,0.166923133,0.806961567623335
+"C109","RA_C","ACPA+ RA","Female","42","","low_disease_activity",3.051138258,5,1,0,56.9,NA,"MTX+LEF",NA,0.2125026,0.727813554954936
+"C111","RA_C","ACPA+ RA","Male","69","","high_disease_activity",5.444848544,70,8,6,29.9,NA,"MTX+LEF",NA,1.427286,0.748863757252903
+"C113","RA_C","ACPA+ RA","Female","42","","disease_remission",2.594582967,60,0,0,8.09,NA,"MTX+LEF",NA,0.1325148,0.82745965051662
+"C116","RA_C","ACPA+ RA","Female","32","","moderate_disease_activity",3.214056324,30,2,3,3.7,NA,"MTX+LEF",NA,0.2718244,0.853284111228117
+"C117","RA_C","ACPA+ RA","Female","44","","disease_remission",1.729027297,20,0,0,2.89,NA,"MTX+LEF+HCQ",NA,0.173319598,0.755654285288499
+"C123","RA_C",NA,"Female","51","","disease_remission",2.320890834,60,0,0,3.25,NA,"MTX+LEF+HCQ",NA,0.07582479,0.718391958976876
+"C125","RA_C","ACPA+ RA","Female","48","","disease_remission",2.312717911,0.5,3,0,1.84,NA,"MTX+HCQ",NA,0.116487,0.780583524778606
+"C133","RA_C","ACPA+ RA","Male","45","","low_disease_activity",3.167686747,10,3,0,20.1,NA,"LEF",NA,0.1357331,0.564456942419982
+"C136","RA_C","ACPA+ RA","Female","51","","disease_remission",2.029624177,15,0,0,9.89,NA,"MTX",NA,0.1031156,0.754546953208728
+"C142","RA_C","ACPA+ RA","Female","53","","moderate_disease_activity",3.472512002,10,8,0,7.94,NA,"LEF+HCQ",NA,0.3257165,0.771741128147013
+"C145","RA_C","ACPA+ RA","Female","53","","moderate_disease_activity",5.085051366,80,6,6,12.9,NA,NA,NA,0.2453649,0.884849898440018
+"C149","RA_C",NA,"Male","71","","disease_remission",2.191560003,0,0,0,29.6,NA,"LEF",NA,0.143159204,0.70827591858651
+"C155","RA_C","ACPA+ RA","Female","41","","disease_remission",2.570873455,40,1,0,2.91,NA,"MTX+LEF+HCQ",NA,0.07905198,0.836496909273807
+"C161","RA_C",NA,"Female","29","","low_disease_activity",3.009500783,50,3,0,1.87,NA,"MTX+HCQ",NA,0.1608723,0.755693087413484
+"C165","RA_C","ACPA+ RA","Female","53","","disease_remission",1.489532985,20,0,0,1,NA,"MTX+HCQ",NA,0.1171837,0.996022328060454
+"C169","RA_C","ACPA+ RA","Female","49","","moderate_disease_activity",4.283229053,70,4,0,28.9,NA,"MTX+HCQ+5-ASA",NA,0.1867636,0.926422121387229
+"C170","RA_C","ACPA+ RA","Female","62","","low_disease_activity",2.997484358,20,6,0,1.92,NA,NA,NA,0.1767885,0.876096176603735
+"C174","RA_C",NA,"Female","55","","high_disease_activity",5.45840523,60,24,0,11.7,NA,NA,NA,0.07015386,0.537493896470867
+"C186","RA_C","ACPA+ RA","Female","48","","moderate_disease_activity",4.753746713,40,26,0,1.86,NA,"MTX+LEF",NA,0.05182196,0.746794544169775
+"C189","RA_C","ACPA+ RA","Female","50","","disease_remission",2.060666973,40,0,0,3.49,NA,"MTX+HCQ",NA,0.180085241,0.692749910806211
+"C191","RA_C","ACPA+ RA","Female","47","","disease_remission",1.655347708,0,0,0,5.9,NA,"MTX+HCQ",NA,0.1311732,0.771549323493154
+"C195","RA_C","ACPA+ RA","Female","50","","moderate_disease_activity",4.417909114,40,14,1,3.27,NA,"LEF",NA,0.1466026,0.834698320392306
+"C198","RA_C","ACPA+ RA","Female","46","","moderate_disease_activity",4.064495629,10,9,2,10.8,NA,"MTX",NA,0.3167156,0.657556245237181
+"C203","RA_C","ACPA+ RA","Female","65","","moderate_disease_activity",4.911729381,20,20,0,24.6,NA,"MTX+LEF",NA,0.05942871,0.689453165231568
+"C204","RA_C","ACPA+ RA","Female","47","","moderate_disease_activity",3.762303607,40,4,2,6.52,NA,"MTX+LEF",NA,0.1375824,0.910504344896054
+"C205","RA_C","ACPA- RA","Female","47","","moderate_disease_activity",4.632516177,20,2,8,151,NA,"MTX+LEF+HCQ",NA,0.2282786,0.709258049879021
+"C206","RA_C","ACPA+ RA","Male","47","","moderate_disease_activity",3.301453193,40,4,0,5.28,NA,"HCQ",NA,0.08715694,0.788127190474906
+"C217","RA_C","ACPA+ RA","Female","59","","low_disease_activity",2.97158472,20,2,0,12.6,NA,"MTX",NA,0.04790337,0.690968611705912
+"C218","RA_C","ACPA+ RA","Female","41","",NA,NA,NA,0,0,3.57,NA,"MTX+LEF",NA,0.1242012,0.727824458091247
+"C228","RA_C","ACPA+ RA","Male","52","","disease_remission",2.083950948,40,0,0,3.79,NA,"MTX+HCQ",NA,0.09976943,0.791660118260276
+"C231","RA_C","ACPA+ RA","Female","52","","disease_remission",2.203136563,0,0,0,30.6,NA,"MTX+LEF",NA,0.2673943,0.782516083585409
+"C240","RA_C","ACPA+ RA","Female","64","","low_disease_activity",3.034225784,50,2,0,4.04,NA,"MTX+HCQ",NA,0.08774623,0.565793383518963
+"C247","RA_C","ACPA+ RA","Female","52","","moderate_disease_activity",3.741229824,60,5,0,5.78,NA,"MTX",NA,0.1321697,0.728104473671527
+"C248","RA_C","ACPA+ RA","Female","61","","moderate_disease_activity",4.963584113,60,16,2,3.33,NA,"MTX+LEF+HCQ",NA,0.9342833,0.849767881516511
+"C252","RA_C","ACPA+ RA","Female","46","","disease_remission",1.744425871,20,0,0,3.06,NA,"MTX",NA,0.1137377,0.81284887193757
+"C253","RA_C","ACPA+ RA","Female","51","",NA,NA,NA,NA,0,6.7,NA,"MTX+HCQ",NA,0.05502684,0.743378981752954
+"C254","RA_C","ACPA+ RA","Female","46","","low_disease_activity",2.801018958,20,1,1,6.41,NA,"LEF+HCQ",NA,0.03720882,0.737379205498062
+"C255","RA_C","ACPA+ RA","Female","53","","disease_remission",2.544762736,20,0,0,36.5,NA,"MTX+LEF",NA,0.145985125,0.775702926384185
+"C264","RA_C","ACPA+ RA","Male","59","","low_disease_activity",2.909031757,30,1,1,5.78,NA,"MTX+HCQ",NA,0.4397924,0.605317209415614
+"C267","RA_C","ACPA+ RA","Female","43","","low_disease_activity",2.603108138,10,2,2,1.4,NA,"MTX+HCQ",NA,0.1115766,0.948881299527514
+"C269","RA_C","ACPA+ RA","Female","59","","disease_remission",2.422627732,20,2,0,1.96,NA,"MTX+LEF",NA,0.2327264,0.700405095471889
+"C270","RA_C","ACPA+ RA","Female","43","",NA,NA,50,1,0,NA,NA,"MTX+LEF",NA,0.05104844,0.807694267282574
+"C276","RA_C","ACPA+ RA","Female","75","","high_disease_activity",6.159741803,40,20,10,31.2,NA,"MTX+LEF",NA,0.09022128,0.772172327323957
+"C280","RA_C","ACPA+ RA","Female","39","","moderate_disease_activity",3.263039538,50,5,0,1.65,NA,"MTX+HCQ",NA,0.07221573,0.870661066442619
+"C290","RA_C","ACPA+ RA","Female","53","","high_disease_activity",5.243009559,50,21,5,1.96,NA,"LEF+HCQ",NA,0.3539577,0.923206446140491
+"C293","RA_C","ACPA+ RA","Female","51","",NA,NA,60,11,3,NA,NA,"HCQ",NA,0.1266674,0.881222409582624
+"C294","RA_C","ACPA- RA","Female","48","","moderate_disease_activity",3.547799144,20,7,3,1.58,NA,"MTX+HCQ",NA,0.04505764,0.669553891120506
+"C296","RA_C","ACPA+ RA","Female","60","","high_disease_activity",5.772686934,80,23,0,15.4,NA,"HCQ",NA,0.1058754,0.776405087657423
+"C301","RA_C","ACPA+ RA","Female","51","","moderate_disease_activity",4.204099379,70,4,0,23,NA,"LEF+HCQ",NA,0.04782645,0.700501353640463
+"C306","RA_C","ACPA+ RA","Male","45","","low_disease_activity",3.081273287,10,4,0,9.94,NA,"MTX+HCQ",NA,0.1641746,0.748474420257136
+"C310","RA_C","ACPA+ RA","Female","45","","low_disease_activity",2.832397836,50,1,0,4.48,NA,"MTX+LEF+HCQ",NA,0.06568394,0.886927252431127
+"C329","RA_C","ACPA+ RA","Female","58","","disease_remission",1.764535109,30,0,0,1.91,NA,"MTX+LEF",NA,0.1340875,0.7822976388889
+"C333","RA_C","ACPA+ RA","Female","25","",NA,NA,80,28,0,NA,NA,"MTX+HCQ+5-ASA",NA,0.1122967,0.907453663656116
+"C340","RA_C","ACPA+ RA","Male","43","","moderate_disease_activity",3.382051747,30,6,0,4.76,NA,"MTX+LEF+HCQ",NA,0.132099992,0.686831263578359
+"C347","RA_C","ACPA+ RA","Female","44","","low_disease_activity",2.962587711,10,6,0,2.91,NA,"MTX",NA,0.3176626,0.81819999271276
+"C351","RA_C",NA,"Female",NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,0.1871723,0.730305692143701
+"C354","RA_C","ACPA+ RA","Female","63","","high_disease_activity",6.247686431,80,23,6,8.13,NA,"LEF+5-ASA",NA,0.4585961,0.845983686712116
+"C355","RA_C",NA,"Male",NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,0.1265807,0.824528984449039
+"C359","RA_C","ACPA+ RA","Female","50","","moderate_disease_activity",3.207211233,1,0,29,6.5,NA,"MTX+LEF",NA,0.06167046,0.784684390325448
+"C361","RA_C","ACPA+ RA","Female","50","",NA,NA,50,8,3,NA,NA,"MTX+HCQ",NA,0.0620852,0.881827547689418
+"C368","RA_C","ACPA+ RA","Male","53","","high_disease_activity",7.949160168,90,28,18,79.1,NA,"MTX+LEF",NA,0.6167831,0.794262512151166
+"C375","RA_C","ACPA+ RA","Female","52","","moderate_disease_activity",4.326493748,50,5,4,9.73,NA,"MTX+LEF",NA,0.1980668,0.8192892324162
+"C381","RA_C","ACPA+ RA","Female","68","",NA,NA,40,8,6,NA,NA,"MTX+HCQ",NA,0.171813737,0.720373813978422
+"C408","RA_C","ACPA+ RA","Male","66","","low_disease_activity",2.718164843,30,1,1,2.99,NA,"LEF",NA,0.165591614,0.891066110668729
+"C409","RA_C","ACPA+ RA","Female","47","","moderate_disease_activity",5.060610056,50,28,0,2.37,NA,NA,NA,0.2398414,0.840179519516852
+"HP001","Health","Health","Female","39","","",NA,NA,NA,NA,NA,NA,"","",0.1226889,0.852456515325744
+"HP002","Health","Health","Male","55","","",NA,NA,NA,NA,NA,NA,"","",0.1198872,0.710948548855826
+"HP003","Health","Health","Male","47","","",NA,NA,NA,NA,NA,NA,"","",0.09701003,1.03832567648049
+"HP004","Health","Health","Male","54","","",NA,NA,NA,NA,NA,NA,"","",0.148632,0.503063526887513
+"HP005","Health","Health","Male","43","","",NA,NA,NA,NA,NA,NA,"","",0.08308461,0.631318365306522
+"HP006","Health","Health","Male","66","","",NA,NA,NA,NA,NA,NA,"","",0.1457233,0.682955785064652
+"HP007","Health","Health","Male","65","","",NA,NA,NA,NA,NA,NA,"","",0.08181045,0.699547275876508
+"HP008","Health","Health","Male","52","","",NA,NA,NA,NA,NA,NA,"","",0.2227199,0.706463121121847
+"HP009","Health","Health","Male","57","","",NA,NA,NA,NA,NA,NA,"","",0.0556646,0.872634524877022
+"HP010","Health","Health","Male","58","","",NA,NA,NA,NA,NA,NA,"","",0.1028422,0.747394357009195
+"HP011","Health","Health","Male","57","","",NA,NA,NA,NA,NA,NA,"","",0.2586894,0.81775840047189
+"HP012","Health","Health","Male","58","","",NA,NA,NA,NA,NA,NA,"","",0.1620944,0.5455364304908
+"HP013","Health","Health","Male","58","","",NA,NA,NA,NA,NA,NA,"","",0.05008485,0.818624918274843
+"HP014","Health","Health","Male","44","","",NA,NA,NA,NA,NA,NA,"","",0.06563461,0.690736297770762
+"HP015","Health","Health","Male","51","","",NA,NA,NA,NA,NA,NA,"","",0.05948391,0.844786747695185
+"HP016","Health","Health","Male","50","","",NA,NA,NA,NA,NA,NA,"","",0.2377934,0.645087598681594
+"HP017","Health","Health","Male","47","","",NA,NA,NA,NA,NA,NA,"","",0.0622536,0.82566142436125
+"HP018","Health","Health","Male","51","","",NA,NA,NA,NA,NA,NA,"","",0.1026817,0.720059440990888
+"HP019","Health","Health","Male","43","","",NA,NA,NA,NA,NA,NA,"","",0.1416113,0.965605366344483
+"HP020","Health","Health","Male","63","","",NA,NA,NA,NA,NA,NA,"","",0.158044,0.714765319288696
+"HP021","Health","Health","Male","52","","",NA,NA,NA,NA,NA,NA,"","",0.1359848,0.596448806349638
+"HP022","Health","Health","Female","46","","",NA,NA,NA,NA,NA,NA,"","",0.1790704,0.822964002762605
+"HP023","Health","Health","Female","52","","",NA,NA,NA,NA,NA,NA,"","",0.0980276,0.930051341053419
+"HP024","Health","Health","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.2588645,0.80321341350388
+"HP025","Health","Health","Female","44","","",NA,NA,NA,NA,NA,NA,"","",0.1970929,0.762699869661074
+"HP026","Health","Health","Female","65","","",NA,NA,NA,NA,NA,NA,"","",0.08690161,0.762574815824546
+"HP027","Health","Health","Female","41","","",NA,NA,NA,NA,NA,NA,"","",0.5845744,0.846456347328809
+"HP029","Health","Health","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0.08061448,0.764578363197119
+"HP030","Health","Health","Female","49","","",NA,NA,NA,NA,NA,NA,"","",0.1149134,0.75501003431137
+"HP031","Health","Health","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0.1048775,0.769734761624379
+"HP032","Health","Health","Female","53","","",NA,NA,NA,NA,NA,NA,"","",0.1676161,0.763383424659391
+"HP033","Health","Health","Female","47","","",NA,NA,NA,NA,NA,NA,"","",0.07871785,0.693089099613426
+"HP034","Health","Health","Female","66","","",NA,NA,NA,NA,NA,NA,"","",0.09056133,0.780382092350333
+"HP035","Health","Health","Female","55","","",NA,NA,NA,NA,NA,NA,"","",0.0652506,0.920558790851742
+"HP036","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.1625021,0.925054478194087
+"HP037","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.04774308,0.723364279192518
+"HP038","Health","Health","Female","62","","",NA,NA,NA,NA,NA,NA,"","",0.07523603,0.798401889796021
+"HP039","Health","Health","Female","58","","",NA,NA,NA,NA,NA,NA,"","",0.3947536,0.672875245065139
+"HP040","Health","Health","Female","55","","",NA,NA,NA,NA,NA,NA,"","",0.2421314,0.632323140011689
+"HP041","Health","Health","Female","42","","",NA,NA,NA,NA,NA,NA,"","",0.4731099,0.73720953446938
+"HP042","Health","Health","Female","49","","",NA,NA,NA,NA,NA,NA,"","",0.07674329,0.731633251054227
+"HP043","Health","Health","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0.1822004,0.711117186217279
+"HP044","Health","Health","Female","52","","",NA,NA,NA,NA,NA,NA,"","",0.08600596,0.854494821209873
+"HP045","Health","Health","Female","53","","",NA,NA,NA,NA,NA,NA,"","",0.2442739,0.921572024008638
+"HP046","Health","Health","Female","53","","",NA,NA,NA,NA,NA,NA,"","",0.07746514,0.881381659304578
+"HP047","Health","Health","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0.1105026,0.861968108341013
+"HP048","Health","Health","Female","67","","",NA,NA,NA,NA,NA,NA,"","",0.1006022,0.780137417903994
+"HP049","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.09795533,0.80395772284452
+"HP050","Health","Health","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.05775411,0.738842161587949
+"HP051","Health","Health","Female","52","","",NA,NA,NA,NA,NA,NA,"","",0.06862579,0.8401053210025
+"HP052","Health","Health","Female","57","","",NA,NA,NA,NA,NA,NA,"","",0.129516149,0.814721787357152
+"HP053","Health","Health","Female","45","","",NA,NA,NA,NA,NA,NA,"","",0.07517855,0.575846279373765
+"HP054","Health","Health","Female","42","","",NA,NA,NA,NA,NA,NA,"","",0.1831518,0.892114085127743
+"HP055","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.05496289,0.73726520334718
+"HP056","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.09289309,0.774418878743526
+"HP057","Health","Health","Female","47","","",NA,NA,NA,NA,NA,NA,"","",0.05670293,0.837859126258215
+"HP058","Health","Health","Female","66","","",NA,NA,NA,NA,NA,NA,"","",0.1079564,0.825080229136446
+"HP059","Health","Health","Female","47","","",NA,NA,NA,NA,NA,NA,"","",0.1192552,0.784518064458852
+"HP060","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.2094462,0.863041190396464
+"HP061","Health","Health","Female","46","","",NA,NA,NA,NA,NA,NA,"","",0.07924286,0.67446018961026
+"HP062","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",1.017102,0.877141076545803
+"HP063","Health","Health","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0.09580674,0.617309424396206
+"HP064","Health","Health","Female","52","","",NA,NA,NA,NA,NA,NA,"","",0.07879706,0.987159319167244
+"HP065","Health","Health","Female","53","","",NA,NA,NA,NA,NA,NA,"","",0.116956902,0.769003049120141
+"HP066","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.1086914,0.800358317864575
+"HP067","Health","Health","Female","49","","",NA,NA,NA,NA,NA,NA,"","",0.1797292,0.815306333045553
+"HP068","Health","Health","Female","45","","",NA,NA,NA,NA,NA,NA,"","",0.1472706,0.862683252683608
+"HP069","Health","Health","Female","51","","",NA,NA,NA,NA,NA,NA,"","",0.05111121,0.706727131933586
+"HP070","Health","Health","Female","47","","",NA,NA,NA,NA,NA,NA,"","",0.1618279,0.80692414322604
+"HP071","Health","Health","Female","47","","",NA,NA,NA,NA,NA,NA,"","",0.1592162,0.897957455674139
+"HP072","Health","Health","Female","44","","",NA,NA,NA,NA,NA,NA,"","",0.1388636,0.776684561599211
+"HP073","Health","Health","Female","44","","",NA,NA,NA,NA,NA,NA,"","",0.1453149,0.83829664999863
+"HP074","Health","Health","Female","64","","",NA,NA,NA,NA,NA,NA,"","",0.1332321,0.935598676067677
+"HP075","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.0756874,0.701722575867583
+"HP076","Health","Health","Female","49","","",NA,NA,NA,NA,NA,NA,"","",0.07660521,0.581107353851443
+"HP077","Health","Health","Female","65","","",NA,NA,NA,NA,NA,NA,"","",0.01636207,0.619023481977728
+"HP078","Health","Health","Female","61","","",NA,NA,NA,NA,NA,NA,"","",0.09761871,0.87284604296742
+"HP079","Health","Health","Female","51","","",NA,NA,NA,NA,NA,NA,"","",0.0931989,0.868460509974263
+"HP080","Health","Health","Female","43","","",NA,NA,NA,NA,NA,NA,"","",0.1747178,0.664495918812414
+"HP081","Health","Health","Female","60","","",NA,NA,NA,NA,NA,NA,"","",0.559934,0.870594318842832
+"HP082","Health","Health","Female","44","","",NA,NA,NA,NA,NA,NA,"","",0.1031334,0.756339435725135
+"HP083","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.09254929,0.865478558061494
+"HP084","Health","Health","Female","49","","",NA,NA,NA,NA,NA,NA,"","",0.08172697,0.711733669195917
+"HP085","Health","Health","Female","48","","",NA,NA,NA,NA,NA,NA,"","",0.06386629,0.846242797169574
+"HP086","Health","Health","Female","40","","",NA,NA,NA,NA,NA,NA,"","",0.09683769,0.841140422036545
+"HP087","Health","Health","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.1431245,0.699505037048459
+"HP088","Health","Health","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.1550001,0.674068681102431
+"HP089","Health","Health","Female","43","","",NA,NA,NA,NA,NA,NA,"","",0.1006142,0.751042775554269
+"HP090","Health","Health","Female","41","","",NA,NA,NA,NA,NA,NA,"","",0.09553176,0.866233521766555
+"HP091","Health","Health","Female","62","","",NA,NA,NA,NA,NA,NA,"","",0.1559068,0.796449729694872
+"HP092","Health","Health","Female","44","","",NA,NA,NA,NA,NA,NA,"","",0.09613486,0.787530936562611
+"HP093","Health","Health","Female","59","","",NA,NA,NA,NA,NA,NA,"","",0.1441001,0.7346826823152
+"HP094","Health","Health","Female","41","","",NA,NA,NA,NA,NA,NA,"","",0.2387614,0.811183329200829
+"HP095","Health","Health","Female","53","","",NA,NA,NA,NA,NA,NA,"","",0.1746095,0.764680294703511
+"HP096","Health","Health","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0.06123405,0.706065081437529
+"HP097","Health","Health","Female","42","","",NA,NA,NA,NA,NA,NA,"","",0.3270992,0.663843869380455
+"HP098","Health","Health","Female","38","","",NA,NA,NA,NA,NA,NA,"","",0.1283881,0.572757859617473
+"HP099","Health","Health","Female","76","","",NA,NA,NA,NA,NA,NA,"","",0.1209909,0.835513874507651
+"HP100","Health","Health","Female","39","","",NA,NA,NA,NA,NA,NA,"","",0.06505966,0.775016251268509
+"IIM01","IIM","IIM","Female","46","","",NA,NA,NA,NA,NA,NA,"","",0.030868833,0.847363579684059
+"IIM02","IIM","IIM","Female","52","","",NA,NA,NA,NA,NA,NA,"","",0.110199344,0.979346508170513
+"IIM03","IIM","IIM","Male","46","","",NA,NA,NA,NA,NA,NA,"","",0,0.586542950598434
+"IIM04","IIM","IIM","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0.019445128,0.628811865182162
+"IIM05","IIM","IIM","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0.016759626,0.773131618348917
+"IIM06","IIM","IIM","Female","57","","",NA,NA,NA,NA,NA,NA,"","",0,0.810202199269819
+"IIM07","IIM","IIM","Male","55","","",NA,NA,NA,NA,NA,NA,"","",0.025952267,0.891960756828832
+"IIM08","IIM","IIM","Female","48","","",NA,NA,NA,NA,NA,NA,"","",0.053314669,0.639177369435522
+"IIM09","IIM","IIM","Male","54","","",NA,NA,NA,NA,NA,NA,"","",0,0.696087864437146
+"IIM10","IIM","IIM","Female","45","","",NA,NA,NA,NA,NA,NA,"","",0.013722683,0.968950921158418
+"IIM11","IIM","IIM","Male","59","","",NA,NA,NA,NA,NA,NA,"","",0.077360405,0.952465181352364
+"IIM12","IIM","IIM","Male","47","","",NA,NA,NA,NA,NA,NA,"","",0.022446929,0.757122376490255
+"IIM13","IIM","IIM","Male","66","","",NA,NA,NA,NA,NA,NA,"","",0,0.461930290751274
+"IIM14","IIM","IIM","Female","60","","",NA,NA,NA,NA,NA,NA,"","",0.043185307,0.785542010192208
+"IIM15","IIM","IIM","Male","65","","",NA,NA,NA,NA,NA,NA,"","",0.040189384,0.541367012777248
+"IIM16","IIM","IIM","Male","60","","",NA,NA,NA,NA,NA,NA,"","",0.02905189,0.790984856776631
+"IIM17","IIM","IIM","Female","51","","",NA,NA,NA,NA,NA,NA,"","",0.045920567,0.857894727944174
+"IIM18","IIM","IIM","Female","65","","",NA,NA,NA,NA,NA,NA,"","",0.053383515,0.666470342236002
+"IIM19","IIM","IIM","Male","50","","",NA,NA,NA,NA,NA,NA,"","",0.071222635,0.530660976521525
+"IIM20","IIM","IIM","Male","57","","",NA,NA,NA,NA,NA,NA,"","",0.065483595,0.783744133160519
+"PRA001","At-risk of RA","At-risk of RA","Male","61","Postive","",NA,NA,NA,NA,NA,NA,"","",0.2981577,0.605439956793476
+"PRA002","At-risk of RA","At-risk of RA","Female","32","Postive","",NA,NA,NA,NA,NA,NA,"","",0.3603724,0.703423176643576
+"PRA003","At-risk of RA","At-risk of RA","Male","58","Postive","",NA,NA,NA,NA,NA,NA,"","",0.09490442,0.734615308137391
+"PRA004","At-risk of RA","At-risk of RA","Male","70","Postive","",NA,NA,NA,NA,NA,NA,"","",2.696151,0.795451516621604
+"PRA005","At-risk of RA","At-risk of RA","Male","59","Postive","",NA,NA,NA,NA,NA,NA,"","",0.07552318,0.692180310846804
+"PRA006","At-risk of RA","At-risk of RA","Male","32","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1039316,0.782672410218698
+"PRA007","At-risk of RA","At-risk of RA","Female","48","Postive","",NA,NA,NA,NA,NA,NA,"","",0.09897622,0.903288055462144
+"PRA008","At-risk of RA","At-risk of RA","Female","40","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1095596,0.783725832560036
+"PRA009","At-risk of RA","At-risk of RA","Female","66","Postive","",NA,NA,NA,NA,NA,NA,"","",0.22181696,0.688119996150378
+"PRA010","At-risk of RA","At-risk of RA","Female","49","Postive","",NA,NA,NA,NA,NA,NA,"","",0.2765578,0.634568522379158
+"PRA011","At-risk of RA","At-risk of RA","Male","64","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1852306,0.680460116531309
+"PRA012","At-risk of RA","At-risk of RA","Female","54","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1267735,0.658214690475889
+"PRA013","At-risk of RA","At-risk of RA","Female","58","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1979673,0.777205212715105
+"PRA014","At-risk of RA","At-risk of RA","Male","53","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1770564,0.841530714024163
+"PRA015","At-risk of RA","At-risk of RA","Male","58","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1080155,0.766567265703327
+"PRA016","At-risk of RA","At-risk of RA","Female","46","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1231241,0.73709412057858
+"PRA017","At-risk of RA","At-risk of RA","Female","55","Postive","",NA,NA,NA,NA,NA,NA,"","",0.182761352,0.772629275339433
+"PRA018","At-risk of RA","At-risk of RA","Female","29","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1325263,0.71818591360759
+"PRA019","At-risk of RA","At-risk of RA","Female","48","Postive","",NA,NA,NA,NA,NA,NA,"","",0.5143921,0.778175068074206
+"PRA020","At-risk of RA","At-risk of RA","Female","60","Postive","",NA,NA,NA,NA,NA,NA,"","",0.08968141,0.724853902751617
+"PRA021","At-risk of RA","At-risk of RA","Female","47","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1200842,0.866181261663115
+"PRA022","At-risk of RA","At-risk of RA","Male","44","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1008656,0.807329293091879
+"PRA023","At-risk of RA","At-risk of RA","Female","43","Postive","",NA,NA,NA,NA,NA,NA,"","",0.255632145,0.762808701180652
+"PRA024","At-risk of RA","At-risk of RA","Male","52","Postive","",NA,NA,NA,NA,NA,NA,"","",1.161223,0.652202634237169
+"PRA025","At-risk of RA","At-risk of RA","Male","41","Postive","",NA,NA,NA,NA,NA,NA,"","",0.190453,0.888773915620244
+"PRA026","At-risk of RA","At-risk of RA","Male","59","Postive","",NA,NA,NA,NA,NA,NA,"","",0.232800207,0.755984598243803
+"PRA027","At-risk of RA","At-risk of RA","Male","45","Postive","",NA,NA,NA,NA,NA,NA,"","",0.04934897,0.776887752444769
+"PRA028","At-risk of RA","At-risk of RA","Male","51","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1149603,0.8212545400279
+"PRA029","At-risk of RA","At-risk of RA","Male","74","Postive","",NA,NA,NA,NA,NA,NA,"","",0.0950408,0.551054145666176
+"PRA030","At-risk of RA","At-risk of RA","Female","54","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1467015,0.721637342318799
+"PRA031","At-risk of RA","At-risk of RA","Male","44","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1018791,0.648940233329052
+"PRA032","At-risk of RA","At-risk of RA","Male","45","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1520969,0.779474073916915
+"PRA033","At-risk of RA","At-risk of RA","Male","44","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1973687,0.945463964826928
+"PRA034","At-risk of RA","At-risk of RA","Male","45","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1134641,0.979802375993548
+"PRA035","At-risk of RA","At-risk of RA","Male","45","Postive","",NA,NA,NA,NA,NA,NA,"","",0.2043395,0.907962317320894
+"PRA036","At-risk of RA","At-risk of RA","Female","32","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1799375,0.921588743596841
+"PRA037","At-risk of RA","At-risk of RA","Female","49","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1151057,0.858485093958762
+"PRA038","At-risk of RA","At-risk of RA","Female","42","Postive","",NA,NA,NA,NA,NA,NA,"","",0.07175276,0.666862443215973
+"PRA039","At-risk of RA","At-risk of RA","Female","45","Postive","",NA,NA,NA,NA,NA,NA,"","",0.09250751,0.828156993011136
+"PRA040","At-risk of RA","At-risk of RA","Female","50","Postive","",NA,NA,NA,NA,NA,NA,"","",0.4824745,0.624131698337884
+"PRA041","At-risk of RA","At-risk of RA","Male","37","Postive","",NA,NA,NA,NA,NA,NA,"","",0.2226579,0.81892127620354
+"PRA042","At-risk of RA","At-risk of RA","Female","46","Postive","",NA,NA,NA,NA,NA,NA,"","",0.104161,0.647656445063852
+"PRA043","At-risk of RA","At-risk of RA","Female","46","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1645584,0.873098970900993
+"PRA044","At-risk of RA","At-risk of RA","Female","66","Postive","",NA,NA,NA,NA,NA,NA,"","",0.07152532,0.818861540646158
+"PRA045","At-risk of RA","At-risk of RA","Female","49","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1290661,0.729224471174303
+"PRA046","At-risk of RA","At-risk of RA","Male","60","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1719658,0.740140846837556
+"PRA047","At-risk of RA","At-risk of RA","Male","49","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1155734,0.817691645283924
+"PRA048","At-risk of RA","At-risk of RA","Female","54","Postive","",NA,NA,NA,NA,NA,NA,"","",0.09759721,0.779631249034769
+"PRA049","At-risk of RA","At-risk of RA","Female","37","Postive","",NA,NA,NA,NA,NA,NA,"","",4.419711,0.903954344279096
+"PRA050","At-risk of RA","At-risk of RA","Female","47","Postive","",NA,NA,NA,NA,NA,NA,"","",0.3100071,0.803889494126596
+"PRA051","At-risk of RA","At-risk of RA","Male","71","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1101855,0.609683692694595
+"PRA052","At-risk of RA","At-risk of RA","Female","42","Postive","",NA,NA,NA,NA,NA,NA,"","",0.2019311,0.661690926978818
+"PRA053","At-risk of RA","At-risk of RA","Male","52","Postive","",NA,NA,NA,NA,NA,NA,"","",0.6499216,0.723651074529791
+"PRA054","At-risk of RA","At-risk of RA","Female","48","Postive","",NA,NA,NA,NA,NA,NA,"","",0.08145647,0.728733561515571
+"PRA055","At-risk of RA","At-risk of RA","Male","38","Postive","",NA,NA,NA,NA,NA,NA,"","",0.09422505,0.900070239314939
+"PRA056","At-risk of RA","At-risk of RA","Female","47","Postive","",NA,NA,NA,NA,NA,NA,"","",0.1501172,0.724344617790124
+"PRA057","At-risk of RA","At-risk of RA","Male","56","Postive","",NA,NA,NA,NA,NA,NA,"","",0.064638409,0.868832047900074
+"PRA058","At-risk of RA","At-risk of RA","Male","52","Postive","",NA,NA,NA,NA,NA,NA,"","",0,0.535207810895566
+"PRA059","At-risk of RA","At-risk of RA","Female","35","Postive","",NA,NA,NA,NA,NA,NA,"","",0.196749961,0.529648066234726
+"PRA060","At-risk of RA","At-risk of RA","Female","42","Postive","",NA,NA,NA,NA,NA,NA,"","",0,0.746823032975008
+"PRA061","At-risk of RA",NA,"Male","56","","",NA,NA,NA,NA,NA,NA,"","",0.014921851,0.689277237037948
+"PRA062","At-risk of RA",NA,"Male","52","","",NA,NA,NA,NA,NA,NA,"","",0.018776156,0.907053737409315
+"PRA063","At-risk of RA",NA,"Female","35","","",NA,NA,NA,NA,NA,NA,"","",0.020345281,0.580777666301539
+"SLE01","SLE","SLE","Male","32","","",NA,NA,NA,NA,NA,NA,"","",0.048547725,0.730574449539045
+"SLE02","SLE","SLE","Female","60","","",NA,NA,NA,NA,NA,NA,"","",0,0.769551336421714
+"SLE03","SLE","SLE","Female","67","","",NA,NA,NA,NA,NA,NA,"","",0.096620418,0.545939425691438
+"SLE04","SLE","SLE","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.023775813,0.678169712015633
+"SLE05","SLE","SLE","Female","53","","",NA,NA,NA,NA,NA,NA,"","",0.172882165,0.556468799739164
+"SLE06","SLE","SLE","Male","36","","",NA,NA,NA,NA,NA,NA,"","",0.041943183,0.643522981935165
+"SLE07","SLE","SLE","Male","48","","",NA,NA,NA,NA,NA,NA,"","",0.086407083,0.802470250628151
+"SLE08","SLE","SLE","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0.030557874,0.724721024170737
+"SLE09","SLE","SLE","Female","63","","",NA,NA,NA,NA,NA,NA,"","",0,0.834703116753811
+"SLE10","SLE","SLE","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.074387502,0.736510376392061
+"SLE11","SLE","SLE","Male","48","","",NA,NA,NA,NA,NA,NA,"","",0.025393711,0.899910859586784
+"SLE12","SLE","SLE","Female","51","","",NA,NA,NA,NA,NA,NA,"","",0.031198534,0.830329607715493
+"SLE13","SLE","SLE","Male","70","","",NA,NA,NA,NA,NA,NA,"","",0.079909602,0.720641987228038
+"SLE14","SLE","SLE","Female","70","","",NA,NA,NA,NA,NA,NA,"","",0.045351051,0.770780767181769
+"SLE15","SLE","SLE","Male","54","","",NA,NA,NA,NA,NA,NA,"","",0.064620477,0.608631184619468
+"SLE16","SLE","SLE","Female","55","","",NA,NA,NA,NA,NA,NA,"","",0.146857361,0.784372231738106
+"SLE17","SLE","SLE","Male","35","","",NA,NA,NA,NA,NA,NA,"","",0.047960852,0.608218298270055
+"SLE18","SLE","SLE","Female","55","","",NA,NA,NA,NA,NA,NA,"","",0,0.742715726110639
+"SS01","SS","SS","Female","58","","",NA,NA,NA,NA,NA,NA,"","",0.129742312,0.550088500903203
+"SS02","SS","SS","Male","52","","",NA,NA,NA,NA,NA,NA,"","",0.045885735,0.783716663473396
+"SS03","SS","SS","Female","38","","",NA,NA,NA,NA,NA,NA,"","",0,0.889736463499423
+"SS04","SS","SS","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0,0.661548824207394
+"SS05","SS","SS","Female","60","","",NA,NA,NA,NA,NA,NA,"","",0.023689295,0.822574385661829
+"SS06","SS","SS","Female","57","","",NA,NA,NA,NA,NA,NA,"","",0.06014474,0.564985802011962
+"SS07","SS","SS","Female","49","","",NA,NA,NA,NA,NA,NA,"","",0,0.788310364228897
+"SS08","SS","SS","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0.025404767,0.734031051182119
+"SS09","SS","SS","Female","66","","",NA,NA,NA,NA,NA,NA,"","",0.119527164,0.927352466109192
+"SS10","SS","SS","Female","50","","",NA,NA,NA,NA,NA,NA,"","",0,0.775812370035465
+"SS11","SS","SS","Female","34","","",NA,NA,NA,NA,NA,NA,"","",0.154412884,0.667275451943948
+"SS12","SS","SS","Female","46","","",NA,NA,NA,NA,NA,NA,"","",0.013993686,0.811749099103834
+"SS13","SS","SS","Male","77","","",NA,NA,NA,NA,NA,NA,"","",0,0.688229672252068
+"SS14","SS","SS","Female","68","","",NA,NA,NA,NA,NA,NA,"","",0,0.860919557509778
+"SS15","SS","SS","Female","68","","",NA,NA,NA,NA,NA,NA,"","",0.067906402,0.506235951010876
+"SS16","SS","SS","Female","55","","",NA,NA,NA,NA,NA,NA,"","",0.060173559,0.636002957658183
+"SS17","SS","SS","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0.198628959,0.539079062537006
+"SS18","SS","SS","Female","32","","",NA,NA,NA,NA,NA,NA,"","",0,0.456061580857061
+"SS19","SS","SS","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0,0.828033844900213
+"SSc01","SSc","SSc","Male","42","","",NA,NA,NA,NA,NA,NA,"","",0,0.571539456048783
+"SSc02","SSc","SSc","Male","45","","",NA,NA,NA,NA,NA,NA,"","",0.031722986,0.557566793983994
+"SSc03","SSc","SSc","Female","26","","",NA,NA,NA,NA,NA,NA,"","",0,0.85916247831027
+"SSc04","SSc","SSc","Female","43","","",NA,NA,NA,NA,NA,NA,"","",0,0.460005754278074
+"SSc05","SSc","SSc","Female","56","","",NA,NA,NA,NA,NA,NA,"","",0.06377891,0.637657492694765
+"SSc06","SSc","SSc","Female","67","","",NA,NA,NA,NA,NA,NA,"","",0.025588726,0.768875576091784
+"SSc07","SSc","SSc","Female","61","","",NA,NA,NA,NA,NA,NA,"","",0.111849686,0.763795563434074
+"SSc09","SSc","SSc","Female","55","","",NA,NA,NA,NA,NA,NA,"","",0,0.625489132984482
+"SSc10","SSc","SSc","Female","63","","",NA,NA,NA,NA,NA,NA,"","",0.098230113,0.683057522647321
+"SSc11","SSc","SSc","Female","66","","",NA,NA,NA,NA,NA,NA,"","",0,0.756794570313024
+"SSc12","SSc","SSc","Female","66","","",NA,NA,NA,NA,NA,NA,"","",0.18487742,0.648160035187123
+"SSc13","SSc","SSc","Male","25","","",NA,NA,NA,NA,NA,NA,"","",0,0.612523979623271
+"SSc14","SSc","SSc","Female","54","","",NA,NA,NA,NA,NA,NA,"","",0.014276669,0.84228923342962
+"SSc15","SSc","SSc","Male","34","","",NA,NA,NA,NA,NA,NA,"","",0.043009975,0.867260387006447
+"SSc16","SSc","SSc","Female","48","","",NA,NA,NA,NA,NA,NA,"","",0.04455817,0.726649116715388
