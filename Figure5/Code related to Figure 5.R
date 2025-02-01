@@ -398,7 +398,7 @@ ggplot(data, aes( x =rep..0...ncol.dat1..,y=LASSO)) +
         axis.text.x= element_text(size = 13, color = "black",   hjust = 0.5),
         title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
 ggsave("MTX_HCQ coefficient.pdf", width = 5, height = 8)#
-########################Fig5I:ROC(MTX+LEF)################
+########################Fig5I+SFig5A:ROC(MTX+LEF)################
 library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
 library(scales);library(pROC);library(lifecycle);library(purrr)
 data=read.csv("RA_DATAKNN1.csv", header = F,row.names = NULL)
@@ -430,8 +430,13 @@ coef_all=NULL
 i=1
 for(i in 1:100){
   set.seed(i)
-  train=rbind(Y[sample(1:nrow(Y),10,replace = F),],N[sample(1:nrow(N),17,replace = F),])
-  test=dat1[!c(dat1$gene%in%train$gene),]
+  Y1<-Y[sample(1:nrow(Y),7,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),7,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),7,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
   y=train$`Responder-HM`
   y_test <- test$`Responder-HM`
   x <- cbind(train[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
@@ -499,7 +504,7 @@ ggplot(re,aes(value, fill=variable))+
 # ggsave("density_plot 100 times ridge 5clinical.pdf", width = 3, height = 3)
 ggsave("rescaled density_plot 100 times ridge_MTXLEF(p-top5).pdf",  width = 3, height = 3.4)
 
-########################Fig5J:ROC(MTX+HCQ)################
+########################Fig5J+SFig5A:ROC(MTX+HCQ)################
 colnames(data)=data[1,];data=data[-1,];data[,c(8:14,16:ncol(data))] = lapply(data[,c(8:14,16:ncol(data))], as.numeric)
 table(is.na(data[,16:ncol(data)]))
 
@@ -532,8 +537,13 @@ coef_all=NULL
 i=1
 for(i in 1:100){
   set.seed(i)
-  train=rbind(Y[sample(1:nrow(Y),7,replace = F),],N[sample(1:nrow(N),14,replace = F),])
-  test=dat1[!c(dat1$gene%in%train$gene),]
+  Y1<-Y[sample(1:nrow(Y),7,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),7,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),7,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
   y=train$`Responder-HM`
   y_test <- test$`Responder-HM`
   x <- cbind(train[,c("GGT1","RPL27A")])
@@ -782,7 +792,832 @@ dev.off()
 
 
 
-########################SFig5A:dot plot-Elisa####################
+########################SFig5B:Feture select########
+setwd("H:/分析/RA/返修第二版/feature select/")
+MTXLEF<-read.csv("RF MTXLEF.csv")
+MTXHCQ<-read.csv("RF MTXHCQ.csv")
+
+ggplot(data=MTXLEF,aes(x=GENE,y=MeanDecreaseGini.2,fill=MeanDecreaseGini.2))+
+  geom_bar(aes(fill=MeanDecreaseGini.2),position = "dodge",stat="identity",width = 0.7)+
+  scale_x_discrete(limits=unique(MTXLEF$GENE))+
+  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
+  scale_fill_gradient2(low="#737AAC",mid="white",high = "#AF322F")+
+  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
+  theme(axis.line=element_line(color="black",size = 0.75),
+        axis.ticks=element_line(color="black",size = 0.75),
+        #panel.grid=element_line(linetype = 2,colour = "grey"),
+        panel.background = element_rect(fill = "white"),
+        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
+        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
+ggsave("rf_coef_mtxlef.pdf",height = 4,width = 7)  
+ggplot(data=MTXHCQ,aes(x=GENE,y=MeanDecreaseGini.1,fill=MeanDecreaseGini.1))+
+  geom_bar(aes(fill=MeanDecreaseGini.1),position = "dodge",stat="identity",width = 0.7)+
+  scale_x_discrete(limits=unique(MTXHCQ$GENE))+
+  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
+  scale_fill_gradient2(low="#737AAC",mid="white",high = "#AF322F")+
+  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
+  theme(axis.line=element_line(color="black",size = 0.75),
+        axis.ticks=element_line(color="black",size = 0.75),
+        #panel.grid=element_line(linetype = 2,colour = "grey"),
+        panel.background = element_rect(fill = "white"),
+        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
+        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
+ggsave("rf_coef_mtxhcq.pdf",height = 4,width = 7)  
+MTXLEF<-read.csv("feature select XGB mtx+lef.csv")[c(1:10),]
+MTXHCQ<-read.csv("feature select XGB mtx+hcq.csv")[c(1:10),]
+
+ggplot(data=MTXLEF,aes(x=Feature,y=Gain,fill=Gain))+
+  geom_bar(aes(fill=Gain),position = "dodge",stat="identity",width = 0.7)+
+  scale_x_discrete(limits=unique(MTXLEF$Feature))+
+  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
+  scale_fill_gradient2(low="#AF322F",mid="white",high = "#737AAC")+
+  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
+  theme(axis.line=element_line(color="black",size = 0.75),
+        axis.ticks=element_line(color="black",size = 0.75),
+        #panel.grid=element_line(linetype = 2,colour = "grey"),
+        panel.background = element_rect(fill = "white"),
+        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
+        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
+ggsave("XGB_coef_mtxlef.pdf",height = 4,width = 7)  
+ggplot(data=MTXHCQ,aes(x=Feature,y=Gain,fill=Gain))+
+  geom_bar(aes(fill=Gain),position = "dodge",stat="identity",width = 0.7)+
+  scale_x_discrete(limits=unique(MTXHCQ$Feature))+
+  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
+  scale_fill_gradient2(low="#AF322F",mid="white",high = "#737AAC")+
+  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
+  theme(axis.line=element_line(color="black",size = 0.75),
+        axis.ticks=element_line(color="black",size = 0.75),
+        #panel.grid=element_line(linetype = 2,colour = "grey"),
+        panel.background = element_rect(fill = "white"),
+        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
+        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
+ggsave("XGB_coef_mtxhcq.pdf",height = 4,width = 7)  
+
+########################SFig5C:RF and XGBoost#####################
+setwd("H:/分析/RA/返修第二版/")
+library(scales);library(randomForest);
+library(reshape2);library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+library(scales);library(pROC);library(lifecycle);library(purrr);library(pROC);library(ggplot2);library(gtable)
+
+data <- read.csv("RA_DATAKNN1.csv")
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXLEF=read.csv("gene_mtxlef.csv",header = F)[-1,2]
+data$Drugs.Response
+d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"gene","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+dat1=d
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,
+                           ifelse(dat1$Drugs.Response=="No Response",0,NA))
+dat1<-dat1[,-c(1:7)]
+a<-as.integer(runif(50,min=1,max=123456789))
+coef <- data.frame(rep("0",ncol(dat1)-1))
+coef<-data.frame(coef)
+i=1
+repeat{set.seed(i)
+  rf=randomForest(as.factor(Drugs.Response)~.,data =dat1,ntree=500 )
+  lasso.coef<-importance(x=rf)
+  coef <- cbind(coef,lasso.coef)
+  i=i+1
+  if(i>50){
+    break}}
+coef[,1]<-colnames(dat1)[-1]
+coef<-coef[,-1]
+coef1<-rowMeans(coef)
+coef2<-data.frame(row.names(coef),coef1)
+write.csv(coef,"coef_rf_mtxLEF.csv",row.names = T)
+
+
+
+
+
+
+
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXLEF=c("VAT1","CBR1","ECI2","XRCC5")
+
+d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+dat1=d
+# 全部变量中心化到-1至1水平
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+
+
+
+for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+
+dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+
+Y=dat1[dat1$Drugs.Response==1,]
+N=dat1[dat1$Drugs.Response==0,]
+
+result=NULL
+list_train=list()
+list_test=list()
+coef_all=NULL
+i=1
+for(i in 1:100){
+  set.seed(i)
+  Y1<-Y[sample(1:nrow(Y),10,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),10,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),9,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
+  y=train$Drugs.Response
+  y_test <- test$Drugs.Response
+  x <- cbind(train[,c("VAT1","CBR1","ECI2","XRCC5")])
+  x_test <- cbind(test[,c("VAT1","CBR1","ECI2","XRCC5")])
+  
+  rf=randomForest(x=x,y=y,ntree=500 )
+  train_y <-predict(rf,as.matrix(x), type="response")
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(rf,as.matrix(x_test), type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+write.csv(result,"rescaled 100 times rf_MTXLEF(p-top5)_sample2.csv",row.names = F)
+range(result$train_auc);range(result$test_auc)
+median(result$train_auc);median(result$test_auc)
+plot_ROC(list_train,show.AUC = F,show.points = F,
+         show.eta=FALSE,#不显示截点
+         show.sens=FALSE #不显示各种率
+)+scale_color_manual(values = rep(rgb(049,124,183,10, maxColorValue = 255),100))+
+  theme(axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        panel.grid = element_blank())+
+  annotate("text",x=0.65,y=0.2, label="AUROC range: 0.82-1.00", size=4)+
+  annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.96", size=4)
+ggsave("rescaled train 100 times ridge_MTXLEF(p-top5).pdf", width = 3.2, height = 3)
+
+plot_ROC(list_test,show.AUC = F,show.points = F,
+         show.eta=FALSE,#不显示截点
+         show.sens=FALSE #不显示各种率
+)+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+  theme(axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        panel.grid = element_blank())+
+  annotate("text",x=0.65,y=0.2, label="AUROC range: 0.47-0.88", size=4)+
+  annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.71", size=4)
+# ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+ggsave("rescaled test 100 times rf_MTXLEF(p-top5)___1.pdf", width = 3.2, height = 3)
+
+setwd("H:/分析/RA/返修第二版/")
+library(scales);library(randomForest);
+library(reshape2);library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+library(scales);library(pROC);library(lifecycle);library(purrr);library(pROC);library(ggplot2);library(gtable)
+library(caret);library(e1071)
+data <- read.csv("RA_DATAKNN1.csv")
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXHCQ=c("GGT1","RPL27A")
+
+d=data[which(data$Drugs=="MTX+HCQ"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXHCQ,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+dat1=d
+# 全部变量中心化到-1至1水平
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+
+
+
+for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+
+dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+
+Y=dat1[dat1$Drugs.Response==1,]
+N=dat1[dat1$Drugs.Response==0,]
+
+result=NULL
+list_train=list()
+list_test=list()
+coef_all=NULL
+i=1
+for(i in 1:100){
+  set.seed(i)
+  Y1<-Y[sample(1:nrow(Y),7,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),7,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),7,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
+  y=train$Drugs.Response
+  y_test <- test$Drugs.Response
+  x <- cbind(train[,c("GGT1","RPL27A")])
+  x_test <- cbind(test[,c("GGT1","RPL27A")])
+  
+  rf=randomForest(x=x,y=y,ntree=500 )
+  train_y <-predict(rf,as.matrix(x), type="response")
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(rf,as.matrix(x_test), type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+write.csv(result,"rescaled 100 times rf_MTXHCQ(p-top2)_sample2.csv",row.names = F)
+range(result$train_auc);range(result$test_auc)
+median(result$train_auc);median(result$test_auc)
+
+plot_ROC(list_test,show.AUC = F,show.points = F,
+         show.eta=FALSE,#不显示截点
+         show.sens=FALSE #不显示各种率
+)+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+  theme(axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        panel.grid = element_blank())+
+  annotate("text",x=0.65,y=0.2, label="AUROC range: 0.41-0.98", size=4)+
+  annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.79", size=4)
+# ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+ggsave("rescaled test 100 times rf_MTXHCQ(p-top5)___1.pdf", width = 3.2, height = 3)
+{setwd("H:/分析/RA/返修第二版/")
+  library(scales);library(randomForest);
+  library(reshape2);library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+  library(scales);library(pROC);library(lifecycle);library(purrr);library(pROC);library(ggplot2);library(gtable)
+  library(dplyr);library(data.table);library(xgboost) ;library(Matrix);library(caTools);library(caret) # 调参和计算模型评价参数使用
+  library(pROC);library(ggplot2) ;library(ggpubr);library(ggprism) ;library(caTools);library(scales);library(Ckmeans.1d.dp)
+  library(plyr);library(dplyr)
+  data <- read.csv("RA_DATAKNN1.csv")
+  data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+  table(is.na(data[,16:ncol(data)]))
+  MTXLEF=read.csv("gene_mtxlef.csv",header = F)[-1,2]
+  data$Drugs.Response
+  d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"gene","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+  dat1=d
+  dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+  dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,
+                             ifelse(dat1$Drugs.Response=="No Response",0,NA))
+  dat1<-dat1[,-c(1:7)]
+  a<-as.integer(runif(50,min=1,max=123456789))
+  
+  newtrain<-dat1
+  head(newtrain)
+  str(newtrain)
+  sparse_matrix = sparse.model.matrix(Drugs.Response~ ., data = newtrain)[,-1]
+  head(sparse_matrix)
+  output_vector = as.numeric(newtrain$Drugs.Response)
+  # 建模（不调参）
+  xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,
+                eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+  
+  # 特征重要性排序
+  imp = xgb.importance(colnames(sparse_matrix),xgb)
+  
+  
+  
+  data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+  table(is.na(data[,16:ncol(data)]))
+  MTXLEF=c("VAT1","APOD","PSMA6","SLC25A13")
+  
+  d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+  dat1=d
+  # 全部变量中心化到-1至1水平
+  dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+  dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+  
+  
+  
+  for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+  
+  dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+  
+  Y=dat1[dat1$Drugs.Response==1,]
+  N=dat1[dat1$Drugs.Response==0,]
+  
+  result=NULL
+  list_train=list()
+  list_test=list()
+  coef_all=NULL
+  i=1
+  for(i in 1:100){
+    set.seed(i)
+    Y1<-Y[sample(1:nrow(Y),9,replace = F),]
+    Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+    N1<-N[sample(1:nrow(N),9,replace = F),]
+    N2<-N[!c(N$Sample%in%N1$Sample),]
+    N2<-N2[sample(1:nrow(N2),10,replace = F),]
+    train=rbind(Y1,N2)
+    test=rbind(Y2,N1)
+    y=train$Drugs.Response
+    y_test <- test$Drugs.Response
+    x <- cbind(train[,c("VAT1")])
+    x_test <- cbind(test[,c("VAT1")])
+    dtrain <- xgb.DMatrix(data = as.matrix(x), label = y)
+    dtest <- xgb.DMatrix(data = as.matrix(x_test))
+    sparse_matrix = sparse.model.matrix(as.factor(Drugs.Response)~.,data = train[,-c(1:8)])[,-1]
+    sparse_matrix_test = sparse.model.matrix(as.factor(Drugs.Response)~.,data = test[,-c(1:8)])[,-1]
+    head(sparse_matrix)
+    output_vector = as.numeric(train$Drugs.Response)
+    # 建模（不调参）
+    xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+    #caret.Control <- trainControl(method = "adaptive_cv",number = 10,repeats=5,verboseIter = FALSE,returnData = FALSE,selectionFunction="best",returnResamp = "final",search = "grid",seeds=set.seed(123))
+    #caret.grid <- expand.grid(nrounds = c(100,200,500),max_depth = c(3,5,6),eta = c(0.01, 0.1, 0.3),gamma = c(0,0.1,0.5),colsample_bytree = 0.7,min_child_weight = c(1,3),subsample =0.7)
+    #xgb_model_caret <- train(as.factor(Drugs.Response)~.,data = train[,-c(1:8)],method = "xgbTree",trControl = caret.Control,tuneGrid = caret.grid, verbose=FALSE,verbosity=0)
+    #params.caret.bst <- list(objective = "binary:logistic",eval_metric = "logloss",max_depth =5,eta = 0.1)
+    #xgb_model_caret.bst <- xgboost(data=dtrain,params = params.caret.bst,nrounds =100)
+    print(i)
+    train_y <-predict(xgb, sparse_matrix,type="response")
+    df=data.frame(y,train_y=as.numeric(train_y))
+    train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+    test_y <- predict(xgb,sparse_matrix_test, type="response")
+    df1=data.frame(y_test,test_y=as.numeric(test_y))
+    test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+    result=rbind(result, data.frame(i,train_auc, test_auc))
+    list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+    list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+  }
+  range(result$train_auc);range(result$test_auc)
+  median(result$train_auc);median(result$test_auc)
+  
+  plot_ROC(list_test,show.AUC = F,show.points = F,
+           show.eta=FALSE,#不显示截点
+           show.sens=FALSE #不显示各种率
+  )+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+    theme(axis.text = element_text(color="black", size=13),
+          axis.title = element_text(color="black", size=13),
+          panel.grid = element_blank())+
+    annotate("text",x=0.65,y=0.2, label="AUROC range: 0.41-0.93", size=4)+
+    annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.70", size=4)
+  # ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+  ggsave("rescaled test 100 times XGB_MTXLEF(p-top1)__NEW.pdf", width = 3.2, height = 3)
+}
+setwd("H:/分析/RA/返修第二版/")
+library(scales);library(randomForest);
+library(reshape2);library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+library(scales);library(pROC);library(lifecycle);library(purrr);library(pROC);library(ggplot2);library(gtable)
+library(dplyr);library(data.table);library(xgboost) ;library(Matrix);library(caTools);library(caret) # 调参和计算模型评价参数使用
+library(pROC);library(ggplot2) ;library(ggpubr);library(ggprism) ;library(caTools);library(scales);library(Ckmeans.1d.dp)
+library(plyr);library(dplyr)
+data <- read.csv("RA_DATAKNN1.csv")
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXLEF=read.csv("gene_mtxlef.csv",header = F)[-1,2]
+data$Drugs.Response
+d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"gene","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+dat1=d
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,
+                           ifelse(dat1$Drugs.Response=="No Response",0,NA))
+dat1<-dat1[,-c(1:7)]
+a<-as.integer(runif(50,min=1,max=123456789))
+
+newtrain<-dat1
+head(newtrain)
+str(newtrain)
+sparse_matrix = sparse.model.matrix(Drugs.Response~ ., data = newtrain)[,-1]
+head(sparse_matrix)
+output_vector = as.numeric(newtrain$Drugs.Response)
+# 建模（不调参）
+xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,
+              eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+
+# 特征重要性排序
+imp = xgb.importance(colnames(sparse_matrix),xgb)
+
+
+
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXLEF=c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")
+
+d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+dat1=d
+# 全部变量中心化到-1至1水平
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+
+
+
+for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+
+dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+
+Y=dat1[dat1$Drugs.Response==1,]
+N=dat1[dat1$Drugs.Response==0,]
+
+result=NULL
+list_train=list()
+list_test=list()
+coef_all=NULL
+i=1
+for(i in 1:100){
+  set.seed(i)
+  Y1<-Y[sample(1:nrow(Y),9,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),9,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),10,replace = F),]
+  train=rbind(Y1,N2)
+  test=rbind(Y2,N1)
+  y=train$Drugs.Response
+  y_test <- test$Drugs.Response
+  x <- cbind(train[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  x_test <- cbind(test[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  dtrain <- xgb.DMatrix(data = as.matrix(x), label = y)
+  dtest <- xgb.DMatrix(data = as.matrix(x_test))
+  sparse_matrix = sparse.model.matrix(as.factor(Drugs.Response)~.,data = train[,-c(1:8)])[,-1]
+  sparse_matrix_test = sparse.model.matrix(as.factor(Drugs.Response)~.,data = test[,-c(1:8)])[,-1]
+  head(sparse_matrix)
+  output_vector = as.numeric(train$Drugs.Response)
+  # 建模（不调参）
+  xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+  #caret.Control <- trainControl(method = "adaptive_cv",number = 10,repeats=5,verboseIter = FALSE,returnData = FALSE,selectionFunction="best",returnResamp = "final",search = "grid",seeds=set.seed(123))
+  #caret.grid <- expand.grid(nrounds = c(100,200,500),max_depth = c(3,5,6),eta = c(0.01, 0.1, 0.3),gamma = c(0,0.1,0.5),colsample_bytree = 0.7,min_child_weight = c(1,3),subsample =0.7)
+  #xgb_model_caret <- train(as.factor(Drugs.Response)~.,data = train[,-c(1:8)],method = "xgbTree",trControl = caret.Control,tuneGrid = caret.grid, verbose=FALSE,verbosity=0)
+  #params.caret.bst <- list(objective = "binary:logistic",eval_metric = "logloss",max_depth =5,eta = 0.1)
+  #xgb_model_caret.bst <- xgboost(data=dtrain,params = params.caret.bst,nrounds =100)
+  print(i)
+  train_y <-predict(xgb, sparse_matrix,type="response")
+  df=data.frame(y,train_y=as.numeric(train_y))
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(xgb,sparse_matrix_test, type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+range(result$train_auc);range(result$test_auc)
+median(result$train_auc);median(result$test_auc)
+
+plot_ROC(list_test,show.AUC = F,show.points = F,
+         show.eta=FALSE,#不显示截点
+         show.sens=FALSE #不显示各种率
+)+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+  theme(axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        panel.grid = element_blank())+
+  annotate("text",x=0.65,y=0.2, label="AUROC range: 0.52-0.95", size=4)+
+  annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.78", size=4)
+# ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+ggsave("rescaled test 100 times XBG_MTXLEF(p-top5)-OLD.pdf", width = 3.2, height = 3)
+{setwd("H:/分析/RA/返修第二版/")
+  library(scales);library(randomForest);
+  library(reshape2);library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+  library(scales);library(pROC);library(lifecycle);library(purrr);library(pROC);library(ggplot2);library(gtable)
+  library(dplyr);library(data.table);library(xgboost) ;library(Matrix);library(caTools);library(caret) # 调参和计算模型评价参数使用
+  library(pROC);library(ggplot2) ;library(ggpubr);library(ggprism) ;library(caTools);library(scales);library(Ckmeans.1d.dp)
+  library(plyr);library(dplyr)
+  data <- read.csv("RA_DATAKNN1.csv")
+  data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+  table(is.na(data[,16:ncol(data)]))
+  MTXHCQ=read.csv("gene_mtxhcq.csv",header = F)[-1,2]
+  data$Drugs.Response
+  d=data[which(data$Drugs=="MTX+HCQ"&data$Drugs.Response!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXHCQ,"gene","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+  dat1=d
+  dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+  dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,
+                             ifelse(dat1$Drugs.Response=="No Response",0,NA))
+  dat1<-dat1[,-c(1:7)]
+  a<-as.integer(runif(50,min=1,max=123456789))
+  
+  newtrain<-dat1
+  head(newtrain)
+  str(newtrain)
+  sparse_matrix = sparse.model.matrix(Drugs.Response~ ., data = newtrain)[,-1]
+  head(sparse_matrix)
+  output_vector = as.numeric(newtrain$Drugs.Response)
+  # 建模（不调参）
+  xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,
+                eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+  
+  # 特征重要性排序
+  imp = xgb.importance(colnames(sparse_matrix),xgb)
+  
+  
+  
+  data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+  table(is.na(data[,16:ncol(data)]))
+  MTXHCQ=c("GGT1","RPL27A")
+  
+  d=data[which(data$Drugs=="MTX+HCQ"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXHCQ,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+  dat1=d
+  # 全部变量中心化到-1至1水平
+  dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+  dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+  
+  
+  
+  for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+  
+  dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+  
+  Y=dat1[dat1$Drugs.Response==1,]
+  N=dat1[dat1$Drugs.Response==0,]
+  
+  result=NULL
+  list_train=list()
+  list_test=list()
+  coef_all=NULL
+  i=1
+  for(i in 1:100){
+    set.seed(i)
+    Y1<-Y[sample(1:nrow(Y),7,replace = F),]
+    Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+    N1<-N[sample(1:nrow(N),7,replace = F),]
+    N2<-N[!c(N$Sample%in%N1$Sample),]
+    N2<-N2[sample(1:nrow(N2),7,replace = F),]
+    train=rbind(Y1,N2)
+    test=rbind(Y2,N1)
+    y=train$Drugs.Response
+    y_test <- test$Drugs.Response
+    x <- cbind(train[,c("GGT1")])
+    x_test <- cbind(test[,c("GGT1")])
+    dtrain <- xgb.DMatrix(data = as.matrix(x), label = y)
+    dtest <- xgb.DMatrix(data = as.matrix(x_test))
+    sparse_matrix = sparse.model.matrix(as.factor(Drugs.Response)~.,data = train[,-c(1:8)])[,-1]
+    sparse_matrix_test = sparse.model.matrix(as.factor(Drugs.Response)~.,data = test[,-c(1:8)])[,-1]
+    head(sparse_matrix)
+    output_vector = as.numeric(train$Drugs.Response)
+    # 建模（不调参）
+    xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+    #caret.Control <- trainControl(method = "adaptive_cv",number = 10,repeats=5,verboseIter = FALSE,returnData = FALSE,selectionFunction="best",returnResamp = "final",search = "grid",seeds=set.seed(123))
+    #caret.grid <- expand.grid(nrounds = c(100,200,500),max_depth = c(3,5,6),eta = c(0.01, 0.1, 0.3),gamma = c(0,0.1,0.5),colsample_bytree = 0.7,min_child_weight = c(1,3),subsample =0.7)
+    #xgb_model_caret <- train(as.factor(Drugs.Response)~.,data = train[,-c(1:8)],method = "xgbTree",trControl = caret.Control,tuneGrid = caret.grid, verbose=FALSE,verbosity=0)
+    #params.caret.bst <- list(objective = "binary:logistic",eval_metric = "logloss",max_depth =5,eta = 0.1)
+    #xgb_model_caret.bst <- xgboost(data=dtrain,params = params.caret.bst,nrounds =100)
+    print(i)
+    train_y <-predict(xgb, sparse_matrix,type="response")
+    df=data.frame(y,train_y=as.numeric(train_y))
+    train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+    test_y <- predict(xgb,sparse_matrix_test, type="response")
+    df1=data.frame(y_test,test_y=as.numeric(test_y))
+    test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+    result=rbind(result, data.frame(i,train_auc, test_auc))
+    list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+    list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+  }
+  range(result$train_auc);range(result$test_auc)
+  median(result$train_auc);median(result$test_auc)
+  
+  plot_ROC(list_test,show.AUC = F,show.points = F,
+           show.eta=FALSE,#不显示截点
+           show.sens=FALSE #不显示各种率
+  )+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+    theme(axis.text = element_text(color="black", size=13),
+          axis.title = element_text(color="black", size=13),
+          panel.grid = element_blank())+
+    annotate("text",x=0.65,y=0.2, label="AUROC range: 0.45-0.97", size=4)+
+    annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.75", size=4)
+  # ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+  ggsave("rescaled test 100 times XGB_MTXHCQ(p-top1)__NEW.pdf", width = 3.2, height = 3)
+}
+{setwd("H:/分析/RA/返修第二版/")
+  library(scales);library(randomForest);
+  library(reshape2);library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+  library(scales);library(pROC);library(lifecycle);library(purrr);library(pROC);library(ggplot2);library(gtable)
+  library(dplyr);library(data.table);library(xgboost) ;library(Matrix);library(caTools);library(caret) # 调参和计算模型评价参数使用
+  library(pROC);library(ggplot2) ;library(ggpubr);library(ggprism) ;library(caTools);library(scales);library(Ckmeans.1d.dp)
+  library(plyr);library(dplyr)
+  data <- read.csv("RA_DATAKNN1.csv")
+  data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+  table(is.na(data[,16:ncol(data)]))
+  MTXHCQ=read.csv("gene_mtxhcq.csv",header = F)[-1,2]
+  data$Drugs.Response
+  d=data[which(data$Drugs=="MTX+HCQ"&data$Drugs.Response!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXHCQ,"gene","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+  dat1=d
+  dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+  dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,
+                             ifelse(dat1$Drugs.Response=="No Response",0,NA))
+  dat1<-dat1[,-c(1:7)]
+  a<-as.integer(runif(50,min=1,max=123456789))
+  
+  newtrain<-dat1
+  head(newtrain)
+  str(newtrain)
+  sparse_matrix = sparse.model.matrix(Drugs.Response~ ., data = newtrain)[,-1]
+  head(sparse_matrix)
+  output_vector = as.numeric(newtrain$Drugs.Response)
+  # 建模（不调参）
+  xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,
+                eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+  
+  # 特征重要性排序
+  imp = xgb.importance(colnames(sparse_matrix),xgb)
+  
+  
+  
+  data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+  table(is.na(data[,16:ncol(data)]))
+  MTXHCQ=c("GGT1","RPL27A")
+  
+  d=data[which(data$Drugs=="MTX+HCQ"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXHCQ,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","Gender","SJC","TJC","CRP.1")]
+  dat1=d
+  # 全部变量中心化到-1至1水平
+  dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+  dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+  
+  
+  
+  for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+  
+  dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+  
+  Y=dat1[dat1$Drugs.Response==1,]
+  N=dat1[dat1$Drugs.Response==0,]
+  
+  result=NULL
+  list_train=list()
+  list_test=list()
+  coef_all=NULL
+  i=1
+  for(i in 1:100){
+    set.seed(i)
+    Y1<-Y[sample(1:nrow(Y),7,replace = F),]
+    Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+    N1<-N[sample(1:nrow(N),7,replace = F),]
+    N2<-N[!c(N$Sample%in%N1$Sample),]
+    N2<-N2[sample(1:nrow(N2),7,replace = F),]
+    train=rbind(Y1,N2)
+    test=rbind(Y2,N1)
+    y=train$Drugs.Response
+    y_test <- test$Drugs.Response
+    x <- cbind(train[,c("GGT1","RPL27A")])
+    x_test <- cbind(test[,c("GGT1","RPL27A")])
+    dtrain <- xgb.DMatrix(data = as.matrix(x), label = y)
+    dtest <- xgb.DMatrix(data = as.matrix(x_test))
+    sparse_matrix = sparse.model.matrix(as.factor(Drugs.Response)~.,data = train[,-c(1:8)])[,-1]
+    sparse_matrix_test = sparse.model.matrix(as.factor(Drugs.Response)~.,data = test[,-c(1:8)])[,-1]
+    head(sparse_matrix)
+    output_vector = as.numeric(train$Drugs.Response)
+    # 建模（不调参）
+    xgb = xgboost(data = sparse_matrix, label = output_vector, max_depth = 4,eta = 1, nthread = 2, nrounds = 10,objective = "binary:logistic")
+    #caret.Control <- trainControl(method = "adaptive_cv",number = 10,repeats=5,verboseIter = FALSE,returnData = FALSE,selectionFunction="best",returnResamp = "final",search = "grid",seeds=set.seed(123))
+    #caret.grid <- expand.grid(nrounds = c(100,200,500),max_depth = c(3,5,6),eta = c(0.01, 0.1, 0.3),gamma = c(0,0.1,0.5),colsample_bytree = 0.7,min_child_weight = c(1,3),subsample =0.7)
+    #xgb_model_caret <- train(as.factor(Drugs.Response)~.,data = train[,-c(1:8)],method = "xgbTree",trControl = caret.Control,tuneGrid = caret.grid, verbose=FALSE,verbosity=0)
+    #params.caret.bst <- list(objective = "binary:logistic",eval_metric = "logloss",max_depth =5,eta = 0.1)
+    #xgb_model_caret.bst <- xgboost(data=dtrain,params = params.caret.bst,nrounds =100)
+    print(i)
+    train_y <-predict(xgb, sparse_matrix,type="response")
+    df=data.frame(y,train_y=as.numeric(train_y))
+    train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+    test_y <- predict(xgb,sparse_matrix_test, type="response")
+    df1=data.frame(y_test,test_y=as.numeric(test_y))
+    test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+    result=rbind(result, data.frame(i,train_auc, test_auc))
+    list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+    list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+  }
+  range(result$train_auc);range(result$test_auc)
+  median(result$train_auc);median(result$test_auc)
+  
+  plot_ROC(list_test,show.AUC = F,show.points = F,
+           show.eta=FALSE,#不显示截点
+           show.sens=FALSE #不显示各种率
+  )+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+    theme(axis.text = element_text(color="black", size=13),
+          axis.title = element_text(color="black", size=13),
+          panel.grid = element_blank())+
+    annotate("text",x=0.65,y=0.2, label="AUROC range: 0.45-0.98", size=4)+
+    annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.76", size=4)
+  # ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+  ggsave("rescaled test 100 times XGB_MTXHCQ(p-top2)__OLD.pdf", width = 3.2, height = 3)
+}
+########################SFig5D:boxplot#####################
+library(ggplot2);library(dplyr);library(reshape2);library(ggplot2);library(ggpubr)
+data<-read.csv("drug respense/pathway—MTX+HCQ2.csv")
+data$PValue2
+data %>%
+  mutate(X.1= factor(X.1, levels = c("All","Female"))) %>%
+  ggplot(aes(y =Term,x = X.1,size=Count,fill=PValue2))+
+  geom_point(aes(size=Count,fill=PValue2),color='black',shape = 21)+
+  scale_fill_gradient2(low="#3C82B9",mid = "white",high = "red")+
+  scale_y_discrete(limits=rev(unique(data$Term)),position = "left")+
+  scale_size_continuous(range=c(4,13))+
+  theme(strip.background.x = element_rect(color="white", fill="white"),
+        axis.line=element_line(linetype=1,color="black",size=0.75),
+        panel.border = element_rect(fill=NA,color="black", size=0.75),
+        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
+        panel.background = element_rect(fill = "white"),
+        panel.grid=element_blank(),
+        axis.text.y= element_blank(),
+        axis.text.x= element_text(size = 13, color = "black", hjust = 1,angle = 45),
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),legend.position = "bottom") 
+ggsave("drug respense/pathway_MTX_HCQ_CCP+(Y_N).pdf", width = 2.7, height = 9)
+
+
+
+
+
+########################sFig5E:clinical factor################
+library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+library(scales);library(pROC);library(lifecycle);library(purrr)
+setwd("H:/分析/RA/返修第二版/")
+data=read.csv("RA_DATAKNN1.csv")
+data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXLEF=c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")
+
+d=data[which(data$Drugs=="MTX+LEF"&data$Drugs.Response!=""&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"Sample","DAS28.CRP","DDAS28.CRP","Drugs.Response","Age","VAS","SJC","TJC","CRP.1")]
+dat1=d
+# 全部变量中心化到-1至1水平
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+dat1$Drugs.Response=ifelse(dat1$Drugs.Response=="Response",1,ifelse(dat1$Drugs.Response=="No Response",0,NA))
+
+
+
+for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$Drugs.Response,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+
+#dat1$G  =ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+
+Y=dat1[dat1$Drugs.Response==1,]
+N=dat1[dat1$Drugs.Response==0,]
+
+result=NULL
+list_train=list()
+list_test=list()
+coef_all=NULL
+i=1
+for(i in 1:100){
+  set.seed(i)
+  Y1<-Y[sample(1:nrow(Y),10,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),10,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),9,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
+  y=train$Drugs.Response
+  y_test <- test$Drugs.Response
+  x <- cbind(train[,c("VAS","SJC","TJC","CRP.1","CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  x_test <- cbind(test[,c("VAS","SJC","TJC","CRP.1","CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  
+  cvfit=cv.glmnet(as.matrix(x), y, nfolds = 10,family="binomial",alpha=0)
+  ridge <- glmnet(as.matrix(x),y, family="binomial", lambda=cvfit$lambda.min, alpha=0)
+  coef=data.frame(ID=colnames(x),i=rep(i,ncol(x)),coef=coef(ridge)@x[2:(ncol(x)+1)])
+  train_y <- predict(ridge,as.matrix(x), type="response")
+  df=data.frame(y,train_y=as.numeric(train_y))
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(ridge,as.matrix(x_test), type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  coef_all=rbind(coef_all,coef)
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+write.csv(result,"rescaled 100 times ridge_MTXLEF(p-top5)_sample3.csv",row.names = F)
+write.csv(coef_all,"rescaled coef 100 times ridge_MTXLEF(p-top5)_sample3.csv",row.names = F)
+range(result$train_auc);range(result$test_auc)
+median(result$train_auc);median(result$test_auc)
+plot_ROC(list_train,show.AUC = F,show.points = F,
+         show.eta=FALSE,#不显示截点
+         show.sens=FALSE #不显示各种率
+)+scale_color_manual(values = rep(rgb(049,124,183,10, maxColorValue = 255),100))+
+  theme(axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        panel.grid = element_blank())+
+  annotate("text",x=0.65,y=0.2, label="AUROC range: 0.91-1.00", size=4)+
+  annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.99", size=4)
+ggsave("rescaled train 100 times ridge_MTXLEF(p-top5)-SAMPLE3.pdf", width = 3.2, height = 3)
+
+plot_ROC(list_test,show.AUC = F,show.points = F,
+         show.eta=FALSE,#不显示截点
+         show.sens=FALSE #不显示各种率
+)+scale_color_manual(values = rep(rgb(220,109,087,10, maxColorValue = 255),100))+
+  theme(axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        panel.grid = element_blank())+
+  annotate("text",x=0.65,y=0.2, label="AUROC range: 0.66-1.00", size=4)+
+  annotate("text",x=0.65,y=0.1, label="Median AUROC: 0.90", size=4)
+# ggsave("test 100 times ridge 5clinical.pdf", width = 3, height = 3)
+ggsave("rescaled test 100 times ridge_MTXLEF(p-top5)-SAMPLE3.pdf", width = 3.2, height = 3)
+
+
+
+result=read.csv("rescaled 100 times ridge_MTXLEF(p-top5).csv")
+range(result$train_auc);range(result$test_auc)
+median(result$train_auc);median(result$test_auc)
+re=reshape2::melt(result,id.vars=1)
+ggplot(re,aes(value, fill=variable))+
+  geom_density(alpha=.5)+
+  geom_vline(xintercept = c(median(result$train_auc), median(result$test_auc)), linetype=2, color=c("#5D669F","#AF322F"))+
+  scale_fill_manual(values = c("#317CB7","#DC6D57"),name="", label=c("Train","Test"))+
+  theme_minimal()+
+  labs(x="AUROC",y="Density")+
+  scale_y_continuous(expand = c(0,0))+
+  theme(axis.line = element_line(color="black"),
+        axis.ticks = element_line(color="black"),
+        axis.text = element_text(color="black", size=13),
+        axis.title = element_text(color="black", size=13),
+        legend.position = "bottom")
+# ggsave("density_plot 100 times ridge 5clinical.pdf", width = 3, height = 3)
+ggsave("rescaled density_plot 100 times ridge_MTXLEF(p-top5).pdf",  width = 3, height = 3.4)
+
+
+########################SFig6F:dot plot-Elisa####################
 library(ggbeeswarm);library(reshape2);library(ggpubr);library(dplyr);library(ggsignif);library(ggplot2);library(ggrepel);library(ggbreak)
 data<-read.csv("MTX+LEF_ELISA.csv")
 {Y<-data[which(data$RESPONSE=="Y"),]
@@ -870,288 +1705,4 @@ P<-data.frame(names(data)[c(4:5)],P)
     facet_wrap( ~Groups, ncol =5,nrow=,scales="free")
 }
 ggsave("MTXHCQ_ELISA.pdf", width =5, height = 3)
-
-
-########################SFig5B:scatter plot#####################
-{data<-read.csv("TEST_MTXLEF_CCP+_YN.csv")
-data[data=="0"]<-NA
-data[data=="Inf"]<-NA
-data=data[which((data$P_Y_N!="NA")&data$FC_Y_N!="NA"),]
-d(data$color_pre)ata$color_pre[(data$P_Y_N> 0.05|data$P_Y_N=="NA")|(data$FC_Y_N > 1& data$FC_Y_N < 1)] <- "no"
-data$color_pre[(data$P_Y_N<0.05)&(data$FC_Y_N>1)] <- "up"
-data$color_pre[(data$P_Y_N<0.05)&(data$FC_Y_N< 1)]  <- "down"
-table
-log2(1.25)
-library(ggplot2)
-library(ggrepel)
-ggplot(data,aes(x=log2(data$FC_Y_N),y=-log10(data$P_Y_N),color=data$color_pre))+
-  geom_point(aes(color=data$color_pre),size=2)+
-  scale_color_manual(values =c('up'='#DD5B51','down'='#438CD5','no'='grey'),guide=FALSE)+
-  geom_text_repel(aes(label =data$X), size = 3,show.legend = F)+
-  geom_hline(yintercept =-log10(0.05),linetype=2,color="grey",size=1)+
-  labs(x="Log2(Y/N)",y="-Log10(P_Value)")+
-  scale_y_continuous(expand = c(0,0),limits = c(0,2.5))+
-  theme(axis.line=element_line(linetype=1,color="black",size=0.75),
-        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
-        panel.background = element_rect(fill = "white"),
-        panel.grid=element_blank(),
-        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
-        axis.text.x= element_text(size = 13, color = "black",   hjust = 0.5),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5))  
-ggsave("drug respense/MTX_LEF_CCP+(Y_N).pdf", width = 3.2, height = 3)
-}
-{library(reshape2);library(dplyr);library(ggplot2);library(ggrepel);library(ggbreak)
-  data<-read.csv("TEST_MTXLEF_CCP+_YN.csv",header = T)[,c(1,8:13)]
-  P<-data[,c(1,5:7)]
-  FC<-data[,c(1:4)]
-  str<- colnames(P)
-  colname<- gsub("P_","",str)
-  colnames(P) <- colname
-  df1<- melt(P,  #id.vars表示不需要合并的列；
-             measure.vars = colnames(P)[-1], #measure.vars表示需要合并的列；
-             variable.name ="Groups", #variable.name表示列名合并后的新列名；
-             value.name ="PValue") 
-  colnames(FC) <- colname
-  df2<- melt(FC,  #id.vars表示不需要合并的列；
-             measure.vars = colnames(FC)[-1], #measure.vars表示需要合并的列；
-             variable.name ="Groups", #variable.name表示列名合并后的新列名；
-             value.name ="FC") 
-  df<-merge(df1,df2,by = c("X","Groups"))
-  df[df=="0"]<-NA
-  df[df=="Inf"]<-NA
-  df=df[which((df$PValue!="NA")&df$FC!="NA"),]
-  
-  df$color_pre[(df$PValue>= 0.05|df$PValue=="NA")|(df$FC> 1& df$FC < 1)] <- "no"
-  df$color_pre[(df$PValue<0.05)&(df$FC>1)] <- "up"
-  df$color_pre[(df$PValue<0.05)&(df$FC< 1)]  <- "down"
-  up<- df %>% group_by(Groups) %>% summarise(max(log2(FC)))
-  down<-  df %>% group_by(Groups) %>% summarise(min(log2(FC)))
-  col_1<- data.frame(up,down)
-  max<- max(max(col_1$max.log2.FC..))
-  expan<- max/10
-  groups<-unique(df$Groups)
-  dfbar<-data.frame(x=groups,y=0,label=c(1:length(groups)))
-  mycolor<- c("#67867C","#D5ABAC","#5A96B5") 
-  df1<-df[which(df$color_pre=="up"),]
-  df2<-df[which(df$color_pre=="down"),]
-  df3<-df[which(df$color_pre=="no"),]
-  ggplot()+
-    geom_col(data = col_1,aes(x = Groups, y =max.log2.FC..+expan),width =0.7,
-             fill="#CCCCCC",alpha=0.4,show.legend = F)+
-    geom_jitter(data = df3,aes(x = Groups, y =log2(FC)),color = "grey",size= 2,width =0.35,show.legend = T)+
-    geom_jitter(data = df1,aes(x = Groups, y =log2(FC)),color = "#DD5B51",size= 2,width =0.35,show.legend = T)+
-    geom_jitter(data = df2,aes(x = Groups, y =log2(FC)),color = "#438CD5",size= 2,width =0.35,show.legend = T)+
-    
-    #scale_color_manual(name=NULL,values =alpha(c("#438CD5","grey","#DD5B51"),0.95),guide= FALSE)+ 
-    #geom_text_repel(data = df1,aes(x = Groups, y = -log10(PValue),label =df1$TXT), size = 1,show.legend = F)+
-    geom_bar(data=dfbar,aes(x=groups,y=y+0.3,fill=groups), levels = colname,stat ="identity",width = 0.9)+
-    geom_bar(data=dfbar,aes(x=groups,y=y-0.3,fill=groups), levels = colname,stat ="identity",width = 0.9)+
-    scale_fill_manual(values=alpha(mycolor,1))+
-    labs(x="",y="Log2(Y/N)")+
-    #scale_x_discrete(breaks=c("All","Female","Male"))+
-    scale_y_continuous(limits = c(-3,3), breaks= c(-2,0,2), expand= expansion(add = 0))+
-    #geom_text(data=dfbar,aes(x=label,y=y,label=x),size=3,color="white")+
-    #geom_text_repel(aes(label =df$X), size = 3,show.legend = F)+
-    theme_classic()+
-    theme(axis.line.x =element_blank(),axis.ticks.x =element_blank(),axis.text.x = element_blank(),
-          title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),
-          axis.text.y = element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),
-          axis.line.y = element_line(linetype=1,color="black",size=0.75),
-          panel.grid = element_blank(),panel.background = element_rect(fill = "white"))
-  ggsave("drug respense/MTX_LEF_SEX_CCP+(Y_N).pdf", width =6, height = 4.5)
-}
-{library(reshape2);library(dplyr);library(ggplot2);library(ggrepel);library(ggbreak)
-  data<-read.csv("drug respense/TEST_MTXHCQ_CCP+_YN.csv",header = T)[,c(1,8:13)]
-  P<-data[,c(1,5:7)]
-  FC<-data[,c(1:4)]
-  str<- colnames(P)
-  colname<- gsub("P_","",str)
-  colnames(P) <- colname
-  df1<- melt(P,  #id.vars表示不需要合并的列；
-             measure.vars = colnames(P)[-1], #measure.vars表示需要合并的列；
-             variable.name ="Groups", #variable.name表示列名合并后的新列名；
-             value.name ="PValue") 
-  colnames(FC) <- colname
-  df2<- melt(FC,  #id.vars表示不需要合并的列；
-             measure.vars = colnames(FC)[-1], #measure.vars表示需要合并的列；
-             variable.name ="Groups", #variable.name表示列名合并后的新列名；
-             value.name ="FC") 
-  df<-merge(df1,df2,by = c("X","Groups"))
-  df[df=="0"]<-NA
-  df[df=="Inf"]<-NA
-  df=df[which((df$PValue!="NA")&df$FC!="NA"),]
-  
-  df$color_pre[(df$PValue>= 0.05|df$PValue=="NA")|(df$FC> 1& df$FC < 1)] <- "no"
-  df$color_pre[(df$PValue<0.05)&(df$FC>1)] <- "up"
-  df$color_pre[(df$PValue<0.05)&(df$FC< 1)]  <- "down"
-  up<- df %>% group_by(Groups) %>% summarise(max(log2(FC)))
-  down<-  df %>% group_by(Groups) %>% summarise(min(log2(FC)))
-  col_1<- data.frame(up,down)
-  max<- max(max(col_1$max.log2.FC..))
-  expan<- max/10
-  groups<-unique(df$Groups)
-  dfbar<-data.frame(x=groups,y=0,label=c(1:length(groups)))
-  mycolor<- c("#67867C","#D5ABAC","#5A96B5") 
-  df1<-df[which(df$color_pre=="up"),]
-  df2<-df[which(df$color_pre=="down"),]
-  df3<-df[which(df$color_pre=="no"),]
-  ggplot()+
-    geom_col(data = col_1,aes(x = Groups, y =max.log2.FC..+expan),width =0.7,
-             fill="#CCCCCC",alpha=0.4,show.legend = F)+
-    geom_jitter(data = df3,aes(x = Groups, y =log2(FC)),color = "grey",size= 2,width =0.35,show.legend = T)+
-    geom_jitter(data = df1,aes(x = Groups, y =log2(FC)),color = "#DD5B51",size= 2,width =0.35,show.legend = T)+
-    geom_jitter(data = df2,aes(x = Groups, y =log2(FC)),color = "#438CD5",size= 2,width =0.35,show.legend = T)+
-    
-    #scale_color_manual(name=NULL,values =alpha(c("#438CD5","grey","#DD5B51"),0.95),guide= FALSE)+ 
-    #geom_text_repel(data = df1,aes(x = Groups, y = -log10(PValue),label =df1$TXT), size = 1,show.legend = F)+
-    geom_bar(data=dfbar,aes(x=groups,y=y+0.3,fill=groups), levels = colname,stat ="identity",width = 0.9)+
-    geom_bar(data=dfbar,aes(x=groups,y=y-0.3,fill=groups), levels = colname,stat ="identity",width = 0.9)+
-    scale_fill_manual(values=alpha(mycolor,1))+
-    labs(x="",y="Log2(Y/N)")+
-    scale_x_discrete(breaks=c("Y_N","F_Y_N","M_Y_N"))+
-    scale_y_continuous(limits = c(-3,3), breaks= c(-2,0,2), expand= expansion(add = 0))+
-    #geom_text(data=dfbar,aes(x=label,y=y,label=x),size=3,color="white")+
-    #geom_text_repel(aes(label =df$X), size = 3,show.legend = F)+
-    theme_classic()+
-    theme(axis.line.x =element_blank(),axis.ticks.x =element_blank(),axis.text.x = element_blank(),
-          title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),
-          axis.text.y = element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),
-          axis.line.y = element_line(linetype=1,color="black",size=0.75),
-          panel.grid = element_blank(),panel.background = element_rect(fill = "white"))
-  ggsave("drug respense/MTX_HCQ_SEX_CCP+(Y_N).pdf", width =4.5, height = 4.5)
-}
-########################SFig5C:pathway########
-library(ggplot2);library(dplyr);library(reshape2);library(ggplot2);library(ggpubr)
-data<-read.csv("drug respense/pathway—MTX+LEF2.csv")
-data$
-  library(ggplot2)
-data$PValue2
-data %>%
-  mutate(X.1= factor(X.1, levels = c("All","Female","Male"))) %>%
-  ggplot(aes(y =Term,x = X.1,size=Count,fill=PValue2))+
-  geom_point(aes(size=Count,fill=PValue2),color='black',shape = 21)+
-  scale_fill_gradient2(low="#3C82B9",mid = "white",high = "red")+
-  scale_y_discrete(limits=rev(unique(data$Term)),position = "left")+
-  scale_size_continuous(range=c(4,13))+
-  theme(strip.background.x = element_rect(color="white", fill="white"),
-        axis.line=element_line(linetype=1,color="black",size=0.75),
-        panel.border = element_rect(fill=NA,color="black", size=0.75),
-        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
-        panel.background = element_rect(fill = "white"),
-        panel.grid=element_blank(),
-        axis.text.y= element_blank(),
-        axis.text.x= element_text(size = 13, color = "black", hjust = 1,angle = 45),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),legend.position = "bottom") 
-ggsave("drug respense/pathway_MTX_lef_CCP+(Y_N).pdf", width = 3.5, height = 9)
-########################SFig5D:scatter plot#####################
-data<-read.csv("drug respense//TEST_MTXHCQ_CCP+_YN.csv")
-data[data=="0"]<-NA
-data[data=="Inf"]<-NA
-data=data[which((data$P_Y_N!="NA")&data$FC_Y_N!="NA"),]
-data$color_pre[(data$P_Y_N> 0.05|data$P_Y_N=="NA")|(data$FC_Y_N > 1& data$FC_Y_N < 1)] <- "no"
-data$color_pre[(data$P_Y_N<0.05)&(data$FC_Y_N>1)] <- "up"
-data$color_pre[(data$P_Y_N<0.05)&(data$FC_Y_N< 1)] <- "down"
-table(data$color_pre)
-log2(1.25)
-library(ggplot2)
-library(ggrepel)
-ggplot(data,aes(x=log2(data$FC_Y_N),y=-log10(data$P_Y_N),color=data$color_pre))+
-  geom_point(aes(color=data$color_pre),size=2)+
-  scale_color_manual(values =c('up'='#DD5B51','down'='#438CD5','no'='grey'),guide=FALSE)+
-  geom_text_repel(aes(label =data$X), size = 3,show.legend = F)+
-  geom_hline(yintercept =-log10(0.05),linetype=2,color="grey",size=1)+
-  labs(x="Log2(Y/N)",y="-Log10(P_Value)")+
-  #scale_y_continuous(expand = c(0,0),limits = c(0,2.5))+
-  theme(axis.line=element_line(linetype=1,color="black",size=0.75),
-        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
-        panel.background = element_rect(fill = "white"),
-        panel.grid=element_blank(),
-        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
-        axis.text.x= element_text(size = 13, color = "black",   hjust = 0.5),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5))  
-ggsave("drug respense/MTX_HCQ_CCP+(Y_N).pdf", width = 3.2, height = 3)
-{library(reshape2);library(dplyr);library(ggplot2);library(ggrepel);library(ggbreak)
-  data<-read.csv("drug respense/TEST_MTXHCQ_CCP+_YN.csv",header = T)[,c(1,8:13)]
-  P<-data[,c(1,5:7)]
-  FC<-data[,c(1:4)]
-  str<- colnames(P)
-  colname<- gsub("P_","",str)
-  colnames(P) <- colname
-  df1<- melt(P,  #id.vars表示不需要合并的列；
-             measure.vars = colnames(P)[-1], #measure.vars表示需要合并的列；
-             variable.name ="Groups", #variable.name表示列名合并后的新列名；
-             value.name ="PValue") 
-  colnames(FC) <- colname
-  df2<- melt(FC,  #id.vars表示不需要合并的列；
-             measure.vars = colnames(FC)[-1], #measure.vars表示需要合并的列；
-             variable.name ="Groups", #variable.name表示列名合并后的新列名；
-             value.name ="FC") 
-  df<-merge(df1,df2,by = c("X","Groups"))
-  df[df=="0"]<-NA
-  df[df=="Inf"]<-NA
-  df=df[which((df$PValue!="NA")&df$FC!="NA"),]
-  
-  df$color_pre[(df$PValue>= 0.05|df$PValue=="NA")|(df$FC> 1& df$FC < 1)] <- "no"
-  df$color_pre[(df$PValue<0.05)&(df$FC>1)] <- "up"
-  df$color_pre[(df$PValue<0.05)&(df$FC< 1)]  <- "down"
-  up<- df %>% group_by(Groups) %>% summarise(max(log2(FC)))
-  down<-  df %>% group_by(Groups) %>% summarise(min(log2(FC)))
-  col_1<- data.frame(up,down)
-  max<- max(max(col_1$max.log2.FC..))
-  expan<- max/10
-  groups<-unique(df$Groups)
-  dfbar<-data.frame(x=groups,y=0,label=c(1:length(groups)))
-  mycolor<- c("#67867C","#D5ABAC","#5A96B5") 
-  df1<-df[which(df$color_pre=="up"),]
-  df2<-df[which(df$color_pre=="down"),]
-  df3<-df[which(df$color_pre=="no"),]
-  ggplot()+
-    geom_col(data = col_1,aes(x = Groups, y =max.log2.FC..+expan),width =0.7,
-             fill="#CCCCCC",alpha=0.4,show.legend = F)+
-    geom_jitter(data = df3,aes(x = Groups, y =log2(FC)),color = "grey",size= 2,width =0.35,show.legend = T)+
-    geom_jitter(data = df1,aes(x = Groups, y =log2(FC)),color = "#DD5B51",size= 2,width =0.35,show.legend = T)+
-    geom_jitter(data = df2,aes(x = Groups, y =log2(FC)),color = "#438CD5",size= 2,width =0.35,show.legend = T)+
-    
-    #scale_color_manual(name=NULL,values =alpha(c("#438CD5","grey","#DD5B51"),0.95),guide= FALSE)+ 
-    #geom_text_repel(data = df1,aes(x = Groups, y = -log10(PValue),label =df1$TXT), size = 1,show.legend = F)+
-    geom_bar(data=dfbar,aes(x=groups,y=y+0.3,fill=groups), levels = colname,stat ="identity",width = 0.9)+
-    geom_bar(data=dfbar,aes(x=groups,y=y-0.3,fill=groups), levels = colname,stat ="identity",width = 0.9)+
-    scale_fill_manual(values=alpha(mycolor,1))+
-    labs(x="",y="Log2(Y/N)")+
-    scale_x_discrete(breaks=c("Y_N","F_Y_N","M_Y_N"))+
-    scale_y_continuous(limits = c(-3,3), breaks= c(-2,0,2), expand= expansion(add = 0))+
-    #geom_text(data=dfbar,aes(x=label,y=y,label=x),size=3,color="white")+
-    #geom_text_repel(aes(label =df$X), size = 3,show.legend = F)+
-    theme_classic()+
-    theme(axis.line.x =element_blank(),axis.ticks.x =element_blank(),axis.text.x = element_blank(),
-          title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),
-          axis.text.y = element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),
-          axis.line.y = element_line(linetype=1,color="black",size=0.75),
-          panel.grid = element_blank(),panel.background = element_rect(fill = "white"))
-  ggsave("drug respense/MTX_HCQ_SEX_CCP+(Y_N).pdf", width =4.5, height = 4.5)
-}
-########################SFig5E:pathway#####################
-library(ggplot2);library(dplyr);library(reshape2);library(ggplot2);library(ggpubr)
-data<-read.csv("drug respense/pathway—MTX+HCQ2.csv")
-data$PValue2
-data %>%
-  mutate(X.1= factor(X.1, levels = c("All","Female"))) %>%
-  ggplot(aes(y =Term,x = X.1,size=Count,fill=PValue2))+
-  geom_point(aes(size=Count,fill=PValue2),color='black',shape = 21)+
-  scale_fill_gradient2(low="#3C82B9",mid = "white",high = "red")+
-  scale_y_discrete(limits=rev(unique(data$Term)),position = "left")+
-  scale_size_continuous(range=c(4,13))+
-  theme(strip.background.x = element_rect(color="white", fill="white"),
-        axis.line=element_line(linetype=1,color="black",size=0.75),
-        panel.border = element_rect(fill=NA,color="black", size=0.75),
-        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
-        panel.background = element_rect(fill = "white"),
-        panel.grid=element_blank(),
-        axis.text.y= element_blank(),
-        axis.text.x= element_text(size = 13, color = "black", hjust = 1,angle = 45),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),legend.position = "bottom") 
-ggsave("drug respense/pathway_MTX_HCQ_CCP+(Y_N).pdf", width = 2.7, height = 9)
-
-
-
 
