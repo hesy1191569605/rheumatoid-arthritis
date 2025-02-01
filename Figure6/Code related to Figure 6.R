@@ -254,7 +254,7 @@ data2 %>%
   facet_wrap( ~variable , ncol =8,scales="free")
 ggsave("MTX_HCQ a_b plot.pdf", width = 2.5, height = 3)
 
-########################SFig6A:pathway###################
+########################SFig7A:pathway###################
 data<-read.csv("pathways_MTXLEF_AB_N.csv")
 library(ggplot2)
 ggplot(data,aes(x =Term,y =Count,fill=PValue))+
@@ -273,7 +273,7 @@ ggplot(data,aes(x =Term,y =Count,fill=PValue))+
         axis.text.x= element_text(size = 13, color = "black",   hjust = 0.5),
         title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),legend.position = "bottom")  
 ggsave("MTX_LEF(A_B)_N pathway.pdf", width = 4, height = 7)#
-########################SFig6B:pathway#######################
+########################SFig7B:pathway#######################
 data<-read.csv("pathways_MTXHCQ_AB_N.csv")
 library(ggplot2)
 ggplot(data,aes(x =Term,y =Count,fill=PValue))+
@@ -292,7 +292,7 @@ ggplot(data,aes(x =Term,y =Count,fill=PValue))+
         axis.text.x= element_text(size = 13, color = "black",   hjust = 0.5),
         title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),legend.position = "bottom")  
 ggsave("MTX_HCQ(A_B)_N pathway.pdf", width = 4, height = 7)
-########################SFig6C:scatter plot################
+########################SFig7C:scatter plot################
 {data<-read.csv("test_n_b_CCP+_SEX_MTXLEF.csv")[,c(1,7:10)]
 P<-data[,c(1,4:5)]
 FC<-data[,c(1:3)]
@@ -431,7 +431,7 @@ ggsave("Y_N_MTXLEF_CCP+.pdf",width = 3.2, height = 3)
           title=element_text(size = 15,  color = "black",  vjust = 0.5, hjust = 0.5))  
   ggsave("Y_N_MTXLEF_CCP+_male.pdf",width = 2.2, height = 2)
 }
-########################SFig6D:bar plot#####################
+########################SFig7D:bar plot#####################
 A<-c(36,40,16,19,33,7)
 A2<-c(0,2,0,0,2,0)
 B<-c("A","A","A","B","B","B")
@@ -455,7 +455,7 @@ ggplot()+
         axis.text.x= element_text(size = 13, color = "black",   hjust =0.5),
         title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
 ggsave("drug beford_after/MTX_lef_CCP+(A_B)_bar.pdf", width = 3, height =4)
-########################SFig6E:pathway#####################
+########################SFig7E:pathway#####################
 data<-read.csv("drug beford_after/pathway-MTXLEF.csv")
 
 data %>%
@@ -476,7 +476,7 @@ data %>%
         title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5),legend.position = "bottom") 
 ggsave("drug beford_after/pathway_MTX_lef_CCP+(A_B).pdf", width = 3.5, height = 9)
 
-########################SFig6F:scatter plot#####################
+########################SFig7F:scatter plot#####################
 {data<-read.csv("test_n_b_CCP+_SEX_MTXHCQ.csv")[,c(1,7:10)]
 P<-data[,c(1,4:5)]
 FC<-data[,c(1:3)]
@@ -523,7 +523,7 @@ ggplot(df,aes(x=log2(df$FC),y=-log10(df$PValue),color=df$color_pre))+
         title=element_text(size = 15,  color = "black",  vjust = 0.5, hjust = 0.5))  
 ggsave("Y_N_MTXHCQ_CCP+.pdf",width = 3.2, height = 3)
 }
-########################SFig6G:pathway#####################
+########################SFig7G:pathway#####################
 ggplot(data,aes(x =Term,y =Count,fill=PValue2))+
   geom_bar(fill ="grey", stat = "identity", width = 0.5) + # 注意将width宽度设小
   geom_point(aes(fill = PValue2),size =10,shape=21) + 
