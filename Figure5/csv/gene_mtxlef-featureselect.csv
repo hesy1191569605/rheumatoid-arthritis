@@ -1,0 +1,6 @@
+Gene,Lasso,RF,REF+SVM,XGBoost,Stability Selection, ElasticNet
+LGALS3BP,1,5,16,23,1,1
+CBR1,2,4,4,13,18,2
+MYH9,3,17,14,11,3,3
+COL1A1,4,20,6,17,21,4
+ECI2,5,1,5,9,2,6
