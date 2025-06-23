@@ -793,69 +793,372 @@ dev.off()
 
 
 ########################SFig5B:Feture select########
-setwd("H:/分析/RA/返修第二版/feature select/")
-MTXLEF<-read.csv("RF MTXLEF.csv")
-MTXHCQ<-read.csv("RF MTXHCQ.csv")
+data=read.csv("gene_mtxlef-featureselect.csv", header = T,row.names = NULL)
+data2<-reshape2::melt(data,id.vars="Gene")
+library(ggplot2)
+data2$Gene
+ggplot(data2, aes(x = variable, y = -value, group = Gene, color =Gene)) +
+  geom_line(size=1) +
+  geom_point(size=3) +
+  ylim(-37,-1)+
+  scale_color_manual(values =c('LGALS3BP'='#9F527C','CBR1'='#E4E4E4','ECI2'='#C85C19','MYH9'='#004A80','COL1A1'='#FFE35E'),guide=FALSE)+
+  geom_hline(yintercept =-10,linetype=2,color="grey",size=1)+
+  labs(x = "Method", y = "Rank", title = "Feature selection stability across methods") +
+  theme(axis.line=element_line(linetype=1,color="black",size=0.75),
+        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
+        panel.background = element_rect(fill = "white"),
+        panel.grid=element_blank(),
+        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
+        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5))  
+ggsave("feature select_mtx+lef.pdf", width =4, height = 4)
 
-ggplot(data=MTXLEF,aes(x=GENE,y=MeanDecreaseGini.2,fill=MeanDecreaseGini.2))+
-  geom_bar(aes(fill=MeanDecreaseGini.2),position = "dodge",stat="identity",width = 0.7)+
-  scale_x_discrete(limits=unique(MTXLEF$GENE))+
-  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
-  scale_fill_gradient2(low="#737AAC",mid="white",high = "#AF322F")+
-  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
-  theme(axis.line=element_line(color="black",size = 0.75),
-        axis.ticks=element_line(color="black",size = 0.75),
-        #panel.grid=element_line(linetype = 2,colour = "grey"),
-        panel.background = element_rect(fill = "white"),
-        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
-        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
-ggsave("rf_coef_mtxlef.pdf",height = 4,width = 7)  
-ggplot(data=MTXHCQ,aes(x=GENE,y=MeanDecreaseGini.1,fill=MeanDecreaseGini.1))+
-  geom_bar(aes(fill=MeanDecreaseGini.1),position = "dodge",stat="identity",width = 0.7)+
-  scale_x_discrete(limits=unique(MTXHCQ$GENE))+
-  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
-  scale_fill_gradient2(low="#737AAC",mid="white",high = "#AF322F")+
-  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
-  theme(axis.line=element_line(color="black",size = 0.75),
-        axis.ticks=element_line(color="black",size = 0.75),
-        #panel.grid=element_line(linetype = 2,colour = "grey"),
-        panel.background = element_rect(fill = "white"),
-        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
-        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
-ggsave("rf_coef_mtxhcq.pdf",height = 4,width = 7)  
-MTXLEF<-read.csv("feature select XGB mtx+lef.csv")[c(1:10),]
-MTXHCQ<-read.csv("feature select XGB mtx+hcq.csv")[c(1:10),]
 
-ggplot(data=MTXLEF,aes(x=Feature,y=Gain,fill=Gain))+
-  geom_bar(aes(fill=Gain),position = "dodge",stat="identity",width = 0.7)+
-  scale_x_discrete(limits=unique(MTXLEF$Feature))+
-  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
-  scale_fill_gradient2(low="#AF322F",mid="white",high = "#737AAC")+
-  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
-  theme(axis.line=element_line(color="black",size = 0.75),
-        axis.ticks=element_line(color="black",size = 0.75),
-        #panel.grid=element_line(linetype = 2,colour = "grey"),
+data=read.csv("gene_mtxHCQ-featureselect.csv", header = T,row.names = NULL)
+data2<-reshape2::melt(data,id.vars="Gene")
+library(ggplot2)
+data2$Gene
+ggplot(data2, aes(x = variable, y = -as.numeric(value), group = Gene, color =Gene)) +
+  geom_line(size=1) +
+  geom_point(size=3) +
+  ylim(-50,-1)+
+  scale_color_manual(values =c('RPL27A'='#3575A2','GGT1'='#E1822B'),guide=FALSE)+
+  geom_hline(yintercept =-10,linetype=2,color="grey",size=1)+
+  labs(x = "Method", y = "Rank", title = "Feature selection stability across methods") +
+  theme(axis.line=element_line(linetype=1,color="black",size=0.75),
+        axis.ticks=element_line(color="black",size=0.75,lineend = 1),
         panel.background = element_rect(fill = "white"),
+        panel.grid=element_blank(),
         axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
         axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
-ggsave("XGB_coef_mtxlef.pdf",height = 4,width = 7)  
-ggplot(data=MTXHCQ,aes(x=Feature,y=Gain,fill=Gain))+
-  geom_bar(aes(fill=Gain),position = "dodge",stat="identity",width = 0.7)+
-  scale_x_discrete(limits=unique(MTXHCQ$Feature))+
-  #geom_hline(yintercept = 1, color = "grey40", size = 1,linetype=2) +
-  scale_fill_gradient2(low="#AF322F",mid="white",high = "#737AAC")+
-  labs(x = "", y = "Coefficients", colour = "", linetype = "", fill = "")+
-  theme(axis.line=element_line(color="black",size = 0.75),
-        axis.ticks=element_line(color="black",size = 0.75),
-        #panel.grid=element_line(linetype = 2,colour = "grey"),
-        panel.background = element_rect(fill = "white"),
-        axis.text.y= element_text(size = 13, color = "black",  vjust = 0.5, hjust = 1),
-        axis.text.x= element_text(size = 13, color = "black",   hjust = 1,angle = 45),
-        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5)) 
-ggsave("XGB_coef_mtxhcq.pdf",height = 4,width = 7)  
+        title=element_text(size = 13,  color = "black",  vjust = 0.5, hjust = 0.5))  
+ggsave("feature select_mtx+hcq.pdf", width =4, height = 4)
+
+
+library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+library(scales);library(pROC);library(lifecycle);library(purrr);library(data.table)
+setwd("H:/分析/RA/Figure5/csv/")
+data=read.csv("RA_DATAKNN1.csv", header = F,row.names = NULL)
+colnames(data)=data[1,];data=data[-1,];data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXLEF=c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")
+
+d=data[which(data$Drugs=="MTX+LEF"&data$`Drugs Response`!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXLEF,"Sample","DAS28-CRP","DDAS28-CRP","Drugs Response","Age","Gender","SJC","TJC","CRP")]
+d=d[!is.na(d$`DDAS28-CRP`),]%>%arrange(Sample)
+dat1=d[,-12]
+
+# 全部变量中心化到-1至1水平
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+sapply(dat1[,10:ncol(dat1)],range)
+
+
+for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$`Drugs Response`,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+
+dat1$`Drugs Response`=ifelse(dat1$`Drugs Response`=="Response",1,ifelse(dat1$`Drugs Response`=="No Response",0,NA))
+dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+
+Y=dat1[dat1$`Drugs Response`==1,]
+N=dat1[dat1$`Drugs Response`==0,]
+
+result=NULL
+list_train=list()
+list_test=list()
+coef_all=NULL
+i=1
+for(i in 1:100){
+  set.seed(i)
+  Y1<-Y[sample(1:nrow(Y),10,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),17,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),17,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
+  y=train$`Drugs Response`
+  y_test <- test$`Drugs Response`
+  x <- cbind(train[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  x_test <- cbind(test[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  
+  cvfit=cv.glmnet(as.matrix(x), y, nfolds = 10,family="binomial",alpha=0)
+  ridge <- glmnet(as.matrix(x),y, family="binomial", lambda=cvfit$lambda.min, alpha=0)
+  coef=data.frame(ID=c("int",colnames(x)),i=rep(i,ncol(x)+1),coef=coef(ridge)@x[1:(ncol(x)+1)])
+  train_y <- predict(ridge,as.matrix(x), type="response")
+  df=data.frame(y,train_y=as.numeric(train_y))
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(ridge,as.matrix(x_test), type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  coef_all=rbind(coef_all,coef)
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+write.csv(result,"../../返修第三次/rescaled 100 times ridge_MTXLEF(p-top5).csv",row.names = F)
+write.csv(coef_all,"../../返修第三次/rescaled coef 100 times ridge_MTXLEF(p-top5).csv",row.names = F)
+# 筛选最好的一次
+{
+  set.seed(14)
+  Y1<-Y[sample(1:nrow(Y),10,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),17,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),17,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
+  y=train$`Drugs Response`
+  y_test <- test$`Drugs Response`
+  x <- cbind(train[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  x_test <- cbind(test[,c("CBR1","LGALS3BP","MYH9","COL1A1","ECI2")])
+  
+  cvfit=cv.glmnet(as.matrix(x), y, nfolds = 10,family="binomial",alpha=0)
+  ridge <- glmnet(as.matrix(x),y, family="binomial", lambda=cvfit$lambda.min, alpha=0)
+  coef=data.frame(ID=c("int",colnames(x)),i=rep(i,ncol(x)+1),coef=coef(ridge)@x[1:(ncol(x)+1)])
+  train_y <- predict(ridge,as.matrix(x), type="response")
+  df=data.frame(y,train_y=as.numeric(train_y))
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(ridge,as.matrix(x_test), type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  coef_all=rbind(coef_all,coef)
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+setDT(coef_all) 
+data1<-data.table::dcast(coef_all,coef_all$ID~coef_all$i,value.var = "coef")
+coef=apply(data1[,2:ncol(data1)],1, function(x){mean(x)})
+coef<-data.frame(data1$coef_all,coef)
+coefficients <-coef[which(coef$data1.coef_all!="int"),]
+
+intercept <- coef$coef[ coef$data1.coef_all == "int" ]
+
+features =dat1[,c(12,11,10,14,13)]
+true_labels <- dat1$`Drugs Response`
+
+
+# 2. 构建自定义概率预测函数
+predict_median_logistic <- function(newdata) {
+  vars <- coefficients$data1.coef_all
+  weights <- coefficients$coef
+  X <- as.matrix(newdata[, vars, drop = FALSE])
+  
+  linear_part <- intercept + X %*% weights
+  prob <- 1 / (1 + exp(-linear_part))
+  return(as.vector(prob))
+}
+
+# 3. 使用该函数进行模型预测
+# 假设 x_test 是一个 data.frame，包含 coef_used$ID 所需的所有列
+predicted_probs <- predict_median_logistic(features)
+
+library(fastshap)
+library(shapviz)
+
+# 5. 生成 SHAP 值
+set.seed(123)
+shap_vals <- fastshap::explain(
+  object       = NULL,
+  X            = features,
+  pred_wrapper = function(obj, newdata) predict_median_logistic(newdata),
+  nsim         = 50
+)
+
+# 6. 构建 shapviz 对象
+
+sv <- shapviz(shap_vals, features)
+
+
+
+
+
+
+
+
+
+# 7. 绘制 beeswarm 图
+
+sv_importance(
+  sv,
+  kind         = "beeswarm",   # 绘制 beeswarm 图
+  max_display  = Inf,          # 显示所有特征
+  alpha        = 1,          # 点透明度
+  size         = 2,            # 点大小
+  bee_width    = 0.4,          # 蜂群宽度
+  bee_adjust   = 0.5,          # 密度调整
+  viridis_args = NULL          # 禁用默认 viridis 色带
+) +
+  scale_color_gradient2(
+    low = "#438CD5",
+    mid = "#438CD5",
+    high = "#DD5B51",
+    midpoint   = 0,            # 标准化特征值的中心点
+    space      = "Lab",
+    na.value   = "grey50",
+    guide      = "colourbar",
+    name       = "Scaled feature\nvalue"
+  ) +
+  scale_y_discrete(limits=c("LGALS3BP", "MYH9", "ECI2", "COL1A1", "CBR1"))+
+  ggtitle("SHAP Beeswarm Plot (Blue–White–Red)") +
+  theme_minimal(base_size = 14)
+ggsave("H:/分析/RA/返修第三次/shap(MTX+LEF).pdf", width =5.70, height = 3.5)
+
+
+
+
+
+
+library(dplyr);library(glmnet);library(ggpubr);library(DMwR2);library(mice);
+library(scales);library(pROC);library(lifecycle);library(purrr);library(data.table)
+setwd("H:/分析/RA/Figure5/csv/")
+data=read.csv("RA_DATAKNN1.csv", header = F,row.names = NULL)
+colnames(data)=data[1,];data=data[-1,];data[,c(5,8:13,16:ncol(data))] = lapply(data[,c(5,8:13,16:ncol(data))], as.numeric)
+table(is.na(data[,16:ncol(data)]))
+MTXHCQ=c("RPL27A","GGT1")
+
+d=data[which(data$Drugs=="MTX+HCQ"&data$`Drugs Response`!="NA"&(data$Class=="moderate_disease_activity"|data$Class=="high_disease_activity")),colnames(data)%in%c(MTXHCQ,"Sample","DAS28-CRP","DDAS28-CRP","Drugs Response","Age","Gender","SJC","TJC","CRP")]
+d=d[!is.na(d$`DDAS28-CRP`),]%>%arrange(Sample)
+dat1=d[,-10]
+
+# 全部变量中心化到-1至1水平
+dat1[,10:ncol(dat1)]=lapply(dat1[,10:ncol(dat1)], function(x){rescale(x, to =c(-1,1))})
+sapply(dat1[,10:ncol(dat1)],range)
+
+
+for(i in 10:ncol(dat1)){p=t.test(dat1[,i]~dat1$`Drugs Response`,alternative = c("two.sided"),paired=F,var.equal=TRUE)[["p.value"]];print(p)}
+
+dat1$`Drugs Response`=ifelse(dat1$`Drugs Response`=="Response",1,ifelse(dat1$`Drugs Response`=="No Response",0,NA))
+dat1$Gender=ifelse(dat1$Gender=="Female",1,ifelse(dat1$Gender=="Male",0,NA))
+
+Y=dat1[dat1$`Drugs Response`==1,]
+N=dat1[dat1$`Drugs Response`==0,]
+
+result=NULL
+list_train=list()
+list_test=list()
+coef_all=NULL
+i=1
+for(i in 1:100){
+  set.seed(i)
+  Y1<-Y[sample(1:nrow(Y),7,replace = F),]
+  Y2<-Y[!c(Y$Sample%in%Y1$Sample),]
+  N1<-N[sample(1:nrow(N),12,replace = F),]
+  N2<-N[!c(N$Sample%in%N1$Sample),]
+  N2<-N2[sample(1:nrow(N2),7,replace = F),]
+  train=rbind(Y1,N1)
+  test=rbind(Y2,N2)
+  y=train$`Drugs Response`
+  y_test <- test$`Drugs Response`
+  x <- cbind(train[,c("RPL27A","GGT1")])
+  x_test <- cbind(test[,c("RPL27A","GGT1")])
+  
+  cvfit=cv.glmnet(as.matrix(x), y, nfolds = 10,family="binomial",alpha=0)
+  ridge <- glmnet(as.matrix(x),y, family="binomial", lambda=cvfit$lambda.min, alpha=0)
+  coef=data.frame(ID=c("int",colnames(x)),i=rep(i,ncol(x)+1),coef=coef(ridge)@x[1:(ncol(x)+1)])
+  train_y <- predict(ridge,as.matrix(x), type="response")
+  df=data.frame(y,train_y=as.numeric(train_y))
+  train_auc=multipleROC(y~train_y,data=df,plot =F)[["auc"]]
+  test_y <- predict(ridge,as.matrix(x_test), type="response")
+  df1=data.frame(y_test,test_y=as.numeric(test_y))
+  test_auc=multipleROC(y_test~test_y,data=df1,plot =F)[["auc"]]
+  result=rbind(result, data.frame(i,train_auc, test_auc))
+  coef_all=rbind(coef_all,coef)
+  list_train[[i]]=multipleROC(y~train_y,data=df,plot =F)
+  list_test[[i]]=multipleROC(y_test~test_y,data=df1,plot =F)
+}
+write.csv(result,"../../返修第三次/rescaled 100 times ridge_MTXHCQ(p-top2).csv",row.names = F)
+write.csv(coef_all,"../../返修第三次/rescaled coef 100 times ridge_MTXHCQ(p-top2).csv",row.names = F)
+
+
+setDT(coef_all) 
+data1<-data.table::dcast(coef_all,coef_all$ID~coef_all$i,value.var = "coef")
+coef=apply(data1[,2:ncol(data1)],1, function(x){mean(x)})
+coef<-data.frame(data1$coef_all,coef)
+coefficients <-coef[which(coef$data1.coef_all!="int"),]
+
+intercept <- coef$coef[ coef$data1.coef_all == "int" ]
+
+features =dat1[,c(10:11)]
+true_labels <- dat1$`Drugs Response`
+
+
+# 2. 构建自定义概率预测函数
+predict_median_logistic <- function(newdata) {
+  vars <- coefficients$data1.coef_all
+  weights <- coefficients$coef
+  X <- as.matrix(newdata[, vars, drop = FALSE])
+  
+  linear_part <- intercept + X %*% weights
+  prob <- 1 / (1 + exp(-linear_part))
+  return(as.vector(prob))
+}
+
+# 3. 使用该函数进行模型预测
+# 假设 x_test 是一个 data.frame，包含 coef_used$ID 所需的所有列
+predicted_probs <- predict_median_logistic(features)
+
+library(fastshap)
+library(shapviz)
+
+# 5. 生成 SHAP 值
+set.seed(123)
+shap_vals <- fastshap::explain(
+  object       = NULL,
+  X            = features,
+  pred_wrapper = function(obj, newdata) predict_median_logistic(newdata),
+  nsim         = 50
+)
+
+# 6. 构建 shapviz 对象
+
+sv <- shapviz(shap_vals, features)
+
+
+
+
+
+
+
+
+
+# 7. 绘制 beeswarm 图
+
+sv_importance(
+  sv,
+  kind         = "beeswarm",   # 绘制 beeswarm 图
+  max_display  = Inf,          # 显示所有特征
+  alpha        = 1,          # 点透明度
+  size         = 2,            # 点大小
+  bee_width    = 0.4,          # 蜂群宽度
+  bee_adjust   = 0.5,          # 密度调整
+  viridis_args = NULL          # 禁用默认 viridis 色带
+) +
+  scale_color_gradient2(
+    low = "#438CD5",
+    mid = "#438CD5",
+    high = "#DD5B51",
+    midpoint   = 0,            # 标准化特征值的中心点
+    space      = "Lab",
+    na.value   = "grey50",
+    guide      = "colourbar",
+    name       = "Scaled feature\nvalue"
+  ) +
+  scale_y_discrete(limits=c("RPL27A", "GGT1"))+
+  ggtitle("SHAP Beeswarm Plot (Blue–White–Red)") +
+  theme_minimal(base_size = 14)
+ggsave("H:/分析/RA/返修第三次/shap(MTX+HCQ).pdf", width =5.70, height = 2.3)
 
 ########################SFig5C:RF and XGBoost#####################
 setwd("H:/分析/RA/返修第二版/")
